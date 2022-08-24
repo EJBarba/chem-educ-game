@@ -10,6 +10,8 @@ public class TileCheck : MonoBehaviour
     private TMP_InputField[] answer;
     private  string playerAnswer;
     public bool isSolved = false;
+    private TileSolveToggle[] tileIsSolved;
+    [SerializeField] float timeToClear = 1f;
    
    public string GetCorrectAnswer()
    {
@@ -33,16 +35,43 @@ public class TileCheck : MonoBehaviour
    {
         GetPlayerAnswer();
         GetCorrectAnswer();
+        tileIsSolved = GetComponentsInChildren<TileSolveToggle>();
+
         if (playerAnswer == correctAnswer)
         {
             Debug.Log("Correct!");
             isSolved = true;
+
+            for (int i = 0; i < tileIsSolved.Length; i++)
+            {
+                tileIsSolved[i].TileSolved();
+                Debug.Log(tileIsSolved[i].TileState());
+            }
         }
         else
         {
             Debug.Log("Wrong!");
             isSolved = false;
-        }
 
+            answer = GetComponentsInChildren<TMP_InputField>();
+            StartCoroutine(WordClear());
+             
+        }
    }
+
+   IEnumerator WordClear()
+    {
+      yield return new WaitForSeconds(timeToClear);
+      
+      tileIsSolved = GetComponentsInChildren<TileSolveToggle>();
+      answer = GetComponentsInChildren<TMP_InputField>();
+      for (int i = 0; i < answer.Length; i++)
+            {
+                if (tileIsSolved[i].TileState() == false)
+                {
+                    // clear text
+                    answer[i].text = "";
+                }
+            }
+    }
 }
