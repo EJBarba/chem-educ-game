@@ -7,15 +7,17 @@ using UnityEngine.UI;
 
 public class WordCheck : MonoBehaviour
 {
-    private TextMeshProUGUI[] tileList;
+    
     [SerializeField] GameObject[] word;
-    [SerializeField] TextMeshProUGUI example;
-    [SerializeField] Sprite neutralTileSprite;
-    [SerializeField] Sprite wrongTileSprite;
-    [SerializeField] Sprite correctTileSprite;
-    [SerializeField] float waitTime = 1f;
     private Image[] currentTileSprites;
-    private Animator[] animator;
+     private Animator[] animator;
+    // [SerializeField] TextMeshProUGUI example;
+    // [SerializeField] Sprite neutralTileSprite;
+    // [SerializeField] Sprite wrongTileSprite;
+    // [SerializeField] Sprite correctTileSprite;
+    // [SerializeField] float waitTime = 1f;
+    // private TextMeshProUGUI[] tileList;
+    
 
     void Awake()
     {

@@ -6,11 +6,9 @@ using TMPro;
 public class TileCheck : MonoBehaviour
 {
     [SerializeField] string correctAnswer;
-    [SerializeField] GameObject[] letters;
-    private TMP_InputField[] answer;
+    [SerializeField] GameObject[] answer;
     private  string playerAnswer;
     public bool isSolved = false;
-    private TileSolveToggle[] tileIsSolved;
     [SerializeField] float timeToClear = 1f;
    
    public string GetCorrectAnswer()
@@ -20,12 +18,11 @@ public class TileCheck : MonoBehaviour
 
    public string GetPlayerAnswer()
    {
-        answer = GetComponentsInChildren<TMP_InputField>();
         playerAnswer = "";
 
         for (int i = 0; i < answer.Length; i++)
         {
-            playerAnswer += answer[i].text;
+            playerAnswer += answer[i].GetComponent<TMP_InputField>().text;
             //Debug.Log(playerAnswer + ": " + playerAnswer.Length);
         }
         return playerAnswer;
@@ -35,27 +32,23 @@ public class TileCheck : MonoBehaviour
    {
         GetPlayerAnswer();
         GetCorrectAnswer();
-        tileIsSolved = GetComponentsInChildren<TileSolveToggle>();
 
         if (playerAnswer == correctAnswer)
         {
             Debug.Log("Correct!");
             isSolved = true;
 
-            for (int i = 0; i < tileIsSolved.Length; i++)
+            for (int i = 0; i < answer.Length; i++)
             {
-                tileIsSolved[i].TileSolved();
-                Debug.Log(tileIsSolved[i].TileState());
+                answer[i].GetComponent<TileSolveToggle>().TileSolved();
+                Debug.Log(answer[i].GetComponent<TileSolveToggle>().TileState());
             }
         }
         else
         {
             Debug.Log("Wrong!");
             isSolved = false;
-
-            answer = GetComponentsInChildren<TMP_InputField>();
-            StartCoroutine(WordClear());
-             
+            StartCoroutine(WordClear()); 
         }
    }
 
@@ -63,14 +56,12 @@ public class TileCheck : MonoBehaviour
     {
       yield return new WaitForSeconds(timeToClear);
       
-      tileIsSolved = GetComponentsInChildren<TileSolveToggle>();
-      answer = GetComponentsInChildren<TMP_InputField>();
       for (int i = 0; i < answer.Length; i++)
             {
-                if (tileIsSolved[i].TileState() == false)
+                Debug.Log(answer[i].GetComponent<TileSolveToggle>().TileState());
+                if (answer[i].GetComponent<TileSolveToggle>().TileState() == false)
                 {
-                    // clear text
-                    answer[i].text = "";
+                    answer[i].GetComponent<TMP_InputField>().text = "";
                 }
             }
     }
