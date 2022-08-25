@@ -41,6 +41,7 @@ public class TileCheck : MonoBehaviour
             for (int i = 0; i < answer.Length; i++)
             {
                 answer[i].GetComponent<TileSolveToggle>().TileSolved();
+                answer[i].GetComponent<TMP_InputField>().readOnly = true;
                 Debug.Log(answer[i].GetComponent<TileSolveToggle>().TileState());
             }
         }
