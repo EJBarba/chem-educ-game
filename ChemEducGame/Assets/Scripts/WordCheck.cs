@@ -11,13 +11,6 @@ public class WordCheck : MonoBehaviour
     [SerializeField] GameObject[] word;
     private Image[] currentTileSprites;
      private Animator[] animator;
-    // [SerializeField] TextMeshProUGUI example;
-    // [SerializeField] Sprite neutralTileSprite;
-    // [SerializeField] Sprite wrongTileSprite;
-    // [SerializeField] Sprite correctTileSprite;
-    // [SerializeField] float waitTime = 1f;
-    // private TextMeshProUGUI[] tileList;
-    
 
     void Awake()
     {
@@ -27,6 +20,18 @@ public class WordCheck : MonoBehaviour
         {
           currentTileSprites = word[i].GetComponentsInChildren<Image>();
           animator = word[i].GetComponentsInChildren<Animator>();
+        }
+       }
+    }
+
+    void Start() 
+    {
+       for (int i = 0; i < word.Length; i++)
+      {
+        if (word[i].tag == "Player")
+        {
+          //activate input field on first empty tile
+          word[i].GetComponent<TileCheck>().GetFirstEmptyTile();
         }
        }
     }

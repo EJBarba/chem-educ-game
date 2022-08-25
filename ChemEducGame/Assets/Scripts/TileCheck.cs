@@ -53,6 +53,18 @@ public class TileCheck : MonoBehaviour
         }
    }
 
+   public void GetFirstEmptyTile()
+   {
+    for (int i = 0; i < answer.Length; i++)
+        {
+            //activate input field on first empty tile
+            if ( answer[i].GetComponent<TMP_InputField>().text == "")
+            {
+                answer[i].GetComponent<TMP_InputField>().ActivateInputField();
+            }
+        }
+   }
+
    IEnumerator WordClear()
     {
       yield return new WaitForSeconds(timeToClear);
