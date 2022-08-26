@@ -8,12 +8,20 @@ public class TileCheck : MonoBehaviour
     [SerializeField] string correctAnswer;
     [SerializeField] GameObject[] answer;
     private  string playerAnswer;
+ 
     public bool isSolved = false;
    
    public string GetCorrectAnswer()
    {
         return correctAnswer;
    }
+
+    public GameObject[] GetTileGameObjects()
+   {
+        return answer;
+   }
+
+ 
 
    public string GetPlayerAnswer()
    {
@@ -45,12 +53,20 @@ public class TileCheck : MonoBehaviour
 
    public void GetFirstEmptyTile()
    {
-    for (int i = 0; i < answer.Length; i++)
+        //if word is cleared after wrong answer, force active input field on first tile
+        if (answer[0].GetComponent<TMP_InputField>().text == "")
         {
-            //activate input field on first empty tile
-            if (answer[i].GetComponent<TMP_InputField>().text == "")
+            answer[0].GetComponent<TMP_InputField>().ActivateInputField();
+        }
+        else
+        {
+            for (int i = 0; i < answer.Length; i++)
             {
-                answer[i].GetComponent<TMP_InputField>().ActivateInputField();
+                //activate input field on first empty tile
+                if (answer[i].GetComponent<TMP_InputField>().text == "")
+                {
+                    answer[i].GetComponent<TMP_InputField>().ActivateInputField();
+                }
             }
         }
    }

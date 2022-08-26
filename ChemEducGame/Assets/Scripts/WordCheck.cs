@@ -12,8 +12,8 @@ public class WordCheck : MonoBehaviour
     [SerializeField] float clearDelay = 1f;
     private float timerSeconds = 1f;
     private bool timerReached = false;
-    private TMP_InputField[] answer;
-    private Animator[] animator;
+    private GameObject[] answer;
+    // private List<Animator> animator;
 
     void Awake()
     {
@@ -30,7 +30,12 @@ public class WordCheck : MonoBehaviour
     {
         for (int i = 0; i < word.Length; i++)
       {
-        if (word[i].tag == "Player" && currentTileSprites.Length != 0)
+        answer = word[i].GetComponent<TileCheck>().GetTileGameObjects();
+
+       
+
+
+        if (word[i].tag == "Player" && answer.Length != 0)
         {
           string playerAnswer = (word[i].GetComponent<TileCheck>().GetPlayerAnswer());
           string correctAnswer = word[i].GetComponent<TileCheck>().GetCorrectAnswer();
@@ -47,20 +52,18 @@ public class WordCheck : MonoBehaviour
           {
             Debug.Log("equal length");
             word[i].GetComponent<TileCheck>().CheckAnswer();
-            animator = word[i].GetComponentsInChildren<Animator>();
-            answer = word[i].GetComponentsInChildren<TMP_InputField>();
 
             // if correct
             if (word[i].GetComponent<TileCheck>().isSolved == true)
             {
-              for (int j = 0; j < animator.Length; j++)
+              for (int j = 0; j < answer.Length; j++)
               {
                 //change into green tile
-                animator[j].SetBool("isSolved", true);
-                animator[j].SetBool("hasAnswered", true);
+                answer[j].GetComponent<Animator>().SetBool("isSolved", true);
+                answer[j].GetComponent<Animator>().SetBool("hasAnswered", true);
 
                 //make tile read only
-                answer[j].readOnly = true;
+                answer[j].GetComponent<TMP_InputField>().readOnly = true;
                 
               }
             }
@@ -69,29 +72,29 @@ public class WordCheck : MonoBehaviour
             else
             {
               // change into red tile
-              for (int j = 0; j < animator.Length; j++)
+              for (int j = 0; j < answer.Length; j++)
               {
-                animator[j].SetBool("hasAnswered", true);
+                answer[j].GetComponent<Animator>().SetBool("hasAnswered", true);
               }
              
               //wait timer
               if (!timerReached)
               {
                 timerSeconds -= Time.deltaTime;
-                Debug.Log(timerSeconds);
+                //Debug.Log(timerSeconds);
               }
                if (!timerReached && timerSeconds < 0)
               {
                 // change into yellow tile
-              for (int j = 0; j < animator.Length; j++)
+              
+              for (int j = 0; j < answer.Length; j++)
               {
-                answer[j].text = "";
-                animator[j].SetBool("hasAnswered", false);
+                //Debug.Log("cleared letter: " + answer[j].GetComponent<TMP_InputField>().text);
+                answer[j].GetComponent<TMP_InputField>().text = "";
+                answer[j].GetComponent<Animator>().SetBool("hasAnswered", false);
               }
                 timerReached = true;
               }
-              
-              
             }
 
           }
