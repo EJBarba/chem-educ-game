@@ -46,6 +46,12 @@ public class WordCheck : MonoBehaviour
             word[i].GetComponent<TileCheck>().GetFirstEmptyTile();
             timerReached = false;
             timerSeconds = clearDelay;
+
+            // go to previous tile and delete. Ignore if first tile
+            if (Input.GetKeyDown(KeyCode.Backspace) && playerAnswer.Length > 0)
+            {
+              answer[playerAnswer.Length - 1].GetComponent<TMP_InputField>().text = "";
+            }
           }
           
           if (playerAnswer.Length == correctAnswer.Length)
