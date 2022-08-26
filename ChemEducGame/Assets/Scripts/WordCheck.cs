@@ -13,7 +13,7 @@ public class WordCheck : MonoBehaviour
     private float timerSeconds = 1f;
     private bool timerReached = false;
     private GameObject[] answer;
-    // private List<Animator> animator;
+    private int currentIndex = 0;
 
     void Awake()
     {
@@ -28,12 +28,9 @@ public class WordCheck : MonoBehaviour
 
     void Update()
     {
-        for (int i = 0; i < word.Length; i++)
+      for (int i = 0; i < word.Length; i++)
       {
         answer = word[i].GetComponent<TileCheck>().GetTileGameObjects();
-
-       
-
 
         if (word[i].tag == "Player" && answer.Length != 0)
         {
@@ -42,7 +39,6 @@ public class WordCheck : MonoBehaviour
 
           if (playerAnswer.Length < correctAnswer.Length)
           {
-            Debug.Log("AAAAAAAAAAAAAAAAAAAAA");
             word[i].GetComponent<TileCheck>().GetFirstEmptyTile();
             timerReached = false;
             timerSeconds = clearDelay;
@@ -56,13 +52,30 @@ public class WordCheck : MonoBehaviour
             // if player presses Left Arrow, go to previous word
             // check if word.Length > 0
             if (Input.GetKeyDown(KeyCode.LeftArrow) && i > 0)
-              {
-                // assign new tile as player
-                word[i - 1].tag = "Player";
+            {
+              // assign new tile as player
+              word[i - 1].tag = "Player";
 
-                //remove current tile as player
-                word[i].tag = "Untagged";
-              }
+              //remove current tile as player
+              word[i].tag = "Untagged";
+            }
+
+            // if player presses Right Arrow, go to next word
+            // check if key is released to reset to prevent "infinite loop" 
+            
+            if (Input.GetKeyDown(KeyCode.RightArrow) && i < word.Length - 1 && currentIndex == 0)
+            {
+              currentIndex = i + 1;
+              word[currentIndex].tag = "Player";
+
+              //remove current tile as player
+              word[i].tag = "Untagged";
+            }
+            
+            if (Input.GetKeyUp(KeyCode.RightArrow))
+            {
+              currentIndex = 0;
+            }
           }
           
           if (playerAnswer.Length == correctAnswer.Length)
