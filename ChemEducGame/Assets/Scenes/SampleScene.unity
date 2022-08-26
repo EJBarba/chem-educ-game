@@ -1718,7 +1718,7 @@ MonoBehaviour:
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
-  m_Text: E
+  m_Text: 
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
@@ -2379,7 +2379,7 @@ MonoBehaviour:
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
-  m_Text: 
+  m_Text: W
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
@@ -2622,7 +2622,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u200B"
+  m_text: "W\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5ea11006530d7d949b93398a2f330b49, type: 2}
   m_sharedMaterial: {fileID: 405639950723117980, guid: 5ea11006530d7d949b93398a2f330b49, type: 2}
@@ -3573,6 +3573,7 @@ MonoBehaviour:
   - {fileID: 233986678}
   - {fileID: 738605122}
   - {fileID: 774056487}
+  clearDelay: 1
 --- !u!1 &1723377971
 GameObject:
   m_ObjectHideFlags: 0
@@ -3631,7 +3632,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "E\u200B"
+  m_text: "\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5ea11006530d7d949b93398a2f330b49, type: 2}
   m_sharedMaterial: {fileID: 405639950723117980, guid: 5ea11006530d7d949b93398a2f330b49, type: 2}

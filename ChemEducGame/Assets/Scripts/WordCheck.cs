@@ -6,11 +6,14 @@ using UnityEngine.UI;
 
 
 public class WordCheck : MonoBehaviour
-{
-    
+{  
     [SerializeField] GameObject[] word;
     private Image[] currentTileSprites;
-     private Animator[] animator;
+    [SerializeField] float clearDelay = 1f;
+    private float timerSeconds = 1f;
+    private bool timerReached = false;
+    private TMP_InputField[] answer;
+    private Animator[] animator;
 
     void Awake()
     {
@@ -19,23 +22,9 @@ public class WordCheck : MonoBehaviour
         if (word[i].tag == "Player")
         {
           currentTileSprites = word[i].GetComponentsInChildren<Image>();
-          animator = word[i].GetComponentsInChildren<Animator>();
         }
        }
     }
-
-    void Start() 
-    {
-       for (int i = 0; i < word.Length; i++)
-      {
-        if (word[i].tag == "Player")
-        {
-          //activate input field on first empty tile
-          word[i].GetComponent<TileCheck>().GetFirstEmptyTile();
-        }
-       }
-    }
-
 
     void Update()
     {
@@ -45,55 +34,68 @@ public class WordCheck : MonoBehaviour
         {
           string playerAnswer = (word[i].GetComponent<TileCheck>().GetPlayerAnswer());
           string correctAnswer = word[i].GetComponent<TileCheck>().GetCorrectAnswer();
-          if (playerAnswer.Length == correctAnswer.Length)
-            {
-              Debug.Log("equal length");
-              word[i].GetComponent<TileCheck>().CheckAnswer();
-              
-              if (word[i].GetComponent<TileCheck>().isSolved == true)
-              {
-                for (int j = 0; j < currentTileSprites.Length; j++)
-                {
-                  //currentTileSprites[j].sprite = correctTileSprite;
-                  animator[j].SetBool("isSolved", true);
-                  animator[j].SetBool("hasAnswered", true);
-                }
-              }
-              else
-              {
-               for (int j = 0; j < currentTileSprites.Length; j++)
-                {
-                  //currentTileSprites[j].sprite = wrongTileSprite;
-                  animator[j].SetBool("hasAnswered", true);
-                }
-              }     
-            }
-          else
+
+          if (playerAnswer.Length < correctAnswer.Length)
           {
-            //StartCoroutine(WordDelay(neutralTileSprite));
-            for (int j = 0; j < currentTileSprites.Length; j++)
-                {
-                  //currentTileSprites[j].sprite = neutralTileSprite;
-                  animator[j].SetBool("hasAnswered", false);
-                }
+            Debug.Log("AAAAAAAAAAAAAAAAAAAAA");
+            word[i].GetComponent<TileCheck>().GetFirstEmptyTile();
+            timerReached = false;
+            timerSeconds = clearDelay;
           }
-          // Debug.Log("player");
-          // Debug.Log(word[i].GetComponent<TileCheck>().GetCorrectAnswer());
           
-          // Debug.Log(word[i].GetComponent<TileCheck>().GetPlayerAnswer());
-          
-          //word[i].GetComponent<TileCheck>().CheckAnswer();
-          //Debug.Log(word[i].GetComponent<TileCheck>().isSolved);
+          if (playerAnswer.Length == correctAnswer.Length)
+          {
+            Debug.Log("equal length");
+            word[i].GetComponent<TileCheck>().CheckAnswer();
+            animator = word[i].GetComponentsInChildren<Animator>();
+            answer = word[i].GetComponentsInChildren<TMP_InputField>();
+
+            // if correct
+            if (word[i].GetComponent<TileCheck>().isSolved == true)
+            {
+              for (int j = 0; j < animator.Length; j++)
+              {
+                //change into green tile
+                animator[j].SetBool("isSolved", true);
+                animator[j].SetBool("hasAnswered", true);
+
+                //make tile read only
+                answer[j].readOnly = true;
+                
+              }
+            }
+
+            // if wrong
+            else
+            {
+              // change into red tile
+              for (int j = 0; j < animator.Length; j++)
+              {
+                animator[j].SetBool("hasAnswered", true);
+              }
+             
+              //wait timer
+              if (!timerReached)
+              {
+                timerSeconds -= Time.deltaTime;
+                Debug.Log(timerSeconds);
+              }
+               if (!timerReached && timerSeconds < 0)
+              {
+                // change into yellow tile
+              for (int j = 0; j < animator.Length; j++)
+              {
+                answer[j].text = "";
+                animator[j].SetBool("hasAnswered", false);
+              }
+                timerReached = true;
+              }
+              
+              
+            }
+
+          }
         }
       } 
     }
-
-    // IEnumerator WordClear()
-    // {
-    //   yield return new WaitForSeconds(waitTime);
-    //   for (int j = 0; j < currentTileSprites.Length; j++)
-    //     {
-          
-    //     }
-    // }
 }

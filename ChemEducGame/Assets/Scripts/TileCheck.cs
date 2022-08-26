@@ -9,7 +9,6 @@ public class TileCheck : MonoBehaviour
     [SerializeField] GameObject[] answer;
     private  string playerAnswer;
     public bool isSolved = false;
-    [SerializeField] float timeToClear = 1f;
    
    public string GetCorrectAnswer()
    {
@@ -23,7 +22,6 @@ public class TileCheck : MonoBehaviour
         for (int i = 0; i < answer.Length; i++)
         {
             playerAnswer += answer[i].GetComponent<TMP_InputField>().text;
-            //Debug.Log(playerAnswer + ": " + playerAnswer.Length);
         }
         return playerAnswer;
    }
@@ -37,19 +35,11 @@ public class TileCheck : MonoBehaviour
         {
             Debug.Log("Correct!");
             isSolved = true;
-
-            for (int i = 0; i < answer.Length; i++)
-            {
-                answer[i].GetComponent<TileSolveToggle>().TileSolved();
-                answer[i].GetComponent<TMP_InputField>().readOnly = true;
-                Debug.Log(answer[i].GetComponent<TileSolveToggle>().TileState());
-            }
         }
         else
         {
             Debug.Log("Wrong!");
             isSolved = false;
-            StartCoroutine(WordClear()); 
         }
    }
 
@@ -58,24 +48,10 @@ public class TileCheck : MonoBehaviour
     for (int i = 0; i < answer.Length; i++)
         {
             //activate input field on first empty tile
-            if ( answer[i].GetComponent<TMP_InputField>().text == "")
+            if (answer[i].GetComponent<TMP_InputField>().text == "")
             {
                 answer[i].GetComponent<TMP_InputField>().ActivateInputField();
             }
         }
    }
-
-   IEnumerator WordClear()
-    {
-      yield return new WaitForSeconds(timeToClear);
-      
-      for (int i = 0; i < answer.Length; i++)
-            {
-                Debug.Log(answer[i].GetComponent<TileSolveToggle>().TileState());
-                if (answer[i].GetComponent<TileSolveToggle>().TileState() == false)
-                {
-                    answer[i].GetComponent<TMP_InputField>().text = "";
-                }
-            }
-    }
 }
