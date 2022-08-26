@@ -80,7 +80,12 @@ public class WordCheck : MonoBehaviour
               // change into red tile
               for (int j = 0; j < answer.Length; j++)
               {
-                answer[j].GetComponent<Animator>().SetBool("hasAnswered", true);
+                // only change tiles if not solved / not green 
+                if (answer[j].GetComponent<TileSolveToggle>().TileState() == false)
+                {
+                  answer[j].GetComponent<Animator>().SetBool("hasAnswered", true);
+                }
+                
               }
              
               //wait timer
@@ -96,8 +101,13 @@ public class WordCheck : MonoBehaviour
               for (int j = 0; j < answer.Length; j++)
               {
                 //Debug.Log("cleared letter: " + answer[j].GetComponent<TMP_InputField>().text);
-                answer[j].GetComponent<TMP_InputField>().text = "";
-                answer[j].GetComponent<Animator>().SetBool("hasAnswered", false);
+                // only change tiles if not solved / not green
+                if (answer[j].GetComponent<TileSolveToggle>().TileState() == false)
+                {
+                  answer[j].GetComponent<TMP_InputField>().text = "";
+                  answer[j].GetComponent<Animator>().SetBool("hasAnswered", false);
+                }
+                
               }
                 timerReached = true;
               }
