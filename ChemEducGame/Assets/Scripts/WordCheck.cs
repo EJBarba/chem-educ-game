@@ -21,7 +21,7 @@ public class WordCheck : MonoBehaviour
       {
         if (word[i].tag == "Player")
         {
-          currentTileSprites = word[i].GetComponentsInChildren<Image>();
+          answer = word[i].GetComponent<TileCheck>().GetTileGameObjects();
         }
        }
     }
@@ -52,6 +52,17 @@ public class WordCheck : MonoBehaviour
             {
               answer[playerAnswer.Length - 1].GetComponent<TMP_InputField>().text = "";
             }
+
+            // if player presses Left Arrow, go to previous word
+            // check if word.Length > 0
+            if (Input.GetKeyDown(KeyCode.LeftArrow) && i > 0)
+              {
+                // assign new tile as player
+                word[i - 1].tag = "Player";
+
+                //remove current tile as player
+                word[i].tag = "Untagged";
+              }
           }
           
           if (playerAnswer.Length == correctAnswer.Length)
