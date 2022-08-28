@@ -94,6 +94,8 @@ public class WordCheck : MonoBehaviour
 
                 //make tile read only
                 answer[j].GetComponent<TMP_InputField>().readOnly = true;
+                // toggle tile to be solved, to be skipped if tile is shared
+                answer[j].GetComponent<TileSolveToggle>().TileSolved(true);
                 
               }
             }

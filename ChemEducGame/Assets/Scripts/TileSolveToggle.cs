@@ -5,9 +5,9 @@ using UnityEngine;
 public class TileSolveToggle : MonoBehaviour
 {
    public bool isSolved = false;
-   public void TileSolved()
+   public void TileSolved(bool state)
    {
-        isSolved = true;
+        isSolved = state;
    }
    public bool TileState()
    {
