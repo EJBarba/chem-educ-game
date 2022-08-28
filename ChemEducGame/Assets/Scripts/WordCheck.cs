@@ -7,19 +7,20 @@ using UnityEngine.UI;
 
 public class WordCheck : MonoBehaviour
 {  
-    [SerializeField] GameObject[] word;
+    // [SerializeField] GameObject[] word;
+    [SerializeField] List<GameObject> word = new List<GameObject>();
     private Image[] currentTileSprites;
     [SerializeField] float clearDelay = 1f;
     private float timerSeconds = 1f;
     private bool timerReached = false;
     private GameObject[] answer;
     private int currentIndex = 0;
-    ScoreKeeper scoreKeeper;
+    //ScoreKeeper scoreKeeper;
 
     void Awake()
     {
-      scoreKeeper = FindObjectOfType<ScoreKeeper>();
-      for (int i = 0; i < word.Length; i++)
+      //scoreKeeper = FindObjectOfType<ScoreKeeper>();
+      for (int i = 0; i < word.Count; i++)
       {
         if (word[i].tag == "Player")
         {
@@ -30,7 +31,7 @@ public class WordCheck : MonoBehaviour
 
     void Update()
     {
-      for (int i = 0; i < word.Length; i++)
+      for (int i = 0; i < word.Count; i++)
       {
         answer = word[i].GetComponent<TileCheck>().GetTileGameObjects();
 
@@ -38,12 +39,9 @@ public class WordCheck : MonoBehaviour
         if (word[i].tag == "Player" && answer.Length != 0)
         {
           //check if player wins
-        if (scoreKeeper.GetCorrectAnswers() == word.Length)
-        {
-          Debug.Log("SCORE: " + scoreKeeper.GetCorrectAnswers());
-          Debug.Log("WORD LENGTH: " + word.Length);
-          Debug.Log("WIN!");
-        }
+          //Debug.Log("SCORE: " + scoreKeeper.GetCorrectAnswers());
+          Debug.Log("WORD LENGTH: " + word.Count);
+
           string playerAnswer = (word[i].GetComponent<TileCheck>().GetPlayerAnswer());
           string correctAnswer = word[i].GetComponent<TileCheck>().GetCorrectAnswer();
 
@@ -73,7 +71,7 @@ public class WordCheck : MonoBehaviour
             // if player presses Right Arrow, go to next word
             // check if key is released to reset to prevent "infinite loop" 
             
-            if (Input.GetKeyDown(KeyCode.RightArrow) && i < word.Length - 1 && currentIndex == 0)
+            if (Input.GetKeyDown(KeyCode.RightArrow) && i < word.Count - 1 && currentIndex == 0)
             {
               currentIndex = i + 1;
               word[currentIndex].tag = "Player";
@@ -109,17 +107,34 @@ public class WordCheck : MonoBehaviour
 
               }
 
-              // go to next word
-              if (currentIndex == 0)
+              // check if very last word, this means player wins
+              if (word.Count == 1)
               {
-              currentIndex = i + 1;
-              word[currentIndex].tag = "Player";
+                Debug.Log("WIN!");
+              }
 
-              //remove current tile as player
-              word[i].tag = "Untagged";
-              //increment 1 to ScoreKeeper
-              scoreKeeper.IncrementCorrectAnswers();
-              currentIndex = 0;
+              // go to next word
+              else if (currentIndex == 0)
+              {
+                  //increment 1 to ScoreKeeper
+                  //scoreKeeper.IncrementCorrectAnswers();
+                  
+                  currentIndex = i + 1;
+
+                  if (currentIndex < word.Count)
+                  {
+                    word[currentIndex].tag = "Player";
+                  }
+                  else
+                  {
+                    word[0].tag = "Player";
+                  }
+                    
+                  //remove current word as player
+                  //word[i].tag = "Untagged";
+
+                  word.RemoveAt(i);
+                  currentIndex = 0;
               }
               
             }
