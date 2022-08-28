@@ -14,9 +14,11 @@ public class WordCheck : MonoBehaviour
     private bool timerReached = false;
     private GameObject[] answer;
     private int currentIndex = 0;
+    ScoreKeeper scoreKeeper;
 
     void Awake()
     {
+      scoreKeeper = FindObjectOfType<ScoreKeeper>();
       for (int i = 0; i < word.Length; i++)
       {
         if (word[i].tag == "Player")
@@ -32,8 +34,16 @@ public class WordCheck : MonoBehaviour
       {
         answer = word[i].GetComponent<TileCheck>().GetTileGameObjects();
 
+        
         if (word[i].tag == "Player" && answer.Length != 0)
         {
+          //check if player wins
+        if (scoreKeeper.GetCorrectAnswers() == word.Length)
+        {
+          Debug.Log("SCORE: " + scoreKeeper.GetCorrectAnswers());
+          Debug.Log("WORD LENGTH: " + word.Length);
+          Debug.Log("WIN!");
+        }
           string playerAnswer = (word[i].GetComponent<TileCheck>().GetPlayerAnswer());
           string correctAnswer = word[i].GetComponent<TileCheck>().GetCorrectAnswer();
 
@@ -96,8 +106,22 @@ public class WordCheck : MonoBehaviour
                 answer[j].GetComponent<TMP_InputField>().readOnly = true;
                 // toggle tile to be solved, to be skipped if tile is shared
                 answer[j].GetComponent<TileSolveToggle>().TileSolved(true);
-                
+
               }
+
+              // go to next word
+              if (currentIndex == 0)
+              {
+              currentIndex = i + 1;
+              word[currentIndex].tag = "Player";
+
+              //remove current tile as player
+              word[i].tag = "Untagged";
+              //increment 1 to ScoreKeeper
+              scoreKeeper.IncrementCorrectAnswers();
+              currentIndex = 0;
+              }
+              
             }
 
             // if wrong
