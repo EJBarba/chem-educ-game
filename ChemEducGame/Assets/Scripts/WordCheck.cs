@@ -56,7 +56,14 @@ public class WordCheck : MonoBehaviour
             // go to previous tile and delete. Ignore if first tile
             if (Input.GetKeyDown(KeyCode.Backspace) && playerAnswer.Length > 0)
             {
-              answer[playerAnswer.Length - 1].GetComponent<TMP_InputField>().text = "";
+              if (answer[playerAnswer.Length - 1].GetComponent<TMP_InputField>().readOnly == false)
+              {
+                answer[playerAnswer.Length - 1].GetComponent<TMP_InputField>().text = "";
+              }
+              else
+              {
+                  answer[playerAnswer.Length - 2].GetComponent<TMP_InputField>().text = "";
+              }
             }
 
             // if player presses Left Arrow, go to previous word
