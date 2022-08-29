@@ -8,8 +8,8 @@ public class TileCheck : MonoBehaviour
     [SerializeField] string correctAnswer;
     [SerializeField] GameObject[] answer;
     private  string playerAnswer;
- 
     public bool isSolved = false;
+    public string description;
    
    public string GetCorrectAnswer()
    {

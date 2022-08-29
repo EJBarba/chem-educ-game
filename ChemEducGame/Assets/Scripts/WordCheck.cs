@@ -15,7 +15,7 @@ public class WordCheck : MonoBehaviour
     private bool timerReached = false;
     private GameObject[] answer;
     private int currentIndex = 0;
-    //ScoreKeeper scoreKeeper;
+    [SerializeField] TMP_Text description;
 
     void Awake()
     {
@@ -25,6 +25,7 @@ public class WordCheck : MonoBehaviour
         if (word[i].tag == "Player")
         {
           answer = word[i].GetComponent<TileCheck>().GetTileGameObjects();
+          description.text = word[i].GetComponent<TileCheck>().description;
         }
        }
     }
@@ -34,10 +35,11 @@ public class WordCheck : MonoBehaviour
       for (int i = 0; i < word.Count; i++)
       {
         answer = word[i].GetComponent<TileCheck>().GetTileGameObjects();
-
+        
         
         if (word[i].tag == "Player" && answer.Length != 0)
         {
+          description.text = word[i].GetComponent<TileCheck>().description;
           //check if player wins
           //Debug.Log("SCORE: " + scoreKeeper.GetCorrectAnswers());
           Debug.Log("WORD LENGTH: " + word.Count);
