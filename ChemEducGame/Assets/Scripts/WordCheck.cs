@@ -9,7 +9,6 @@ public class WordCheck : MonoBehaviour
 {  
     // [SerializeField] GameObject[] word;
     [SerializeField] List<GameObject> word = new List<GameObject>();
-    private Image[] currentTileSprites;
     [SerializeField] float clearDelay = 1f;
     private float timerSeconds = 1f;
     private bool timerReached = false;
@@ -52,6 +51,7 @@ public class WordCheck : MonoBehaviour
             word[i].GetComponent<TileCheck>().GetFirstEmptyTile();
             timerReached = false;
             timerSeconds = clearDelay;
+            
 
             // go to previous tile and delete. Ignore if first tile
             if (Input.GetKeyDown(KeyCode.Backspace) && playerAnswer.Length > 0)
@@ -151,6 +151,7 @@ public class WordCheck : MonoBehaviour
             // if wrong
             else
             {
+              
               // change into red tile
               for (int j = 0; j < answer.Length; j++)
               {
@@ -158,6 +159,7 @@ public class WordCheck : MonoBehaviour
                 if (answer[j].GetComponent<TileSolveToggle>().TileState() == false)
                 {
                   answer[j].GetComponent<Animator>().SetBool("hasAnswered", true);
+                  answer[j].GetComponent<TMP_InputField>().readOnly = true;
                 }
                 
               }
@@ -180,11 +182,13 @@ public class WordCheck : MonoBehaviour
                 {
                   answer[j].GetComponent<TMP_InputField>().text = "";
                   answer[j].GetComponent<Animator>().SetBool("hasAnswered", false);
+                  answer[j].GetComponent<TMP_InputField>().readOnly = false;
                 }
                 
               }
                 timerReached = true;
               }
+             
             }
 
           }
