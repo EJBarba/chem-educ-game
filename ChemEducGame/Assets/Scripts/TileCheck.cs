@@ -75,6 +75,7 @@ public class TileCheck : MonoBehaviour
                     answer[i].GetComponent<TMP_InputField>().ActivateInputField();
                     //force uppercase
                     answer[i].GetComponent<TMP_InputField>().onValidateInput += delegate (string s, int i, char c) { return char.ToUpper(c); };
+                    break;
                 }
             }
         }

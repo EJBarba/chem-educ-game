@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class WordCheck : MonoBehaviour
 {  
-    // [SerializeField] GameObject[] word;
     [SerializeField] List<GameObject> word = new List<GameObject>();
     [SerializeField] float clearDelay = 1f;
     private float timerSeconds = 1f;
