@@ -15,19 +15,14 @@ public class PlayerPosition : MonoBehaviour
     
     void Update()
     {
-        if (currentGameObjectPlayer != null)
+        if (currentGameObjectPlayer != null && currentGameObjectPlayer.tag == "Player")
         {
             FocusTile();
         }
-        // else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
-        // {
-        //     FindPlayer();
-        //     FocusTile();
-        // }
-        // else
-        // {
-        //     FindPlayer();
-        // }
+        else
+        {
+            FindPlayer();
+        }
         
     }
 
