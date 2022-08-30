@@ -11,6 +11,9 @@ public class TileCheck : MonoBehaviour
     public bool isSolved = false;
     public string description;
    
+    private void Start() {
+        transform.localPosition = new Vector3(0, 0, 0);
+   }
    public string GetCorrectAnswer()
    {
         return correctAnswer;
