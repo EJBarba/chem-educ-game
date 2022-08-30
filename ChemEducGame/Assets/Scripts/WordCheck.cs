@@ -41,7 +41,7 @@ public class WordCheck : MonoBehaviour
           description.text = word[i].GetComponent<TileCheck>().description;
           //check if player wins
           //Debug.Log("SCORE: " + scoreKeeper.GetCorrectAnswers());
-          Debug.Log("WORD LENGTH: " + word.Count);
+          //Debug.Log("WORD LENGTH: " + word.Count);
 
           string playerAnswer = (word[i].GetComponent<TileCheck>().GetPlayerAnswer());
           string correctAnswer = word[i].GetComponent<TileCheck>().GetCorrectAnswer();
@@ -56,13 +56,13 @@ public class WordCheck : MonoBehaviour
             // go to previous tile and delete. Ignore if first tile
             if (Input.GetKeyDown(KeyCode.Backspace) && playerAnswer.Length > 0)
             {
-              if (answer[playerAnswer.Length - 1].GetComponent<TMP_InputField>().readOnly == false)
+              if (answer[playerAnswer.Length - 1].GetComponent<TMP_InputField>().readOnly == false && answer[playerAnswer.Length - 1].GetComponent<TMP_InputField>().text.Length > 0)
               {
                 answer[playerAnswer.Length - 1].GetComponent<TMP_InputField>().text = "";
               }
               else
               {
-                  answer[playerAnswer.Length - 2].GetComponent<TMP_InputField>().text = "";
+                answer[playerAnswer.Length - 2].GetComponent<TMP_InputField>().text = "";
               }
             }
 

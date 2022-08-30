@@ -64,11 +64,11 @@ public class TileCheck : MonoBehaviour
         }
         else
         {
-            Debug.Log(answer.Length);
+            //Debug.Log(answer.Length);
             for (int i = 0; i < answer.Length; i++)
             {
                 //activate input field on first empty tile
-                Debug.Log(answer[i].name);
+                //Debug.Log(answer[i].name);
                 if (answer[i].GetComponent<TMP_InputField>().text == "")
                 {
                     //focus player to type in this tile
