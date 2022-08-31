@@ -141,6 +141,7 @@ public class WordCheck : MonoBehaviour
                   //remove current word as player
                   //word[i].tag = "Untagged";
 
+                  word[i].tag = "Untagged";
                   word.RemoveAt(i);
                   currentIndex = 0;
               }
