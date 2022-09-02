@@ -15,6 +15,7 @@ public class WordCheck : MonoBehaviour
     private int currentIndex = 0;
     [SerializeField] TMP_Text description;
     [SerializeField] GameObject winModal;
+    [SerializeField] GameObject timer;
 
     void Awake()
     {
@@ -109,6 +110,8 @@ public class WordCheck : MonoBehaviour
               {
                 Debug.Log("WIN!");
                 winModal.SetActive(true);
+                timer.SetActive(false);
+                description.text = "";
               }
 
               // go to next word
