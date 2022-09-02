@@ -24,6 +24,7 @@ public class WordCheck : MonoBehaviour
         {
           answer = word[i].GetComponent<TileCheck>().GetTileGameObjects();
           description.text = word[i].GetComponent<TileCheck>().description;
+          break;
         }
        }
     }
@@ -31,16 +32,11 @@ public class WordCheck : MonoBehaviour
     void Update()
     {
       for (int i = 0; i < word.Count; i++)
-      {
-        answer = word[i].GetComponent<TileCheck>().GetTileGameObjects();
-        
-        
+      { 
         if (word[i].tag == "Player" && answer.Length != 0)
         {
+          answer = word[i].GetComponent<TileCheck>().GetTileGameObjects();
           description.text = word[i].GetComponent<TileCheck>().description;
-          //check if player wins
-          //Debug.Log("SCORE: " + scoreKeeper.GetCorrectAnswers());
-          //Debug.Log("WORD LENGTH: " + word.Count);
 
           string playerAnswer = (word[i].GetComponent<TileCheck>().GetPlayerAnswer());
           string correctAnswer = word[i].GetComponent<TileCheck>().GetCorrectAnswer();
@@ -51,18 +47,10 @@ public class WordCheck : MonoBehaviour
             timerReached = false;
             timerSeconds = clearDelay;
             
-
-            // go to previous tile and delete. Ignore if first tile
-            if (Input.GetKeyDown(KeyCode.Backspace) && playerAnswer.Length > 0)
+            // go to previous tile and delete. Ignore if first tile // && playerAnswer.Length > 0
+            if (Input.GetKeyDown(KeyCode.Backspace))
             {
-              if (answer[playerAnswer.Length - 1].GetComponent<TMP_InputField>().readOnly == false && answer[playerAnswer.Length - 1].GetComponent<TMP_InputField>().text.Length > 0)
-              {
-                answer[playerAnswer.Length - 1].GetComponent<TMP_InputField>().text = "";
-              }
-              else
-              {
-                answer[playerAnswer.Length - 2].GetComponent<TMP_InputField>().text = "";
-              }
+              word[i].GetComponent<TileCheck>().DeleteTile();
             }
 
             // if player presses Left Arrow, go to previous word
@@ -96,7 +84,7 @@ public class WordCheck : MonoBehaviour
           
           if (playerAnswer.Length == correctAnswer.Length)
           {
-            Debug.Log("equal length");
+            Debug.Log(word[i].GetComponent<TileCheck>().GetPlayerAnswer());
             word[i].GetComponent<TileCheck>().CheckAnswer();
 
             // if correct
@@ -174,24 +162,22 @@ public class WordCheck : MonoBehaviour
               {
                 // change into yellow tile
               
-              for (int j = 0; j < answer.Length; j++)
-              {
-                //Debug.Log("cleared letter: " + answer[j].GetComponent<TMP_InputField>().text);
-                // only change tiles if not solved / not green
-                if (answer[j].GetComponent<TileSolveToggle>().TileState() == false)
+                for (int j = 0; j < answer.Length; j++)
                 {
-                  answer[j].GetComponent<TMP_InputField>().text = "";
-                  answer[j].GetComponent<Animator>().SetBool("hasAnswered", false);
-                  answer[j].GetComponent<TMP_InputField>().readOnly = false;
+                  //Debug.Log("cleared letter: " + answer[j].GetComponent<TMP_InputField>().text);
+                  // only change tiles if not solved / not green
+                  if (answer[j].GetComponent<TileSolveToggle>().TileState() == false)
+                  {
+                    answer[j].GetComponent<TMP_InputField>().text = "";
+                    answer[j].GetComponent<Animator>().SetBool("hasAnswered", false);
+                    answer[j].GetComponent<TMP_InputField>().readOnly = false;
+                  }
                 }
-                
-              }
                 timerReached = true;
               }
-             
             }
-
           }
+          break;
         }
       } 
     }

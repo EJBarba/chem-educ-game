@@ -10,6 +10,7 @@ public class TileCheck : MonoBehaviour
     private  string playerAnswer;
     public bool isSolved = false;
     public string description;
+    private int tileIndex = 0;
    
     private void Start() {
         transform.localPosition = new Vector3(0, 0, 0);
@@ -24,7 +25,20 @@ public class TileCheck : MonoBehaviour
         return answer;
    }
 
- 
+    public void DeleteTile()
+    {
+        if (tileIndex != 0)
+        {
+            if(answer[tileIndex - 1].GetComponent<TMP_InputField>().readOnly == false)
+            {
+            answer[tileIndex - 1].GetComponent<TMP_InputField>().text = "";
+            } 
+            else
+            {
+                answer[tileIndex - 2].GetComponent<TMP_InputField>().text = "";
+            }
+        }        
+    }
 
    public string GetPlayerAnswer()
    {
@@ -44,12 +58,12 @@ public class TileCheck : MonoBehaviour
 
         if (playerAnswer == correctAnswer)
         {
-            Debug.Log("Correct!");
+            //Debug.Log("Correct!");
             isSolved = true;
         }
         else
         {
-            Debug.Log("Wrong!");
+            //Debug.Log("Wrong!");
             isSolved = false;
         }
    }
@@ -74,6 +88,7 @@ public class TileCheck : MonoBehaviour
                 //Debug.Log(answer[i].name);
                 if (answer[i].GetComponent<TMP_InputField>().text == "")
                 {
+                    tileIndex = i;
                     //focus player to type in this tile
                     answer[i].GetComponent<TMP_InputField>().ActivateInputField();
                     //force uppercase

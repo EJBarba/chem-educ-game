@@ -2982,6 +2982,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1538516815}
     m_Modifications:
+    - target: {fileID: 1581983284518590353, guid: 37562f5620b02de4fa6919bafb7e4312, type: 3}
+      propertyPath: isSolved
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1581983284518590357, guid: 37562f5620b02de4fa6919bafb7e4312, type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1581983284518590357, guid: 37562f5620b02de4fa6919bafb7e4312, type: 3}
+      propertyPath: m_ReadOnly
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1581983284518590358, guid: 37562f5620b02de4fa6919bafb7e4312, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4190,6 +4202,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1538516815}
     m_Modifications:
+    - target: {fileID: 1581983284518590353, guid: 37562f5620b02de4fa6919bafb7e4312, type: 3}
+      propertyPath: isSolved
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1581983284518590357, guid: 37562f5620b02de4fa6919bafb7e4312, type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1581983284518590357, guid: 37562f5620b02de4fa6919bafb7e4312, type: 3}
+      propertyPath: m_ReadOnly
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1581983284518590358, guid: 37562f5620b02de4fa6919bafb7e4312, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4640,6 +4664,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1538516815}
     m_Modifications:
+    - target: {fileID: 1581983284518590353, guid: 37562f5620b02de4fa6919bafb7e4312, type: 3}
+      propertyPath: isSolved
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1581983284518590357, guid: 37562f5620b02de4fa6919bafb7e4312, type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1581983284518590357, guid: 37562f5620b02de4fa6919bafb7e4312, type: 3}
+      propertyPath: m_ReadOnly
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1581983284518590358, guid: 37562f5620b02de4fa6919bafb7e4312, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
