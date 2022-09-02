@@ -14,6 +14,7 @@ public class WordCheck : MonoBehaviour
     private GameObject[] answer;
     private int currentIndex = 0;
     [SerializeField] TMP_Text description;
+    [SerializeField] GameObject winModal;
 
     void Awake()
     {
@@ -107,6 +108,7 @@ public class WordCheck : MonoBehaviour
               if (word.Count == 1)
               {
                 Debug.Log("WIN!");
+                winModal.SetActive(true);
               }
 
               // go to next word
