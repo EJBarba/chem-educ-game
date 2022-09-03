@@ -3039,9 +3039,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 739680325}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 698369284}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   hours: 0
-  minutes: 0
-  seconds: 3
+  minutes: 10
+  seconds: 0
   startAtRuntime: 1
   hoursDisplay: 0
   minutesDisplay: 1
@@ -3052,7 +3076,7 @@ MonoBehaviour:
   textMeshProText: {fileID: 739680327}
   standardSlider: {fileID: 0}
   dialSlider: {fileID: 0}
-  timeRemaining: 3
+  timeRemaining: 600
 --- !u!114 &420881702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9595,6 +9619,7 @@ MonoBehaviour:
   description: {fileID: 1952488627}
   winModal: {fileID: 1834123856}
   timer: {fileID: 420881699}
+  pauseButton: {fileID: 698369284}
 --- !u!114 &1538516817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13404,6 +13429,12 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: bgmusicdefeat
     clip: {fileID: 8300000, guid: 3aefdbb34dbb135419a17b4e399ae89c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bgmusicvictory
+    clip: {fileID: 8300000, guid: 113cea0c78e54f640a15301df900d2d2, type: 3}
     volume: 1
     pitch: 1
     loop: 0

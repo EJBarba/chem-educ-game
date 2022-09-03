@@ -16,6 +16,8 @@ public class WordCheck : MonoBehaviour
     [SerializeField] TMP_Text description;
     [SerializeField] GameObject winModal;
     [SerializeField] GameObject timer;
+    [SerializeField] GameObject pauseButton;
+    private bool isPlayed = false;
 
     void Awake()
     {
@@ -109,8 +111,16 @@ public class WordCheck : MonoBehaviour
               if (word.Count == 1)
               {
                 Debug.Log("WIN!");
+                if(isPlayed == false)
+                {
+                  FindObjectOfType<AudioManager>().Stop("bgmusic1");
+                  FindObjectOfType<AudioManager>().Play("bgmusicvictory");
+                  isPlayed = true;
+                }
+                
                 winModal.SetActive(true);
                 timer.SetActive(false);
+                pauseButton.SetActive(false);
                 description.text = "";
               }
 

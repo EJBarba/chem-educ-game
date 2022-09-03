@@ -186,7 +186,6 @@ public class Timer : MonoBehaviour
         else
         {
             //Timer has ended from counting downwards
-            Debug.Log("STAP");
             FindObjectOfType<AudioManager>().Stop("bgmusic1");
             FindObjectOfType<AudioManager>().Play("bgmusicdefeat");
             timeRemaining = 0;
