@@ -68,6 +68,10 @@ public class TileCheck : MonoBehaviour
         else
         {
             //Debug.Log("Wrong!");
+            if (Input.anyKeyDown)
+            {
+                FindObjectOfType<AudioManager>().Play("wordwrong");               
+            }
             isSolved = false;
         }
    }

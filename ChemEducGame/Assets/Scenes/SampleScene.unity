@@ -13423,7 +13423,7 @@ MonoBehaviour:
   sounds:
   - name: bgmusic1
     clip: {fileID: 8300000, guid: e7fa4c00e1248e54282a1f871213ca3b, type: 3}
-    volume: 1
+    volume: 0.2
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -13447,6 +13447,12 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: tilesfx
     clip: {fileID: 8300000, guid: a018248ac39db884786ed4d74fb77983, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: wordwrong
+    clip: {fileID: 8300000, guid: 02c92d7ea750fbf48882ccc7ee0d7542, type: 3}
     volume: 1
     pitch: 1
     loop: 0
