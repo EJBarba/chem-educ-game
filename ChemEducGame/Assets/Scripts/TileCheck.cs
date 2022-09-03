@@ -11,7 +11,6 @@ public class TileCheck : MonoBehaviour
     public bool isSolved = false;
     public string description;
     private int tileIndex = 0;
-    private bool isPlayed = false;
    
     private void Start() {
         transform.localPosition = new Vector3(0, 0, 0);
@@ -60,10 +59,9 @@ public class TileCheck : MonoBehaviour
         if (playerAnswer == correctAnswer)
         {
             //Debug.Log("Correct!");
-            if (isPlayed == false)
+            if (Input.anyKeyDown)
             {
-                FindObjectOfType<AudioManager>().Play("wordcorrect");
-                isPlayed = true;                
+                FindObjectOfType<AudioManager>().Play("wordcorrect");               
             }
             isSolved = true;
         }
@@ -94,6 +92,10 @@ public class TileCheck : MonoBehaviour
                 //Debug.Log(answer[i].name);
                 if (answer[i].GetComponent<TMP_InputField>().text == "")
                 {
+                    if (Input.anyKeyDown)
+                    {
+                        FindObjectOfType<AudioManager>().Play("tilesfx");
+                    }
                     tileIndex = i;
                     //focus player to type in this tile
                     answer[i].GetComponent<TMP_InputField>().ActivateInputField();
