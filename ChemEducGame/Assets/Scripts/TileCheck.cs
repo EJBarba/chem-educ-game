@@ -11,6 +11,7 @@ public class TileCheck : MonoBehaviour
     public bool isSolved = false;
     public string description;
     private int tileIndex = 0;
+    private bool isPlayed = false;
    
     private void Start() {
         transform.localPosition = new Vector3(0, 0, 0);
@@ -59,6 +60,11 @@ public class TileCheck : MonoBehaviour
         if (playerAnswer == correctAnswer)
         {
             //Debug.Log("Correct!");
+            if (isPlayed == false)
+            {
+                FindObjectOfType<AudioManager>().Play("wordcorrect");
+                isPlayed = true;                
+            }
             isSolved = true;
         }
         else

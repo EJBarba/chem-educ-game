@@ -13439,3 +13439,9 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: wordcorrect
+    clip: {fileID: 8300000, guid: 7b46f8e0ce6266543b8d58a7a53fc92f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
