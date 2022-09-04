@@ -13,4 +13,8 @@ public class SceneHandler : MonoBehaviour
     {
         SceneManager.LoadScene("Home");
     }
+    public void Crossword()
+    {
+        SceneManager.LoadScene("Crossword");
+    }
 }
