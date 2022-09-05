@@ -18,10 +18,13 @@ public class WordCheck : MonoBehaviour
     [SerializeField] GameObject timer;
     [SerializeField] GameObject pauseButton;
     private bool isPlayed = false;
+    private int winTime = 0;
+    private bool playerWin = false;
+    public PlayFabManager playFabManager;
 
     void Awake()
     {
-      //scoreKeeper = FindObjectOfType<ScoreKeeper>();
+      playFabManager = GameObject.Find("PLAYER").GetComponent<PlayFabManager>();
       for (int i = 0; i < word.Count; i++)
       {
         if (word[i].tag == "Player")
@@ -37,7 +40,7 @@ public class WordCheck : MonoBehaviour
     {
       for (int i = 0; i < word.Count; i++)
       { 
-        if (word[i].tag == "Player" && answer.Length != 0)
+        if (word[i].tag == "Player" && answer.Length != 0 && playerWin != true)
         {
           answer = word[i].GetComponent<TileCheck>().GetTileGameObjects();
           description.text = word[i].GetComponent<TileCheck>().description;
@@ -118,10 +121,13 @@ public class WordCheck : MonoBehaviour
                   isPlayed = true;
                 }
                 
+                winTime = (int)timer.GetComponent<Timer>().timeRemaining;
+                playFabManager.SendLeaderBoard(winTime);
                 winModal.SetActive(true);
                 timer.SetActive(false);
                 pauseButton.SetActive(false);
                 description.text = "";
+                playerWin = true;
               }
 
               // go to next word
