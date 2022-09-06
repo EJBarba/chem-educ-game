@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using PlayFab;
 using PlayFab.ClientModels;
+using TMPro;
 
 public class PlayFabManager : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject rowPrefab;
+    public Transform rowsParent;
+    
     void Start()
     {
         Login();
@@ -78,6 +82,12 @@ public class PlayFabManager : MonoBehaviour
     {
         foreach (var item in result.Leaderboard)
         {
+            GameObject newRow = Instantiate(rowPrefab, rowsParent);
+            TMP_Text[] texts = newRow.GetComponentsInChildren<TMP_Text>();
+            texts[0].text = item.Position.ToString();
+            texts[1].text = item.PlayFabId;
+            texts[2].text = item.StatValue.ToString();
+            
             Debug.Log(item.Position + " " + item.PlayFabId + " " + item.StatValue);
         }
     }
