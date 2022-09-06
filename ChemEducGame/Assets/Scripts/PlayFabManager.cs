@@ -17,14 +17,23 @@ public class PlayFabManager : MonoBehaviour
         var request = new LoginWithCustomIDRequest
             {
                 CustomId = SystemInfo.deviceUniqueIdentifier,
-                CreateAccount = true        
+                CreateAccount = true,
+                InfoRequestParameters = new GetPlayerCombinedInfoRequestParams
+                {
+                    GetPlayerProfile = true
+                }        
             };
-        PlayFabClientAPI.LoginWithCustomID(request, OnSuccess, OnError);
+        PlayFabClientAPI.LoginWithCustomID(request, OnLoginSuccess, OnError);
     }
 
-    void OnSuccess(LoginResult result)
+    void OnLoginSuccess(LoginResult result)
     {
         Debug.Log("Successful login/account creation!");
+        string name = null;
+        if (result.InfoResultPayload.PlayerProfile != null)
+        {
+            name = result.InfoResultPayload.PlayerProfile.DisplayName;   
+        }
     }
 
     void OnError(PlayFabError error)

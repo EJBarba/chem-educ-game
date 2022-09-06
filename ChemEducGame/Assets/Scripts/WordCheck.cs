@@ -20,11 +20,15 @@ public class WordCheck : MonoBehaviour
     private bool isPlayed = false;
     private int winTime = 0;
     private bool playerWin = false;
+    [HideInInspector]
     public PlayFabManager playFabManager;
+    [HideInInspector]
+    public ScoreKeeper scoreKeeper;
 
     void Awake()
     {
       playFabManager = GameObject.Find("PLAYER").GetComponent<PlayFabManager>();
+      scoreKeeper = GameObject.Find("PLAYER").GetComponent<ScoreKeeper>();
       for (int i = 0; i < word.Count; i++)
       {
         if (word[i].tag == "Player")
@@ -122,7 +126,12 @@ public class WordCheck : MonoBehaviour
                 }
                 
                 winTime = (int)timer.GetComponent<Timer>().timeRemaining;
+                
+                //display score in winModal, record if highscore 
+                scoreKeeper.RecordScore(winTime);
+                //online leaderboards
                 playFabManager.SendLeaderBoard(winTime);
+
                 winModal.SetActive(true);
                 timer.SetActive(false);
                 pauseButton.SetActive(false);
@@ -132,10 +141,7 @@ public class WordCheck : MonoBehaviour
 
               // go to next word
               else if (currentIndex == 0)
-              {
-                  //increment 1 to ScoreKeeper
-                  //scoreKeeper.IncrementCorrectAnswers();
-                  
+              {                  
                   currentIndex = i + 1;
 
                   if (currentIndex < word.Count)
