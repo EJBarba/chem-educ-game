@@ -1,18 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class ScoreKeeper : MonoBehaviour
 {
-    int correctAnswers = 0;
+    public TMP_Text scoreText;
+    public TMP_Text highScoreText;
 
-    public int GetCorrectAnswers()
-    {
-        return correctAnswers;
+    int score = 0;
+    int highScore = 0;
+
+    private void Start() {
+        highScore = PlayerPrefs.GetInt("highscore", 0);
+        scoreText.text ="SCORE: " + score.ToString();
+        highScoreText.text ="HIGH SCORE: " + highScore.ToString();
     }
 
-    public void IncrementCorrectAnswers()
+    public void RecordScore(int newScore)
     {
-        correctAnswers++;
-    }
+        scoreText.text = "SCORE: " + newScore.ToString();
+        if (newScore > highScore)
+        {
+            PlayerPrefs.SetInt("highscore", newScore);
+            highScoreText.text = "HIGH SCORE: " + newScore.ToString();
+        }
+        else
+        {
+            highScoreText.text = "HIGH SCORE: " + highScore.ToString();
+        }
+        
+        
+        
+    }    
 }
