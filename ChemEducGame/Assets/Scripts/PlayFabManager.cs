@@ -10,6 +10,10 @@ public class PlayFabManager : MonoBehaviour
     // Start is called before the first frame update
     public GameObject rowPrefab;
     public Transform rowsParent;
+    public GameObject playerNameForm;
+    public GameObject leaderboardTable;
+    public GameObject refreshButton;
+    public TMP_InputField playerNameInput;
     
     void Start()
     {
@@ -38,6 +42,33 @@ public class PlayFabManager : MonoBehaviour
         {
             name = result.InfoResultPayload.PlayerProfile.DisplayName;   
         }
+        if (name == null)
+        {
+            leaderboardTable.SetActive(false);
+            refreshButton.SetActive(false);
+            playerNameForm.SetActive(true);
+        }
+        else
+        {
+            GetLeaderboard();
+        }
+    }
+
+    public void SubmitNameButton()
+    {
+        var request = new UpdateUserTitleDisplayNameRequest
+        {
+            DisplayName = playerNameInput.text
+        };
+        PlayFabClientAPI.UpdateUserTitleDisplayName(request, OnDisplayNameUpdate, OnError);
+    }
+
+    void OnDisplayNameUpdate(UpdateUserTitleDisplayNameResult result)
+    {
+        Debug.Log("Updated display name!");
+        leaderboardTable.SetActive(true);
+        refreshButton.SetActive(true);
+        playerNameForm.SetActive(false);
     }
 
     void OnError(PlayFabError error)
@@ -80,12 +111,15 @@ public class PlayFabManager : MonoBehaviour
 
     void OnLeaderboardGet(GetLeaderboardResult result)
     {
+         foreach (Transform child in leaderboardTable.transform) {
+            GameObject.Destroy(child.gameObject);
+        }
         foreach (var item in result.Leaderboard)
         {
             GameObject newRow = Instantiate(rowPrefab, rowsParent);
             TMP_Text[] texts = newRow.GetComponentsInChildren<TMP_Text>();
-            texts[0].text = item.Position.ToString();
-            texts[1].text = item.PlayFabId;
+            texts[0].text = (item.Position + 1).ToString();
+            texts[1].text = item.DisplayName;
             texts[2].text = item.StatValue.ToString();
             
             Debug.Log(item.Position + " " + item.PlayFabId + " " + item.StatValue);
