@@ -4710,7 +4710,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1538516815}
-  m_RootOrder: 82
+  m_RootOrder: 79
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4996,7 +4996,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 544.29
+  orthographic size: 820
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -11486,10 +11486,10 @@ RectTransform:
   - {fileID: 1168452768}
   - {fileID: 690026039}
   - {fileID: 364958597}
+  - {fileID: 497784528}
   - {fileID: 311683252}
   - {fileID: 1399796943}
   - {fileID: 1326031412}
-  - {fileID: 497784528}
   - {fileID: 639941517}
   - {fileID: 943832439}
   - {fileID: 555933630}
@@ -16204,7 +16204,7 @@ MonoBehaviour:
   m_Follow: {fileID: 687136531}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 544.29
+    OrthographicSize: 820
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
