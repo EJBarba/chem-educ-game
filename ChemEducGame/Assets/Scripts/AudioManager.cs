@@ -31,5 +31,29 @@ public class AudioManager : MonoBehaviour
         s.source.Stop();
     }
 
+    public void MusicVolume (float volume)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == "bgmusic1");
+        // check for playerprefs
+
+        s.source.volume = volume;
+    }
+     public void SfxVolume (float volume)
+    {
+         string[] sfxArray = { "wordcorrect", "wordwrong", "tilesfx"};
+         foreach (Sound sound in sounds)
+         {
+             foreach (var sfx in sfxArray)
+             {
+                if (sound.name == sfx)
+                {
+                    sound.source.volume = volume;
+                }
+             }
+         }
+
+    }
+
+
 
 }
