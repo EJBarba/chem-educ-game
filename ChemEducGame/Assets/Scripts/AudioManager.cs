@@ -31,6 +31,12 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    void Start() 
+    {
+        MusicVolume(PlayerPrefs.GetFloat("musicvolume", 1));
+        SfxVolume(PlayerPrefs.GetFloat("sfxvolume", 1));    
+    }
+
     public void Play(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
@@ -52,6 +58,7 @@ public class AudioManager : MonoBehaviour
                 if (sound.name == music)
                 {
                     sound.source.volume = volume;
+                    PlayerPrefs.SetFloat("musicvolume", volume);
                 }
              }
          }
@@ -66,6 +73,7 @@ public class AudioManager : MonoBehaviour
                 if (sound.name == sfx)
                 {
                     sound.source.volume = volume;
+                    PlayerPrefs.SetFloat("sfxvolume", volume);
                 }
              }
          }

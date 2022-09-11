@@ -12,7 +12,9 @@ public class VolumeSettings : MonoBehaviour
     {
         audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         musicSlider.onValueChanged.AddListener(audioManager.MusicVolume);
+        musicSlider.value = PlayerPrefs.GetFloat("musicvolume", 1);
         sfxSlider.onValueChanged.AddListener(audioManager.SfxVolume);
+        sfxSlider.value = PlayerPrefs.GetFloat("sfxvolume", 1);
     }
 
 }
