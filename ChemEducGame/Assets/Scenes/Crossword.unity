@@ -15456,6 +15456,7 @@ GameObject:
   - component: {fileID: 1818087718}
   - component: {fileID: 1818087717}
   - component: {fileID: 1818087716}
+  - component: {fileID: 1818087719}
   m_Layer: 5
   m_Name: Map Button
   m_TagString: Untagged
@@ -15566,6 +15567,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1818087714}
   m_CullTransparentMesh: 1
+--- !u!114 &1818087719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818087714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5309fd600695eed48a6dbaeb1f128d22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 2140310244}
+  mapCamera: {fileID: 1792855706}
+  cameraButton: {fileID: 1818087716}
 --- !u!1 &1825188619 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1581983284518590359, guid: 37562f5620b02de4fa6919bafb7e4312, type: 3}
