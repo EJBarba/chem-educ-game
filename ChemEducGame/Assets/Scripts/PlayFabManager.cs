@@ -11,10 +11,7 @@ public class PlayFabManager : MonoBehaviour
     public GameObject rowPrefab;
     public Transform rowsParent;
     public GameObject leaderboardTable;
-    //public GameObject refreshButton;
-    //public TMP_InputField playerNameInput;
-    //public GameObject crossWordButton;
-    //public GameObject playerNamePanel;
+
     [Header("Form")]
     public GameObject formPanel;
     public TMP_Text messageText;
@@ -34,13 +31,14 @@ public class PlayFabManager : MonoBehaviour
     public GameObject archeryButton;
     public GameObject loginsignupButton;
     public TMP_Text welcomeText;
+    public GameObject logoutButton;
     void Start()
     {
         //Login();
         if (PlayerPrefs.GetString("email").Length > 0 && PlayerPrefs.GetString("password").Length > 0  )
         {
+            logoutButton.SetActive(true);
             LoginPlayerPrefs();
-            GetLeaderboard();
         }
     }
 
@@ -84,29 +82,11 @@ public class PlayFabManager : MonoBehaviour
             crosswordButton.SetActive(true);
             archeryButton.SetActive(true);
             loginsignupButton.SetActive(true);
+            logoutButton.SetActive(true);
         }
         
+        GetLeaderboard();
         
-
-        // string name = null;
-        // if (result.InfoResultPayload.PlayerProfile != null)
-        // {
-        //     name = result.InfoResultPayload.PlayerProfile.DisplayName;
-        //     welcomeText.text = "Welcome " + name + " !";   
-        // }
-        // if (name == null)
-        // {
-        //     // leaderboardTable.SetActive(false);
-        //     // refreshButton.SetActive(false);
-        //     //playerNameForm.SetActive(true);
-
-        //     //playerNamePanel.SetActive(true);
-        //     //crossWordButton.SetActive(false);
-        // }
-        // else
-        // {
-        //     GetLeaderboard();
-        // }
     }
 
     // public void SubmitUserName()
@@ -121,12 +101,6 @@ public class PlayFabManager : MonoBehaviour
     void OnDisplayNameUpdate(UpdateUserTitleDisplayNameResult result)
     {
         Debug.Log("Updated display name!");
-        // leaderboardTable.SetActive(true);
-        // refreshButton.SetActive(true);
-        //playerNameForm.SetActive(false);
-        
-        //playerNamePanel.SetActive(false);
-        //crossWordButton.SetActive(true);
     }
 
     void OnError(PlayFabError error)
@@ -241,5 +215,13 @@ public class PlayFabManager : MonoBehaviour
             InfoRequestParameters = new GetPlayerCombinedInfoRequestParams { GetPlayerProfile = true }
         };
         PlayFabClientAPI.LoginWithEmailAddress(request, OnLoginSuccess, OnError);
+    }
+
+    public void LogoutButton()
+    {
+         PlayerPrefs.DeleteKey("email");
+         PlayerPrefs.DeleteKey("password");
+         welcomeText.text = "";
+         logoutButton.SetActive(false);
     }
 }
