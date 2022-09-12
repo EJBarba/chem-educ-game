@@ -17,4 +17,9 @@ public class SceneHandler : MonoBehaviour
     {
         SceneManager.LoadScene("Crossword");
     }
+
+    public void Archery()
+    {
+        SceneManager.LoadScene("Archery");
+    }
 }
