@@ -7,17 +7,39 @@ using TMPro;
 
 public class PlayFabManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [Header("Leaderboard")]
     public GameObject rowPrefab;
     public Transform rowsParent;
-    public GameObject playerNameForm;
     public GameObject leaderboardTable;
-    public GameObject refreshButton;
-    public TMP_InputField playerNameInput;
+
+    [Header("Form")]
+    public GameObject formPanel;
+    public TMP_Text messageText;
+
+    [Header("Sign Up Form")]
+    public TMP_InputField signUpEmailInputField;
+    public TMP_InputField signUpUsernameInputField;
+    public TMP_InputField signUpPasswordInputField;
+
+    [Header("Log In Form")]
+    public TMP_InputField logInEmailInputField;
+    public TMP_InputField logInPasswordInputField;
+  
     
+    [Header("Menu")]
+    public GameObject crosswordButton;
+    public GameObject archeryButton;
+    public GameObject loginsignupButton;
+    public TMP_Text welcomeText;
+    public GameObject logoutButton;
     void Start()
     {
-        Login();
+        //Login();
+        if (PlayerPrefs.GetString("email").Length > 0 && PlayerPrefs.GetString("password").Length > 0  )
+        {
+            logoutButton.SetActive(true);
+            LoginPlayerPrefs();
+        }
     }
 
     void Login()
@@ -37,44 +59,55 @@ public class PlayFabManager : MonoBehaviour
     void OnLoginSuccess(LoginResult result)
     {
         Debug.Log("Successful login/account creation!");
+
+        messageText.text = "";
         string name = null;
+        // check if player profile exists, so it wont crash
         if (result.InfoResultPayload.PlayerProfile != null)
         {
-            name = result.InfoResultPayload.PlayerProfile.DisplayName;   
+            name = result.InfoResultPayload.PlayerProfile.DisplayName;
+            welcomeText.text = "Welcome " + name + " !"; 
         }
-        if (name == null)
+
+        // check if PlayerPrefs is empty
+        if (PlayerPrefs.GetString("email").Length <= 0 && PlayerPrefs.GetString("password").Length <= 0  )
         {
-            leaderboardTable.SetActive(false);
-            refreshButton.SetActive(false);
-            playerNameForm.SetActive(true);
+            PlayerPrefs.SetString("email", logInEmailInputField.text);
+            PlayerPrefs.SetString("password", logInPasswordInputField.text);
+            logInEmailInputField.text = "";
+            logInPasswordInputField.text = "";
+
+            formPanel.SetActive(false);
+
+            crosswordButton.SetActive(true);
+            archeryButton.SetActive(true);
+            loginsignupButton.SetActive(true);
+            logoutButton.SetActive(true);
         }
-        else
-        {
-            GetLeaderboard();
-        }
+        
+        GetLeaderboard();
+        
     }
 
-    public void SubmitNameButton()
-    {
-        var request = new UpdateUserTitleDisplayNameRequest
-        {
-            DisplayName = playerNameInput.text
-        };
-        PlayFabClientAPI.UpdateUserTitleDisplayName(request, OnDisplayNameUpdate, OnError);
-    }
+    // public void SubmitUserName()
+    // {
+    //     var request = new UpdateUserTitleDisplayNameRequest
+    //     {
+    //         DisplayName = usernameInputField.text
+    //     };
+    //     PlayFabClientAPI.UpdateUserTitleDisplayName(request, OnDisplayNameUpdate, OnError);
+    // }
 
     void OnDisplayNameUpdate(UpdateUserTitleDisplayNameResult result)
     {
         Debug.Log("Updated display name!");
-        leaderboardTable.SetActive(true);
-        refreshButton.SetActive(true);
-        playerNameForm.SetActive(false);
     }
 
     void OnError(PlayFabError error)
     {
         Debug.Log("Error while logging in/creating account");
         Debug.Log(error.GenerateErrorReport());
+        messageText.text = (error.ErrorMessage);
     }
 
     public void SendLeaderBoard(int score)
@@ -124,5 +157,72 @@ public class PlayFabManager : MonoBehaviour
             
             Debug.Log(item.Position + " " + item.PlayFabId + " " + item.StatValue);
         }
+    }
+
+    public void RegisterButton()
+    {
+        messageText.text = "";
+        if (signUpPasswordInputField.text.Length < 6)
+        {
+            messageText.text = "Password too short.";
+            return;
+        }
+        var request = new RegisterPlayFabUserRequest
+        {
+            Email = signUpEmailInputField.text,
+            DisplayName = signUpUsernameInputField.text,
+            Password = signUpPasswordInputField.text,
+            RequireBothUsernameAndEmail = false
+        };
+        PlayFabClientAPI.RegisterPlayFabUser(request, OnRegisterSuccess, OnError);
+        
+    }
+
+    void OnRegisterSuccess(RegisterPlayFabUserResult result)
+    {
+        Debug.Log("Successfully registered and logged in!");
+        messageText.text = "";
+        welcomeText.text = "Welcome " + signUpUsernameInputField.text + " !"; 
+
+        signUpEmailInputField.text = "";
+        signUpUsernameInputField.text = "";
+        signUpPasswordInputField.text = "";
+        
+        formPanel.SetActive(false);
+
+        crosswordButton.SetActive(true);
+        archeryButton.SetActive(true);
+        loginsignupButton.SetActive(true);
+    }
+
+    public void LoginButton()
+    {
+        var request = new LoginWithEmailAddressRequest()
+        {
+            Email = logInEmailInputField.text,
+            Password = logInPasswordInputField.text,
+            InfoRequestParameters = new GetPlayerCombinedInfoRequestParams { GetPlayerProfile = true }
+        };
+        PlayFabClientAPI.LoginWithEmailAddress(request, OnLoginSuccess, OnError);
+    }
+
+    public void LoginPlayerPrefs()
+    {
+        var request = new LoginWithEmailAddressRequest()
+        {
+            Email = PlayerPrefs.GetString("email"),
+            Password = PlayerPrefs.GetString("password"),
+            InfoRequestParameters = new GetPlayerCombinedInfoRequestParams { GetPlayerProfile = true }
+        };
+        PlayFabClientAPI.LoginWithEmailAddress(request, OnLoginSuccess, OnError);
+    }
+
+    public void LogoutButton()
+    {
+         PlayerPrefs.DeleteKey("email");
+         PlayerPrefs.DeleteKey("password");
+         PlayerPrefs.DeleteKey("highscore");
+         welcomeText.text = "";
+         logoutButton.SetActive(false);
     }
 }

@@ -17,6 +17,9 @@ public class WordCheck : MonoBehaviour
     [SerializeField] GameObject winModal;
     [SerializeField] GameObject timer;
     [SerializeField] GameObject pauseButton;
+    [SerializeField] GameObject mapButton;
+    [SerializeField] GameObject tutorialButton;
+    [SerializeField] GameObject descriptionBackground;
     private bool isPlayed = false;
     private int winTime = 0;
     private bool playerWin = false;
@@ -24,11 +27,13 @@ public class WordCheck : MonoBehaviour
     public PlayFabManager playFabManager;
     [HideInInspector]
     public ScoreKeeper scoreKeeper;
-
+    AudioManager audioManager;
     void Awake()
     {
       playFabManager = GameObject.Find("PLAYER").GetComponent<PlayFabManager>();
       scoreKeeper = GameObject.Find("PLAYER").GetComponent<ScoreKeeper>();
+      audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+
       for (int i = 0; i < word.Count; i++)
       {
         if (word[i].tag == "Player")
@@ -38,6 +43,12 @@ public class WordCheck : MonoBehaviour
           break;
         }
        }
+    }
+
+    void Start() 
+    {
+      audioManager.Stop("bgmusicmainmenu");
+      audioManager.Play("bgmusic1");
     }
 
     void Update()
@@ -120,8 +131,8 @@ public class WordCheck : MonoBehaviour
                 Debug.Log("WIN!");
                 if(isPlayed == false)
                 {
-                  FindObjectOfType<AudioManager>().Stop("bgmusic1");
-                  FindObjectOfType<AudioManager>().Play("bgmusicvictory");
+                  audioManager.Stop("bgmusic1");
+                  audioManager.Play("bgmusicvictory");
                   isPlayed = true;
                 }
                 
@@ -135,6 +146,9 @@ public class WordCheck : MonoBehaviour
                 winModal.SetActive(true);
                 timer.SetActive(false);
                 pauseButton.SetActive(false);
+                mapButton.SetActive(false);
+                tutorialButton.SetActive(false);
+                descriptionBackground.SetActive(false);
                 description.text = "";
                 playerWin = true;
               }
