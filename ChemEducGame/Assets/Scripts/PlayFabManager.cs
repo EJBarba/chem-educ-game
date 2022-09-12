@@ -182,7 +182,10 @@ public class PlayFabManager : MonoBehaviour
     {
         Debug.Log("Successfully registered and logged in!");
         messageText.text = "";
-        welcomeText.text = "Welcome " + signUpUsernameInputField.text + " !"; 
+        welcomeText.text = "Welcome " + signUpUsernameInputField.text + " !";
+
+        PlayerPrefs.SetString("email", signUpEmailInputField.text);
+        PlayerPrefs.SetString("password", signUpPasswordInputField.text); 
 
         signUpEmailInputField.text = "";
         signUpUsernameInputField.text = "";
