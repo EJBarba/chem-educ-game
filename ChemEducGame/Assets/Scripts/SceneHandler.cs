@@ -22,4 +22,9 @@ public class SceneHandler : MonoBehaviour
     {
         SceneManager.LoadScene("Archery");
     }
+
+    public void Archery1()
+    {
+        SceneManager.LoadScene("Archery1");
+    }
 }

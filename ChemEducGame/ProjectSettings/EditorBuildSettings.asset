@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Archery.unity
     guid: d0ea28f5bdb7e3e4fb10dfde0b9d5299
+  - enabled: 1
+    path: Assets/Scenes/Archery1.unity
+    guid: c76f899971e4f6d4cbd057761b427110
   m_configObjects: {}
