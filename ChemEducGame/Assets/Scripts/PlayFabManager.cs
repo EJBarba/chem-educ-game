@@ -193,6 +193,7 @@ public class PlayFabManager : MonoBehaviour
         crosswordButton.SetActive(true);
         archeryButton.SetActive(true);
         loginsignupButton.SetActive(true);
+        logoutButton.SetActive(true);
     }
 
     public void LoginButton()
