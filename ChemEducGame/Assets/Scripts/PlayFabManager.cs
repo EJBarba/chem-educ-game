@@ -10,14 +10,27 @@ public class PlayFabManager : MonoBehaviour
     // Start is called before the first frame update
     public GameObject rowPrefab;
     public Transform rowsParent;
-    public GameObject playerNameForm;
+    //public GameObject playerNameForm;
     public GameObject leaderboardTable;
-    public GameObject refreshButton;
-    public TMP_InputField playerNameInput;
-    
+    //public GameObject refreshButton;
+    //public TMP_InputField playerNameInput;
+    //public GameObject crossWordButton;
+    //public GameObject playerNamePanel;
+    public TMP_Text welcomeText;
+
+    public TMP_InputField emailInputField;
+    public TMP_InputField usernameInputField;
+    public TMP_InputField passwordInputField;
+    public TMP_Text messageText;
+
+    public GameObject formPanel;
+    public GameObject crosswordButton;
+    public GameObject archeryButton;
+    public GameObject loginsignupButton;
+
     void Start()
     {
-        Login();
+        //Login();
     }
 
     void Login()
@@ -40,13 +53,17 @@ public class PlayFabManager : MonoBehaviour
         string name = null;
         if (result.InfoResultPayload.PlayerProfile != null)
         {
-            name = result.InfoResultPayload.PlayerProfile.DisplayName;   
+            name = result.InfoResultPayload.PlayerProfile.DisplayName;
+            welcomeText.text = "Welcome " + name + " !";   
         }
         if (name == null)
         {
-            leaderboardTable.SetActive(false);
-            refreshButton.SetActive(false);
-            playerNameForm.SetActive(true);
+            // leaderboardTable.SetActive(false);
+            // refreshButton.SetActive(false);
+            //playerNameForm.SetActive(true);
+
+            //playerNamePanel.SetActive(true);
+            //crossWordButton.SetActive(false);
         }
         else
         {
@@ -54,11 +71,11 @@ public class PlayFabManager : MonoBehaviour
         }
     }
 
-    public void SubmitNameButton()
+    public void SubmitUserName()
     {
         var request = new UpdateUserTitleDisplayNameRequest
         {
-            DisplayName = playerNameInput.text
+            DisplayName = usernameInputField.text
         };
         PlayFabClientAPI.UpdateUserTitleDisplayName(request, OnDisplayNameUpdate, OnError);
     }
@@ -66,15 +83,19 @@ public class PlayFabManager : MonoBehaviour
     void OnDisplayNameUpdate(UpdateUserTitleDisplayNameResult result)
     {
         Debug.Log("Updated display name!");
-        leaderboardTable.SetActive(true);
-        refreshButton.SetActive(true);
-        playerNameForm.SetActive(false);
+        // leaderboardTable.SetActive(true);
+        // refreshButton.SetActive(true);
+        //playerNameForm.SetActive(false);
+        
+        //playerNamePanel.SetActive(false);
+        //crossWordButton.SetActive(true);
     }
 
     void OnError(PlayFabError error)
     {
         Debug.Log("Error while logging in/creating account");
         Debug.Log(error.GenerateErrorReport());
+        messageText.text = (error.ErrorMessage);
     }
 
     public void SendLeaderBoard(int score)
@@ -124,5 +145,41 @@ public class PlayFabManager : MonoBehaviour
             
             Debug.Log(item.Position + " " + item.PlayFabId + " " + item.StatValue);
         }
+    }
+
+    public void RegisterButton()
+    {
+        messageText.text = "";
+        if (passwordInputField.text.Length < 6)
+        {
+            messageText.text = "Password too short.";
+            return;
+        }
+        var request = new RegisterPlayFabUserRequest
+        {
+            Email = emailInputField.text,
+            DisplayName = usernameInputField.text,
+            Password = passwordInputField.text,
+            RequireBothUsernameAndEmail = false
+        };
+        PlayFabClientAPI.RegisterPlayFabUser(request, OnRegisterSuccess, OnError);
+        
+    }
+
+    void OnRegisterSuccess(RegisterPlayFabUserResult result)
+    {
+        Debug.Log("Successfully registered and logged in!");
+        messageText.text = "";
+        welcomeText.text = "Welcome " + usernameInputField.text + " !"; 
+
+        emailInputField.text = "";
+        usernameInputField.text = "";
+        passwordInputField.text = "";
+        
+        formPanel.SetActive(false);
+
+        crosswordButton.SetActive(true);
+        archeryButton.SetActive(true);
+        loginsignupButton.SetActive(true);
     }
 }
