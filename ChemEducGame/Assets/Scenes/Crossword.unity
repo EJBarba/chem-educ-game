@@ -13602,7 +13602,7 @@ MonoBehaviour:
   pauseButton: {fileID: 698369284}
   mapButton: {fileID: 1818087714}
   tutorialButton: {fileID: 711686289}
-  descriptionBackground: {fileID: 0}
+  descriptionBackground: {fileID: 1304505818}
   playFabManager: {fileID: 0}
   scoreKeeper: {fileID: 0}
 --- !u!1 &1542766199

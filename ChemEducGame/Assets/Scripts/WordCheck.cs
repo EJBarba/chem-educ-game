@@ -53,6 +53,10 @@ public class WordCheck : MonoBehaviour
 
     void Update()
     {
+      if (playerWin)
+      {
+        return;
+      }
       for (int i = 0; i < word.Count; i++)
       { 
         if (word[i].tag == "Player" && answer.Length != 0 && playerWin != true)
@@ -141,7 +145,11 @@ public class WordCheck : MonoBehaviour
                 //display score in winModal, record if highscore 
                 scoreKeeper.RecordScore(winTime);
                 //online leaderboards
-                playFabManager.SendLeaderBoard(winTime);
+                if (PlayerPrefs.GetString("email").Length > 0 && PlayerPrefs.GetString("password").Length > 0 )
+                {
+                  playFabManager.SendLeaderBoard(winTime);
+                }
+                
 
                 winModal.SetActive(true);
                 timer.SetActive(false);
