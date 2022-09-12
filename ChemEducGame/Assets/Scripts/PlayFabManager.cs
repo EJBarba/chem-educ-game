@@ -221,6 +221,7 @@ public class PlayFabManager : MonoBehaviour
     {
          PlayerPrefs.DeleteKey("email");
          PlayerPrefs.DeleteKey("password");
+         PlayerPrefs.DeleteKey("highscore");
          welcomeText.text = "";
          logoutButton.SetActive(false);
     }
