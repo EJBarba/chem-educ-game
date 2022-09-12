@@ -37,6 +37,11 @@ public class PlayFabManager : MonoBehaviour
     void Start()
     {
         //Login();
+        if (PlayerPrefs.GetString("email").Length > 0 && PlayerPrefs.GetString("password").Length > 0  )
+        {
+            LoginPlayerPrefs();
+            GetLeaderboard();
+        }
     }
 
     void Login()
@@ -66,14 +71,21 @@ public class PlayFabManager : MonoBehaviour
             welcomeText.text = "Welcome " + name + " !"; 
         }
 
-        logInEmailInputField.text = "";
-        logInPasswordInputField.text = "";
+        // check if PlayerPrefs is empty
+        if (PlayerPrefs.GetString("email").Length <= 0 && PlayerPrefs.GetString("password").Length <= 0  )
+        {
+            PlayerPrefs.SetString("email", logInEmailInputField.text);
+            PlayerPrefs.SetString("password", logInPasswordInputField.text);
+            logInEmailInputField.text = "";
+            logInPasswordInputField.text = "";
 
-        formPanel.SetActive(false);
+            formPanel.SetActive(false);
 
-        crosswordButton.SetActive(true);
-        archeryButton.SetActive(true);
-        loginsignupButton.SetActive(true);
+            crosswordButton.SetActive(true);
+            archeryButton.SetActive(true);
+            loginsignupButton.SetActive(true);
+        }
+        
         
 
         // string name = null;
@@ -215,6 +227,17 @@ public class PlayFabManager : MonoBehaviour
         {
             Email = logInEmailInputField.text,
             Password = logInPasswordInputField.text,
+            InfoRequestParameters = new GetPlayerCombinedInfoRequestParams { GetPlayerProfile = true }
+        };
+        PlayFabClientAPI.LoginWithEmailAddress(request, OnLoginSuccess, OnError);
+    }
+
+    public void LoginPlayerPrefs()
+    {
+        var request = new LoginWithEmailAddressRequest()
+        {
+            Email = PlayerPrefs.GetString("email"),
+            Password = PlayerPrefs.GetString("password"),
             InfoRequestParameters = new GetPlayerCombinedInfoRequestParams { GetPlayerProfile = true }
         };
         PlayFabClientAPI.LoginWithEmailAddress(request, OnLoginSuccess, OnError);
