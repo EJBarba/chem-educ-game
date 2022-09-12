@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tile
+  - Dummy
+  - Target
   layers:
   - Default
   - TransparentFX
