@@ -4295,7 +4295,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   hours: 0
-  minutes: 10
+  minutes: 4
   seconds: 0
   startAtRuntime: 1
   hoursDisplay: 0
@@ -4307,7 +4307,7 @@ MonoBehaviour:
   textMeshProText: {fileID: 739680327}
   standardSlider: {fileID: 0}
   dialSlider: {fileID: 0}
-  timeRemaining: 600
+  timeRemaining: 240
 --- !u!114 &420881702
 MonoBehaviour:
   m_ObjectHideFlags: 0
