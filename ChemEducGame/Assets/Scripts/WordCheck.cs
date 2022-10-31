@@ -29,6 +29,7 @@ public class WordCheck : MonoBehaviour
     public ScoreKeeper scoreKeeper;
     public int playerScore = 25;
     public int penaltyScore = 5;
+    private int perfectScore;
     private bool playerAnswered = true;
     public Sprite badgeUnlocked;
     public Image badgeImage;
@@ -39,6 +40,7 @@ public class WordCheck : MonoBehaviour
       playFabManager = GameObject.Find("PLAYER").GetComponent<PlayFabManager>();
       scoreKeeper = GameObject.Find("PLAYER").GetComponent<ScoreKeeper>();
       audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+      perfectScore = playerScore;
 
       for (int i = 0; i < word.Count; i++)
       {
@@ -151,7 +153,7 @@ public class WordCheck : MonoBehaviour
                 //display score in winModal, record if highscore 
                 scoreKeeper.RecordScore(playerScore);
                 Debug.Log(playerScore);
-                if (playerScore == 25)
+                if (playerScore == perfectScore)
                 {
                   badgeImage.sprite = badgeUnlocked;
                   badgeText.text = "You earned a badge!";

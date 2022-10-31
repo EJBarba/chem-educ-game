@@ -22,6 +22,10 @@ public class SceneHandler : MonoBehaviour
     {
         SceneManager.LoadScene("Crossword_Level2");
     }
+    public void CrosswordLevel3()
+    {
+        SceneManager.LoadScene("Crossword_Level3");
+    }
 
     public void Archery()
     {
