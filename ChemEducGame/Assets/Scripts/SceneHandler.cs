@@ -13,9 +13,14 @@ public class SceneHandler : MonoBehaviour
     {
         SceneManager.LoadScene("Home");
     }
-    public void Crossword()
+    public void CrosswordLevel1()
     {
-        SceneManager.LoadScene("Crossword");
+        SceneManager.LoadScene("Crossword_Level1");
+    }
+
+    public void CrosswordLevel2()
+    {
+        SceneManager.LoadScene("Crossword_Level2");
     }
 
     public void Archery()
