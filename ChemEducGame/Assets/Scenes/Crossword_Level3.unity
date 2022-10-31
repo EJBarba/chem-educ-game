@@ -14354,7 +14354,7 @@ MonoBehaviour:
   scoreKeeper: {fileID: 0}
   playerScore: 50
   penaltyScore: 5
-  badgeUnlocked: {fileID: 21300000, guid: 91a20a99c721dec4ea59bad1e94e5cac, type: 3}
+  badgeUnlocked: {fileID: 21300000, guid: 3fe8516cbcf30c5469a8de5731f618ee, type: 3}
   badgeImage: {fileID: 872083012}
   badgeText: {fileID: 1617206771}
 --- !u!1 &1542766199
