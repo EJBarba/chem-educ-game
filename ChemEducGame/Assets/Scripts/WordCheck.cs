@@ -27,12 +27,16 @@ public class WordCheck : MonoBehaviour
     public PlayFabManager playFabManager;
     [HideInInspector]
     public ScoreKeeper scoreKeeper;
+    public int playerScore = 25;
+    public int penaltyScore = 5;
+    private bool playerAnswered = true;
     AudioManager audioManager;
     void Awake()
     {
       playFabManager = GameObject.Find("PLAYER").GetComponent<PlayFabManager>();
       scoreKeeper = GameObject.Find("PLAYER").GetComponent<ScoreKeeper>();
       audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+      playerScore = 35;
 
       for (int i = 0; i < word.Count; i++)
       {
@@ -143,7 +147,7 @@ public class WordCheck : MonoBehaviour
                 winTime = (int)timer.GetComponent<Timer>().timeRemaining;
                 
                 //display score in winModal, record if highscore 
-                scoreKeeper.RecordScore(winTime);
+                scoreKeeper.RecordScore(playerScore);
                 //online leaderboards
                 if (PlayerPrefs.GetString("email").Length > 0 && PlayerPrefs.GetString("password").Length > 0 )
                 {
@@ -188,7 +192,13 @@ public class WordCheck : MonoBehaviour
             // if wrong
             else
             {
-              
+              if (playerAnswered == true)
+              {
+                playerAnswered = false;
+                playerScore -= penaltyScore;
+                Debug.Log(playerScore);
+                
+              }
               // change into red tile
               for (int j = 0; j < answer.Length; j++)
               {
@@ -223,6 +233,7 @@ public class WordCheck : MonoBehaviour
                   }
                 }
                 timerReached = true;
+                playerAnswered = true;
               }
             }
           }

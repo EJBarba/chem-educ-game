@@ -14,7 +14,7 @@ public class ScoreKeeper : MonoBehaviour
 
     private void Start() {
         highScore = PlayerPrefs.GetInt("highscore", 0);
-        scoreText.text ="SCORE: " + score.ToString();
+        scoreText.text ="LEVEL 1 SCORE: " + score.ToString();
         highScoreText.text ="HIGH SCORE: " + highScore.ToString();
     }
 
@@ -30,8 +30,5 @@ public class ScoreKeeper : MonoBehaviour
         {
             highScoreText.text = "HIGH SCORE: " + highScore.ToString();
         }
-        
-        
-        
     }    
 }

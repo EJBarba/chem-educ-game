@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba77a23bad7f4fa42b536b399b7443d5, type: 3}
   m_Name: ScoreDataCrossword
   m_EditorClassIdentifier: 
-  crosswordScores: 190000002300000032000000
+  scoreList: 190000002300000037000000
