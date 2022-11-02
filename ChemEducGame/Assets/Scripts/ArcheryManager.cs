@@ -10,30 +10,26 @@ public class ArcheryManager : MonoBehaviour
     [SerializeField] GameObject resultModal;
     [SerializeField] TMP_Text resultText;
     [SerializeField] GameObject nextLevelButton;
-    public bool birdCollided = false;
-    public bool isTargetCollided = false;
-    private bool isHitOnce = true;
+    public bool isTargetHit = false;
+    public bool isLaserFired = false;
     void Update()
     {
-        if(birdCollided == true && isHitOnce == true)
+        if(isLaserFired == true)
         {
             resultModal.SetActive(true);
-
-            if (isTargetCollided == true)
+            nextLevelButton.SetActive(true);
+            if (isTargetHit == true)
             {
-                resultText.text = "YOU WIN";
-                if(SceneManager.GetActiveScene().name != "Archery1")
-                {
-                    nextLevelButton.SetActive(true); 
-                }
-                
+                resultText.text = "YOU WIN";     
             }
             else
             {
                 resultText.text = "YOU LOSE";
             }
-            isHitOnce = false;
-            return;
+            
         }
+        
+        return;
     }
+    
 }

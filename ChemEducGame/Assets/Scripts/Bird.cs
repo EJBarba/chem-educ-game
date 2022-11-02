@@ -35,14 +35,14 @@ public class Bird : MonoBehaviour
         // if collision.gameObject.tag == "Dummy" -> lose
         if (collision.gameObject.tag == "Dummy")
         {
-            archeryManager.birdCollided = true;
-            archeryManager.isTargetCollided = false;
+            //archeryManager.birdCollided = true;
+            //archeryManager.isTargetCollided = false;
             return;
         }
         if (collision.gameObject.tag == "Target")
         {
-            archeryManager.birdCollided = true;
-            archeryManager.isTargetCollided = true;
+            //archeryManager.birdCollided = true;
+            //archeryManager.isTargetCollided = true;
             return;
         }
         // if collision.gameObject.tag == "Target" -> win
