@@ -40,6 +40,7 @@ public class DummyHealth : MonoBehaviour
             if (this.gameObject.tag == "Target")
             {
                 archeryManager.isTargetHit = true;
+                archeryManager.score += 1;
                 Instantiate(checkMark, this.gameObject.transform.position, Quaternion.identity);
             }
             else

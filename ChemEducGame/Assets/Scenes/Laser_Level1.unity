@@ -2652,10 +2652,12 @@ MonoBehaviour:
   resultText: {fileID: 1843288082}
   nextLevelButton: {fileID: 590637588}
   laser: {fileID: 887311035}
+  scoreSO: {fileID: 11400000, guid: c10f583cf94497446828c22fa387bfc2, type: 2}
   isTargetHit: 0
   hasDestroyed: 0
   playerChance: 1
   waitSeconds: 1
+  score: 0
 --- !u!1 &1254539007
 GameObject:
   m_ObjectHideFlags: 0

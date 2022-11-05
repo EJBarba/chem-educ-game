@@ -7,13 +7,14 @@ using UnityEditor;
 [CreateAssetMenu(fileName = "ScoreData", menuName = "ScoreData")]
 public class ScoreData : ScriptableObject
 {
-    public List<int> scoreList;
-
-    public void updateCrosswordScores(int index, int score)
+    public List<Score> scoreList;
+    public int getTotalScores()
     {
-        EditorUtility.SetDirty(this);
-        scoreList[index] = score;
-        AssetDatabase.SaveAssets();
-        AssetDatabase.Refresh();
+        int totalScore = 0;
+        foreach (var item in scoreList)
+        {
+            totalScore += item.scoreValue;
+        }
+        return totalScore;
     }
 }
