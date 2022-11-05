@@ -18,6 +18,17 @@ public class Laser : MonoBehaviour
     {
         RaycastHit2D hitInfoIronSight = Physics2D.Raycast(ironSightPoint.position, ironSightPoint.right);
 
+        if (Input.GetKey(KeyCode.UpArrow) && this.transform.rotation.z <= 0.3f)
+        {
+            Debug.Log(this.transform.rotation.z);
+            this.transform.Rotate(0f,0f,0.1f);
+        }
+
+        if (Input.GetKey(KeyCode.DownArrow) && this.transform.rotation.z >= -0.3f)
+        {
+            this.transform.Rotate(0f,0f, -0.1f);
+        }
+        
         if (Input.GetKeyUp("space"))
         {
             lineRenderer.enabled = false;
@@ -51,7 +62,11 @@ public class Laser : MonoBehaviour
             //archeryManager.isLaserFired = true;
             if(hitInfo.transform.tag == "Target")
             {
+                hitInfo.transform.GetComponent<DummyHealth>().TakeDamage(1);
+                
                 //archeryManager.isTargetHit = true;
+
+
                 laserHit += 1;
                 Debug.Log(laserHit);
                 
