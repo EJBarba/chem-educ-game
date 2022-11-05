@@ -12,15 +12,17 @@ public class DummyHealth : MonoBehaviour
     [SerializeField] GameObject checkMark;
     [SerializeField] GameObject wrongMark;
 
+    public Animator animator;
+
     private float r = 1f;
     private float g = 1f;
     private float b = 1f;
     private float a = 1f;
 
     private void Start() {
-        spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
+        spriteRenderer = this.gameObject.GetComponentInChildren<SpriteRenderer>();
         archeryManager = GameObject.FindObjectOfType<ArcheryManager>();
-
+        animator = this.gameObject.GetComponent<Animator>();
     }
     public void TakeDamage(int damage)
     {
