@@ -11,11 +11,16 @@ public class ArcheryManager : MonoBehaviour
     [SerializeField] TMP_Text resultText;
     [SerializeField] GameObject nextLevelButton;
     [SerializeField] GameObject laser;
+    private Laser laserScript;
     public bool isTargetHit = false;
     public bool hasDestroyed = false;
     public int playerChance = 1;
     public float waitSeconds = 3f;
     private bool endGame = false;
+
+    private void Start() {
+        laserScript = laser.GetComponent<Laser>();
+    }
     void Update()
     {
         if(hasDestroyed == true && playerChance <= 0)
@@ -33,6 +38,7 @@ public class ArcheryManager : MonoBehaviour
 
     IEnumerator ShowResultsModal()
     {
+        laserScript.enabled = false;
         yield return new WaitForSeconds(waitSeconds);
         resultModal.SetActive(true);
         nextLevelButton.SetActive(true);
