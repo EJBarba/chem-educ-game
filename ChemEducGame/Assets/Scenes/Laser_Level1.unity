@@ -2063,6 +2063,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 17c676e41fc41814ea550b3b94780794, type: 3}
+    - target: {fileID: 2621540766036263077, guid: a7f65e67534c86b4798b22b48eb01f6b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2621540766036263077, guid: a7f65e67534c86b4798b22b48eb01f6b, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2621540766036263077, guid: a7f65e67534c86b4798b22b48eb01f6b, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2621540766036263080, guid: a7f65e67534c86b4798b22b48eb01f6b, type: 3}
       propertyPath: m_Name
       value: Target
@@ -2159,7 +2171,6 @@ MonoBehaviour:
   firePoint: {fileID: 52037602}
   ironSightPoint: {fileID: 1485683052}
   lineRenderer: {fileID: 1614140771}
-  archeryManager: {fileID: 1237247476}
   lineRendererIronSight: {fileID: 1269348221}
 --- !u!212 &887311037
 SpriteRenderer:
@@ -2221,7 +2232,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887311035}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.64, y: 0, z: 0}
+  m_LocalPosition: {x: -5.6399994, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -2636,8 +2647,11 @@ MonoBehaviour:
   resultModal: {fileID: 566879788}
   resultText: {fileID: 1843288082}
   nextLevelButton: {fileID: 590637588}
+  laser: {fileID: 887311035}
   isTargetHit: 0
-  isLaserFired: 0
+  hasDestroyed: 0
+  playerChance: 1
+  waitSeconds: 1
 --- !u!1 &1254539007
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,9 +7,7 @@ public class Laser : MonoBehaviour
     public Transform firePoint;
     public Transform ironSightPoint;
     public LineRenderer lineRenderer;
-    public ArcheryManager archeryManager;
     public LineRenderer lineRendererIronSight;
-    private int laserHit = 0;
     
     private void Start() {
         lineRendererIronSight.SetPosition(0, ironSightPoint.position);
@@ -20,7 +18,6 @@ public class Laser : MonoBehaviour
 
         if (Input.GetKey(KeyCode.UpArrow) && this.transform.rotation.z <= 0.3f)
         {
-            Debug.Log(this.transform.rotation.z);
             this.transform.Rotate(0f,0f,0.1f);
         }
 
@@ -46,9 +43,7 @@ public class Laser : MonoBehaviour
         if(!hitInfoIronSight)
         {
             lineRendererIronSight.SetPosition(1, ironSightPoint.position + firePoint.right * 100);
-        }
-        
-        
+        }  
     }
     public IEnumerator FireLaser()
     {
@@ -63,26 +58,16 @@ public class Laser : MonoBehaviour
             if(hitInfo.transform.tag == "Target")
             {
                 hitInfo.transform.GetComponent<DummyHealth>().TakeDamage(1);
-                
-                //archeryManager.isTargetHit = true;
-
-
-                laserHit += 1;
-                Debug.Log(laserHit);
-                
             }
             else if (hitInfo.transform.tag == "Dummy")
             {
-                //archeryManager.isTargetHit = false;
+                hitInfo.transform.GetComponent<DummyHealth>().TakeDamage(1);
             }
         }
         else
         {
             lineRenderer.SetPosition(0, firePoint.position);
 			lineRenderer.SetPosition(1, firePoint.position + firePoint.right * 100);
-            archeryManager.isLaserFired = false;
-            archeryManager.isTargetHit = false;
-
         }
         
         lineRenderer.enabled = true;
