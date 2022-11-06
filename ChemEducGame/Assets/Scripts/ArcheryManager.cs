@@ -13,6 +13,8 @@ public class ArcheryManager : MonoBehaviour
     [SerializeField] GameObject laser;
     [SerializeField] Score scoreSO;
     [SerializeField] ScoreData scoreListSO;
+    [SerializeField] GameObject world;
+    [SerializeField] GameObject worldCanvas;
     private Laser laserScript;
     public bool hasDestroyed = false;
     public int playerChance = 1;
@@ -47,17 +49,21 @@ public class ArcheryManager : MonoBehaviour
 
         resultModal.SetActive(true);
         laser.SetActive(false);
+        world.SetActive(false);
+        worldCanvas.SetActive(false);
         
         itemText.text = "ITEM #" + scoreSO.name + " OUT OF " + scoreListSO.scoreList.Count;
         if(setToZero)
         {
             scoreSO.updateScore(0);
             resultText.text = "YOU LOSE";
+            resultText.color = Color.red;
         }
         else
         {
             scoreSO.updateScore(1);
-            resultText.text = "YOU WIN";
+            resultText.text = "YOU WIN!";
+            resultText.color = Color.green;
         } 
     }
            
