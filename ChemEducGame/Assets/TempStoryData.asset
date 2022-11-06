@@ -17,7 +17,7 @@ MonoBehaviour:
   UID: a752acb5-00ed-40f6-ac0f-6de2fcc89b5d
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 0
+  IndexInList: 1
   NodeRect:
     serializedVersion: 2
     x: 533.2
@@ -96,7 +96,7 @@ MonoBehaviour:
   UID: 315c8b39-a579-42b6-90b3-fe4cf1823a6b
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 1
+  IndexInList: 2
   NodeRect:
     serializedVersion: 2
     x: 963.19995
@@ -178,7 +178,7 @@ MonoBehaviour:
   UID: 3bf57e2b-fe7c-48a6-9010-2e11617382f4
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 10
+  IndexInList: 0
   NodeRect:
     serializedVersion: 2
     x: 131.2
@@ -394,7 +394,7 @@ MonoBehaviour:
   UID: c4ff9e2a-a4ad-484f-9f86-74d3c97a9b4c
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 2
+  IndexInList: 3
   NodeRect:
     serializedVersion: 2
     x: 1393.2
@@ -473,7 +473,7 @@ MonoBehaviour:
   UID: 3dc6b95b-fee4-4b1a-bf30-f732fac40c86
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 4
+  IndexInList: 5
   NodeRect:
     serializedVersion: 2
     x: 2253.1997
@@ -554,7 +554,7 @@ MonoBehaviour:
   UID: d149f043-78b0-48d0-b057-7065c1a0f2e4
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 7
+  IndexInList: 8
   NodeRect:
     serializedVersion: 2
     x: 3543.1997
@@ -633,7 +633,7 @@ MonoBehaviour:
   UID: 36183f7b-b91d-46be-ad00-486c567597db
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 8
+  IndexInList: 9
   NodeRect:
     serializedVersion: 2
     x: 3973.1997
@@ -713,7 +713,7 @@ MonoBehaviour:
   UID: dbbad317-4aee-433e-b9e7-419e2e8661a8
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 5
+  IndexInList: 6
   NodeRect:
     serializedVersion: 2
     x: 2683.1997
@@ -796,11 +796,12 @@ MonoBehaviour:
   EnvironmentNodes: []
   RouteNodes: []
   Scenes:
-  - SceneName: Tutorial1
+  - SceneName: Game1InitTutorial
     UID: c4564046-88b7-431a-ad2f-9a33c59703b7
-    Pan: {x: 1304.2183, y: -484.66614}
-    Zoom: 0.3
+    Pan: {x: 1240.361, y: -487.23788}
+    Zoom: 0.28
     NodeElements:
+    - {fileID: -7436559051607405429}
     - {fileID: -8341507124595409122}
     - {fileID: -7737659949907185750}
     - {fileID: -5936269319569533824}
@@ -810,9 +811,8 @@ MonoBehaviour:
     - {fileID: 4896717453208815573}
     - {fileID: -4265121987804446520}
     - {fileID: -2857702991752830040}
-    - {fileID: 5126295406484959733}
-    - {fileID: -7436559051607405429}
     - {fileID: 1153009045416600209}
+    - {fileID: 5126295406484959733}
     Characters:
     - {fileID: -7436559051607405429}
     Environments: []
@@ -828,7 +828,7 @@ MonoBehaviour:
     ShowChainingColourInTimeline: 0
     TimelineData:
       PanScroll: {x: 0, y: 0}
-      Zoom: 100
+      Zoom: 78.53965
     SceneImagePath: 
     image: {fileID: 0}
     expandCustomSceneDataFoldout: 0
@@ -976,7 +976,7 @@ MonoBehaviour:
   UID: 6cdfe451-3253-4261-bed8-b3ab946d4c16
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 11
+  IndexInList: 10
   NodeRect:
     serializedVersion: 2
     x: 4403.1997
@@ -1055,7 +1055,7 @@ MonoBehaviour:
   UID: c5eb6ae1-eaae-4ca9-8c6d-e925b6b8de43
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 3
+  IndexInList: 4
   NodeRect:
     serializedVersion: 2
     x: 1823.1998
@@ -1134,7 +1134,7 @@ MonoBehaviour:
   UID: 48a9ad12-3d68-4115-8365-8dea2f354695
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 6
+  IndexInList: 7
   NodeRect:
     serializedVersion: 2
     x: 3113.2
@@ -1213,7 +1213,7 @@ MonoBehaviour:
   UID: 9c881145-48de-4f86-a6d7-c89d20b44581
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 9
+  IndexInList: 11
   NodeRect:
     serializedVersion: 2
     x: 4833.1997
