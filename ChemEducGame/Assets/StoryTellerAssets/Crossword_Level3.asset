@@ -1,0 +1,299 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6943627805289347312
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 3_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 3_Dialogue
+  Text: 
+  UID: f33b5f2c-2304-49f1-aeab-ea96746b160b
+  CharacterName: Doc
+  CallingNodeData: {fileID: -2591080114562600497}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -886444862991440323}
+  DataIconnectedTo: []
+  Duration: 1
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 2
+  DurationSum: 3
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 'Your time limit for this level is 13 minutes. '
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-5858964488706970205
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 1_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 1_Dialogue
+  Text: 
+  UID: 518eeabf-395d-439b-9caa-b3a68f907860
+  CharacterName: Doc
+  CallingNodeData: {fileID: -2591080114562600497}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -2591080114562600497}
+  DataIconnectedTo:
+  - {fileID: -886444862991440323}
+  Duration: 1
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 1
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - You will earn a perfect score of 50 pts if you complete this level.
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-2591080114562600497
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f62fd303fe32d84d939ad01a51f9fdb, type: 3}
+  m_Name: Doc
+  m_EditorClassIdentifier: 
+  Name: Doc
+  Text: 
+  UID: 2269e1c9-b3e6-4786-93f3-cfa087bffbdf
+  CharacterName: Doc
+  CallingNodeData: {fileID: -2591080114562600497}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe: []
+  DataIconnectedTo:
+  - {fileID: -5858964488706970205}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  NodeDataInMyChain:
+  - {fileID: -2591080114562600497}
+  - {fileID: -5858964488706970205}
+  - {fileID: -886444862991440323}
+  - {fileID: -6943627805289347312}
+  CharacterImage: {fileID: 0}
+  CharacterPersonality:
+    NegativeTraits:
+      Angry: 0
+      Arrogantt: 0
+      Careless: 0
+      Childish: 0
+      Cowardly: 0
+      Crafty: 0
+      Crazy: 0
+      Cruel: 0
+      Dependent: 0
+      Destructive: 0
+      Devious: 0
+      Disloyal: 0
+      Disobedient: 0
+      Disorderly: 0
+      Disorganized: 0
+      Fearful: 0
+      Fickle: 0
+      Foolish: 0
+      Forgetful: 0
+      Frightening: 0
+      Frivolous: 0
+      Graceless: 0
+      Gullible: 0
+      Hostile: 0
+      Impractical: 0
+      Irritable: 0
+      Lazy: 0
+      Meddlesome: 0
+      Miserable: 0
+      Neglectful: 0
+      Opportunistic: 0
+      Provocative: 0
+      Slow: 0
+      Timid: 0
+      Uncooperative: 0
+      Unreliable: 0
+      Weak: 0
+      WeakWilled: 0
+    NeutralTraits:
+      Aggressive: 0
+      Deceptive: 0
+      Dominating: 0
+      Enigmatic: 0
+      Experimental: 0
+      Iconoclastic: 0
+      Idiosyncratic: 0
+      Impassive: 0
+      Obedient: 0
+      Progressive: 0
+      Questioning: 0
+      Reserved: 0
+      Stubborn: 0
+    PositiveTraits:
+      Accessible: 0
+      Active: 0
+      Adaptable: 0
+      Adventurous: 0
+      Alert: 0
+      Brilliant: 0
+      Calm: 0
+      Capable: 0
+      Challenging: 0
+      Charismatic: 0
+      Clever: 0
+      Confident: 0
+      Cooperative: 0
+      Courageous: 0
+      Curious: 0
+      Daring: 0
+      Decisive: 0
+      Discreet: 0
+      Efficient: 0
+      Energetic: 0
+      Focused: 0
+      Helpful: 0
+      Independent: 0
+      Individualistic: 0
+      Innovative: 0
+      Intelligent: 0
+      Leaderly: 0
+      Logical: 0
+      Loyal: 0
+      Methodical: 0
+      Orderly: 0
+      Organized: 0
+      Patient: 0
+      Patriotic: 0
+      Peaceful: 0
+      Reliable: 0
+      Resourceful: 0
+      Responsible: 0
+      Responsive: 0
+      Sane: 0
+      Selfless: 0
+      Serious: 0
+      Skillful: 0
+      Stoic: 0
+      Strong: 0
+  SortingID: 0
+--- !u!114 &-886444862991440323
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 2_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 2_Dialogue
+  Text: 
+  UID: d629bc40-8f23-4ce2-b4a2-52ebe54e68ee
+  CharacterName: Doc
+  CallingNodeData: {fileID: -2591080114562600497}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -5858964488706970205}
+  DataIconnectedTo:
+  - {fileID: -6943627805289347312}
+  Duration: 1
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 1
+  DurationSum: 2
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - There will be a deduction of -5 points if you get a wrong answer.
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 898e24b5475626c4e801ae0a3c8a1e90, type: 3}
+  m_Name: Crossword_Level3
+  m_EditorClassIdentifier: 
+  UID: 11788d76-6834-4b08-8e6f-7b549755e357
+  UpdateUID: b6a33721-95fa-4fee-9f07-3468dd091661
+  SceneID: 3
+  FullCharacterDialogueSet:
+  - {fileID: -2591080114562600497}
+  - {fileID: -5858964488706970205}
+  - {fileID: -886444862991440323}
+  - {fileID: -6943627805289347312}
+  ActiveCharacterDialogueSet:
+  - {fileID: -5858964488706970205}
+  - {fileID: -886444862991440323}
+  - {fileID: -6943627805289347312}
+  Characters:
+  - {fileID: -2591080114562600497}
+  Languages:
+  - Name: English
+    CountryCode: en-US
+    Active: 0
+    Default: 0
+  LanguageIndex: 0
+  LanguageNameArray:
+  - English
