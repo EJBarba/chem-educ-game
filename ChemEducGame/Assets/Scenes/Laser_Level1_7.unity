@@ -1799,7 +1799,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &566879789
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2038,7 +2038,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1237247475}
         m_TargetAssemblyTypeName: SceneHandler, Assembly-CSharp
-        m_MethodName: Archery1
+        m_MethodName: LaserLevel1_8
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
