@@ -5,19 +5,16 @@ using UnityEngine;
 public class Laser : MonoBehaviour
 {
     public Transform firePoint;
-    public Transform ironSightPoint;
-    public LineRenderer lineRenderer;
+    public LineRenderer lineRendererMainLaser;
     public LineRenderer lineRendererIronSight;
     private Animator targetAnimator;
     private RaycastHit2D hitInfo;
+    private RaycastHit2D lastHitInfo;
     private RaycastHit2D hitInfoCheck;
-    private void Start() {
-        lineRendererIronSight.SetPosition(0, ironSightPoint.position);
-    }
+    private Ray2D ray;
     void Update()
     {
-        RaycastHit2D hitInfoIronSight = Physics2D.Raycast(ironSightPoint.position, ironSightPoint.right);
-
+        FireLaser(firePoint, lineRendererIronSight, false);
         if (Input.GetKey(KeyCode.UpArrow) && this.transform.rotation.z <= 0.3f)
         {
             this.transform.Rotate(0f,0f,0.1f);
@@ -30,7 +27,6 @@ public class Laser : MonoBehaviour
                 }
             } 
         }
-
         if (Input.GetKey(KeyCode.DownArrow) && this.transform.rotation.z >= -0.3f )
         { 
             this.transform.Rotate(0f,0f, -0.1f);
@@ -43,63 +39,58 @@ public class Laser : MonoBehaviour
                 }
             }    
         }
-        
         if (Input.GetKeyUp("space"))
         {
-            lineRenderer.enabled = false;
+            lineRendererMainLaser.enabled = false;
             if (targetAnimator != null)
             {
                 targetAnimator.SetBool("TakeDamage", false);
             }
-            
         }
         if (Input.GetKey("space"))
         {
-            FireLaser();
+            FireLaser(firePoint, lineRendererMainLaser, true);
         }
-
-        if (hitInfoIronSight)
-        {
-          lineRendererIronSight.SetPosition(1, hitInfoIronSight.point);  
-        }
-
-        if(!hitInfoIronSight)
-        {
-            lineRendererIronSight.SetPosition(1, ironSightPoint.position + firePoint.right * 100);
-        }  
     }
-    public void FireLaser()
+    public void FireLaser(Transform pointOfOrigin, LineRenderer lineRenderer, bool mainLaser)
     {
-        hitInfo = Physics2D.Raycast(firePoint.position, firePoint.right);
+        ray = new Ray2D(pointOfOrigin.position, pointOfOrigin.right);
 
-        if (hitInfo)
+        lineRenderer.positionCount = 1;
+        lineRenderer.SetPosition(0, transform.position);
+        float remainingLength = 100;
+
+        for (int i = 0; i < 10; i++)
         {
-            lineRenderer.SetPosition(0, firePoint.position);
-			lineRenderer.SetPosition(1, hitInfo.point);
+            hitInfo = Physics2D.Raycast(ray.origin, ray.direction, remainingLength);
 
-            if(hitInfo.transform.tag == "Target" || hitInfo.transform.tag == "Dummy")
+            if (hitInfo)
             {
-                hitInfo.transform.GetComponent<DummyHealth>().TakeDamage(1);
-                targetAnimator = hitInfo.transform.GetComponent<DummyHealth>().animator;
-                targetAnimator.SetBool("TakeDamage", true);
+                lineRenderer.positionCount += 1;
+                lineRenderer.SetPosition(lineRenderer.positionCount - 1, hitInfo.point);
+                remainingLength -= Vector2.Distance(ray.origin, hitInfo.point);
+
+                // Get the reflected vector of the raycast.
+                Vector2 updatedDirection = Vector2.Reflect(ray.direction, hitInfo.normal);
+                // Create new Ray object & set origin to be 0.01f away from hitpoint so the line is not colliding with the gameobject collider.
+                ray = new Ray2D(hitInfo.point + updatedDirection * 0.01f, updatedDirection);
+                
+                if (hitInfo.transform.tag == "Target" || hitInfo.transform.tag == "Dummy")
+                {
+                    if (mainLaser)
+                    {
+                        hitInfo.transform.GetComponent<DummyHealth>().TakeDamage(1);
+                        targetAnimator = hitInfo.transform.GetComponent<DummyHealth>().animator;
+                        targetAnimator.SetBool("TakeDamage", true); 
+                    }
+                    break;
+                }
             }
             else
             {
-               if (targetAnimator)
-            {
-                targetAnimator.SetBool("TakeDamage", false);
+                lineRenderer.positionCount += 1;
+                lineRenderer.SetPosition(lineRenderer.positionCount - 1, ray.origin + ray.direction * remainingLength);
             }
-            }
-        }
-        else
-        {
-            lineRenderer.SetPosition(0, firePoint.position);
-			lineRenderer.SetPosition(1, firePoint.position + firePoint.right * 100);
-            if (targetAnimator)
-            {
-                targetAnimator.SetBool("TakeDamage", false);
-            }
-            
         }
         lineRenderer.enabled = true;
     }
