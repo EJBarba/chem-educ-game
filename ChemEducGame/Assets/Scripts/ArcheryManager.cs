@@ -8,14 +8,15 @@ public class ArcheryManager : MonoBehaviour
 {
     
     [SerializeField] GameObject resultModal;
+    [SerializeField] TMP_Text itemText;
     [SerializeField] TMP_Text resultText;
-    [SerializeField] GameObject nextLevelButton;
     [SerializeField] GameObject laser;
     [SerializeField] Score scoreSO;
+    [SerializeField] ScoreData scoreListSO;
     private Laser laserScript;
-    public bool isTargetHit = false;
     public bool hasDestroyed = false;
     public int playerChance = 1;
+    public bool setToZero = false;
     public float waitSeconds = 3f;
     private bool endGame = false;
     public int score = 0;
@@ -43,18 +44,21 @@ public class ArcheryManager : MonoBehaviour
     {
         laserScript.enabled = false;
         yield return new WaitForSeconds(waitSeconds);
+
         resultModal.SetActive(true);
-        nextLevelButton.SetActive(true);
         laser.SetActive(false);
-        if (isTargetHit == true)
+        
+        itemText.text = "ITEM #" + scoreSO.name + " OUT OF " + scoreListSO.scoreList.Count;
+        if(setToZero)
         {
-            resultText.text = "YOU WIN";
-            scoreSO.updateScore(score); 
+            scoreSO.updateScore(0);
+            resultText.text = "YOU LOSE";
         }
         else
         {
-            resultText.text = "YOU LOSE";
-        }
+            scoreSO.updateScore(1);
+            resultText.text = "YOU WIN";
+        } 
     }
            
 }
