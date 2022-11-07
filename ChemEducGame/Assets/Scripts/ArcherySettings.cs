@@ -10,13 +10,6 @@ public class ArcherySettings : MonoBehaviour
     {
         audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
     }
-
-    // private void Update() {
-    //     if (Input.GetKey("space"))
-    //     {
-    //      audioManager.Play("laserSound");   
-    //     }
-    // }
     public void StopSpaceMusic()
     {
         audioManager.Stop("laserMusic");

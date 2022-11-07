@@ -12,6 +12,11 @@ public class Laser : MonoBehaviour
     private RaycastHit2D lastHitInfo;
     private RaycastHit2D hitInfoCheck;
     private Ray2D ray;
+    private AudioManager audioManager;
+
+    private void Awake() {
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+    }
     void Update()
     {
         FireLaser(firePoint, lineRendererIronSight, false);
@@ -50,6 +55,14 @@ public class Laser : MonoBehaviour
         if (Input.GetKey("space"))
         {
             FireLaser(firePoint, lineRendererMainLaser, true);
+        }
+        if (Input.GetKeyUp("space"))
+        {
+            audioManager.Stop("laserSound");
+        }
+        else if (Input.GetKeyDown("space"))
+        {
+            audioManager.Play("laserSound");
         }
     }
     public void FireLaser(Transform pointOfOrigin, LineRenderer lineRenderer, bool mainLaser)
