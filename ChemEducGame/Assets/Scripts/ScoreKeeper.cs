@@ -8,6 +8,7 @@ public class ScoreKeeper : MonoBehaviour
 {
     public TMP_Text scoreText;
     public TMP_Text highScoreText;
+    public Score scoreSO;
 
     int score = 0;
     int highScore = 0;
@@ -30,5 +31,6 @@ public class ScoreKeeper : MonoBehaviour
         {
             highScoreText.text = "HIGH SCORE: " + highScore.ToString();
         }
+        scoreSO.updateScore(newScore);
     }    
 }

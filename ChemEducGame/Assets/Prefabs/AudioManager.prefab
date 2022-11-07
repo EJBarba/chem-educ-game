@@ -87,3 +87,9 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: tutorialMusic
+    clip: {fileID: 8300000, guid: 5658d350789cddc47acbb18ae5243f00, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
