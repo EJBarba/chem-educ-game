@@ -93,3 +93,9 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: missionCompleteMusic
+    clip: {fileID: 8300000, guid: 97f15dc90f0827046a3dca3782f8b931, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}

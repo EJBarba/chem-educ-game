@@ -50,7 +50,7 @@ public class AudioManager : MonoBehaviour
 
     public void MusicVolume (float volume)
     {
-        string[] musicArray = { "bgmusic1", "bgmusicmainmenu", "bgmusicdefeat", "bgmusicvictory", "tutorialMusic"};
+        string[] musicArray = { "bgmusic1", "bgmusicmainmenu", "bgmusicdefeat", "bgmusicvictory", "tutorialMusic", "missionCompleteMusic"};
          foreach (Sound sound in sounds)
          {
              foreach (var music in musicArray)
@@ -81,7 +81,7 @@ public class AudioManager : MonoBehaviour
 
     public void StopAllBGMusic ()
     {
-        string[] musicArray = { "bgmusic1", "bgmusicmainmenu", "bgmusicdefeat", "bgmusicvictory", "tutorialMusic"};
+        string[] musicArray = { "bgmusic1", "bgmusicmainmenu", "bgmusicdefeat", "bgmusicvictory", "tutorialMusic", "missionCompleteMusic"};
          foreach (Sound sound in sounds)
          {
              foreach (var music in musicArray)
