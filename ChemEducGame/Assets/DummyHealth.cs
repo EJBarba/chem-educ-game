@@ -36,14 +36,34 @@ public class DummyHealth : MonoBehaviour
         if (dummyHealth <= 0)
         {
             archeryManager.hasDestroyed = true;
-            archeryManager.playerChance -= 1;
+            
             if (this.gameObject.tag == "Target")
             {
+                if (archeryManager.isLevel2 == false)
+                {
+                    archeryManager.playerChance -= 1;
+                }
+                else
+                {
+                    archeryManager.level2Targets -= 1;
+                }
                 Instantiate(checkMark, this.gameObject.transform.position, Quaternion.identity);
             }
             else
             {
-                archeryManager.setToZero = true;
+                if (archeryManager.isLevel2 == true)
+                {
+                   archeryManager.playerChance -= 1;
+                   if(archeryManager.playerChance <=0)
+                   {
+                    archeryManager.setToZero = true;
+                   } 
+                }
+                else
+                {
+                    archeryManager.playerChance -= 1;
+                    archeryManager.setToZero = true;
+                }
                 Instantiate(wrongMark, this.gameObject.transform.position, Quaternion.identity);  
             }
             

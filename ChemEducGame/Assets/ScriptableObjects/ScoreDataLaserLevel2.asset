@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba77a23bad7f4fa42b536b399b7443d5, type: 3}
   m_Name: ScoreDataLaserLevel2
   m_EditorClassIdentifier: 
-  scoreList: []
+  scoreList:
+  - {fileID: 11400000, guid: 85e560f78bdff1642bfd7c0a58f559f8, type: 2}
+  - {fileID: 11400000, guid: 9ad1f1c87fd45e541bad204a8136b593, type: 2}

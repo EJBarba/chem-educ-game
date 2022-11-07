@@ -20,10 +20,12 @@ public class ArcheryManager : MonoBehaviour
     public int playerChance = 1;
     public bool setToZero = false;
     public float waitSeconds = 3f;
-    private bool endGame = false;
+    public bool endGame = false;
     public int score = 0;
     private AudioManager audioManager;
     public int scoreValueLaser = 5;
+    public bool isLevel2 = false;
+    public int level2Targets = 999;
 
     private void Awake() {
         audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
@@ -36,7 +38,7 @@ public class ArcheryManager : MonoBehaviour
     }
     void Update()
     {
-        if(hasDestroyed == true && playerChance <= 0)
+        if(hasDestroyed == true && playerChance <= 0 || hasDestroyed == true && level2Targets <= 0)
         {
             endGame = true;
         }
