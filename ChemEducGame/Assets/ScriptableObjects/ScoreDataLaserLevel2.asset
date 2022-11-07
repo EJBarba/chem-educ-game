@@ -15,3 +15,4 @@ MonoBehaviour:
   scoreList:
   - {fileID: 11400000, guid: 85e560f78bdff1642bfd7c0a58f559f8, type: 2}
   - {fileID: 11400000, guid: 9ad1f1c87fd45e541bad204a8136b593, type: 2}
+  - {fileID: 11400000, guid: a8e693fe310281e48bcedd4542c7bea5, type: 2}
