@@ -32,5 +32,10 @@ public class ScoreKeeper : MonoBehaviour
             highScoreText.text = "HIGH SCORE: " + highScore.ToString();
         }
         scoreSO.updateScore(newScore);
-    }    
+    } 
+
+    public void SetToZero()
+    {
+       scoreSO.updateScore(0); 
+    }   
 }
