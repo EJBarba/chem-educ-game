@@ -55,7 +55,7 @@ public class WordCheck : MonoBehaviour
 
     void Start() 
     {
-      audioManager.Stop("bgmusicmainmenu");
+      audioManager.StopAllBGMusic();
       audioManager.Play("bgmusic1");
     }
 

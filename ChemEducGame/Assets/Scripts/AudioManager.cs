@@ -50,7 +50,7 @@ public class AudioManager : MonoBehaviour
 
     public void MusicVolume (float volume)
     {
-        string[] musicArray = { "bgmusic1", "bgmusicmainmenu", "bgmusicdefeat", "bgmusicvictory", "tutorialMusic", "missionCompleteMusic"};
+        string[] musicArray = { "bgmusic1", "bgmusicmainmenu", "bgmusicdefeat", "bgmusicvictory", "tutorialMusic", "missionCompleteMusic", "laserMusic"};
          foreach (Sound sound in sounds)
          {
              foreach (var music in musicArray)
@@ -65,7 +65,7 @@ public class AudioManager : MonoBehaviour
     }
      public void SfxVolume (float volume)
     {
-         string[] sfxArray = { "wordcorrect", "wordwrong", "tilesfx"};
+         string[] sfxArray = { "wordcorrect", "wordwrong", "tilesfx", "laserSound"};
          foreach (Sound sound in sounds)
          {
              foreach (var sfx in sfxArray)
@@ -81,7 +81,7 @@ public class AudioManager : MonoBehaviour
 
     public void StopAllBGMusic ()
     {
-        string[] musicArray = { "bgmusic1", "bgmusicmainmenu", "bgmusicdefeat", "bgmusicvictory", "tutorialMusic", "missionCompleteMusic"};
+        string[] musicArray = { "bgmusic1", "bgmusicmainmenu", "bgmusicdefeat", "bgmusicvictory", "tutorialMusic", "missionCompleteMusic", "laserMusic"};
          foreach (Sound sound in sounds)
          {
              foreach (var music in musicArray)

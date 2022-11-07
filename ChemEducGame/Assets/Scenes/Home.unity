@@ -6234,7 +6234,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 463804018}
         m_TargetAssemblyTypeName: SceneHandler, Assembly-CSharp
-        m_MethodName: Archery
+        m_MethodName: LaserLevel1_1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

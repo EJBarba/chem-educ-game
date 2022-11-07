@@ -22,6 +22,12 @@ public class ArcheryManager : MonoBehaviour
     public float waitSeconds = 3f;
     private bool endGame = false;
     public int score = 0;
+    private AudioManager audioManager;
+    public int scoreValueLaser = 5;
+
+    private void Awake() {
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+    }
 
     private void Start() {
         laserScript = laser.GetComponent<Laser>();
@@ -58,12 +64,14 @@ public class ArcheryManager : MonoBehaviour
             scoreSO.updateScore(0);
             resultText.text = "YOU LOSE";
             resultText.color = Color.red;
+            audioManager.Play("bgmusicdefeat");
         }
         else
         {
-            scoreSO.updateScore(1);
+            scoreSO.updateScore(scoreValueLaser);
             resultText.text = "YOU WIN!";
             resultText.color = Color.green;
+            audioManager.Play("bgmusicvictory");
         } 
     }
            
