@@ -35,6 +35,11 @@ public class WordCheck : MonoBehaviour
     public Image badgeImage;
     public TMP_Text badgeText;
     AudioManager audioManager;
+
+    public int previousPerfectScore;
+    public Score previousScoreSO;
+    public int beakerPowerupCount = 1;
+    public GameObject beakerPowerupGameobject;
     void Awake()
     {
       playFabManager = GameObject.Find("PLAYER").GetComponent<PlayFabManager>();
@@ -57,6 +62,54 @@ public class WordCheck : MonoBehaviour
     {
       audioManager.StopAllBGMusic();
       audioManager.Play("bgmusic1");
+
+      //check if eligible for powerup
+      if (previousPerfectScore == previousScoreSO.scoreValue)
+      {
+        beakerPowerupGameobject.SetActive(true);
+      }
+    }
+
+    public void BeakerPowerup()
+    {
+      beakerPowerupCount -= 1;
+      if (beakerPowerupCount <= 0)
+      {
+        beakerPowerupGameobject.SetActive(false);
+      }
+      for (int i = 0; i < word.Count; i++)
+      {
+         if(word[i].tag == "Player" && answer.Length != 0 && playerWin != true)
+          {
+            answer = word[i].GetComponent<TileCheck>().GetTileGameObjects();
+            
+            
+            bool createRandomIndex = false;
+            int randomIndex = 0;
+            for (int j = 0; i < answer.Length; j++)
+            {
+              if(answer[j].GetComponent<TMP_InputField>().text.Length <= 0)
+              {
+                if (createRandomIndex == false)
+                {
+                  randomIndex = Random.Range(j, answer.Length);
+                  createRandomIndex = true;
+                }
+
+                if (j == randomIndex)
+                {
+                answer[j].GetComponent<TMP_InputField>().text = answer[j].name; 
+                answer[j].GetComponent<Animator>().SetBool("isSolved", true);
+                answer[j].GetComponent<Animator>().SetBool("hasAnswered", true);
+                answer[j].GetComponent<TMP_InputField>().readOnly = true;
+                answer[j].GetComponent<TileSolveToggle>().TileSolved(true);
+
+                Debug.Log(answer[j]);
+                }
+              } 
+            }
+          }
+      }
     }
 
     void Update()
