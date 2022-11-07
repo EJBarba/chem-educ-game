@@ -109,4 +109,8 @@ public class SceneHandler : MonoBehaviour
     {
         SceneManager.LoadScene("Laser_Level2_5");
     }
+    public void LaserLevel2_6()
+    {
+        SceneManager.LoadScene("Laser_Level2_6");
+    }
 }
