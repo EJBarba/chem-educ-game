@@ -2045,7 +2045,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1237247475}
         m_TargetAssemblyTypeName: SceneHandler, Assembly-CSharp
-        m_MethodName: LaserLevel2_7
+        m_MethodName: LaserLevel2_Results
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
