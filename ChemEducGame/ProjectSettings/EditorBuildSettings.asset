@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Crossword_Level3.unity
     guid: c6f5c9c347b2eb84ab076632e70d689b
+  - enabled: 1
+    path: Assets/Scenes/Crossword_Results.unity
+    guid: 86b312977d100ff47b05b3b60374ef8d
   m_configObjects: {}
