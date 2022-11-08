@@ -1410,7 +1410,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 291e80706184dd445a52aa63292d8d45, type: 3}
     - target: {fileID: 7100383010815205886, guid: bfcefb9040f1d94499db94c76a5851a6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7100383010836868548, guid: bfcefb9040f1d94499db94c76a5851a6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -1673,6 +1673,7 @@ MonoBehaviour:
   scoreSO: {fileID: 11400000, guid: 8e30d90c55e79034a90e3966c4f60001, type: 2}
   scoreListSO: {fileID: 11400000, guid: cd5abc83b739ff44bb55fe2661df37a6, type: 2}
   world: {fileID: 1493638450}
+  worldCanvas: {fileID: 864723523}
   promptText: {fileID: 864723523}
   hasDestroyed: 0
   playerChance: 1

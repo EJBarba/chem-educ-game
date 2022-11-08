@@ -2287,6 +2287,7 @@ MonoBehaviour:
   scoreSO: {fileID: 11400000, guid: c10f583cf94497446828c22fa387bfc2, type: 2}
   scoreListSO: {fileID: 11400000, guid: cd5abc83b739ff44bb55fe2661df37a6, type: 2}
   world: {fileID: 1493638450}
+  worldCanvas: {fileID: 241564067}
   promptText: {fileID: 241564067}
   hasDestroyed: 0
   playerChance: 1

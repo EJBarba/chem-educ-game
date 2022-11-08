@@ -879,7 +879,7 @@ PrefabInstance:
     - target: {fileID: 4230783316528919975, guid: a7f65e67534c86b4798b22b48eb01f6b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b3448d00944de694583795d5c871e9e5, type: 3}
+      objectReference: {fileID: 21300000, guid: 2e8f9a40bc9b8a44d81957fc14cef0f4, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7f65e67534c86b4798b22b48eb01f6b, type: 3}
 --- !u!1 &642184361
@@ -1764,6 +1764,7 @@ MonoBehaviour:
   scoreSO: {fileID: 11400000, guid: 9752d491d154a3a4fa7987294e9cdbdc, type: 2}
   scoreListSO: {fileID: 11400000, guid: cd5abc83b739ff44bb55fe2661df37a6, type: 2}
   world: {fileID: 1493638450}
+  worldCanvas: {fileID: 7100383012392059562}
   promptText: {fileID: 7100383012392059562}
   hasDestroyed: 0
   playerChance: 2
