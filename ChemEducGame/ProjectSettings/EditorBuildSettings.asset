@@ -68,4 +68,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Laser_Level2_4.unity
     guid: 736722b9106df3e4ebe08fb23dfac2f4
+  - enabled: 1
+    path: Assets/Scenes/Laser_Level2_5.unity
+    guid: a0c469da19940214e9fba86939f55fcf
   m_configObjects: {}
