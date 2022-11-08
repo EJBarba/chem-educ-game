@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Crossword_Results.unity
     guid: 86b312977d100ff47b05b3b60374ef8d
+  - enabled: 1
+    path: Assets/Scenes/Laser_Level1_1.unity
+    guid: 3ec2c67f5b21cb542a983a636615ccb9
   m_configObjects: {}

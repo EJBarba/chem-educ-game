@@ -14,7 +14,7 @@ public class ArcheryManager : MonoBehaviour
     [SerializeField] Score scoreSO;
     [SerializeField] ScoreData scoreListSO;
     [SerializeField] GameObject world;
-    [SerializeField] GameObject worldCanvas;
+    [SerializeField] GameObject promptText;
     private Laser laserScript;
     public bool hasDestroyed = false;
     public int playerChance = 1;
@@ -59,7 +59,7 @@ public class ArcheryManager : MonoBehaviour
         resultModal.SetActive(true);
         laser.SetActive(false);
         world.SetActive(false);
-        worldCanvas.SetActive(false);
+        promptText.SetActive(false);
         
         itemText.text = "ITEM #" + scoreSO.name + " OUT OF " + scoreListSO.scoreList.Count;
         if(setToZero)
