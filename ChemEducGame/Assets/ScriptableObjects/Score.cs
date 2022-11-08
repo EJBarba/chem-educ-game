@@ -9,9 +9,15 @@ public class Score : ScriptableObject
     public int scoreValue;
     public void updateScore(int score)
     {
+        #if UNITY_EDITOR
         EditorUtility.SetDirty(this);
+        #endif
         scoreValue = score;
+
+        #if UNITY_EDITOR
         AssetDatabase.SaveAssets();
-        AssetDatabase.Refresh();
+        AssetDatabase.Refresh()
+        #endif
+        ;
     }
 }
