@@ -70,7 +70,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.18, y: 0}
+  m_Offset: {x: -1.3, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -81,7 +81,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.2, y: 5.9}
+  m_Size: {x: 5.5, y: 7.35}
   m_EdgeRadius: 0
 --- !u!114 &4261194543514417544
 MonoBehaviour:
@@ -99,6 +99,7 @@ MonoBehaviour:
   archeryManager: {fileID: 0}
   checkMark: {fileID: 6829399254404114065, guid: f92aa229932be44448d9ab7780eb944e, type: 3}
   wrongMark: {fileID: 5901441089554977348, guid: 5446012ef8f5c8a46afdfb5bc0c8d07f, type: 3}
+  animator: {fileID: 0}
 --- !u!95 &5637001371293672029
 Animator:
   serializedVersion: 4
@@ -144,8 +145,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9069128099973300395}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -1.57, y: 0, z: 0}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2621540766036263076}
