@@ -1535,13 +1535,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7100383010608609739, guid: bfcefb9040f1d94499db94c76a5851a6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 323962a2bec2ee5478a4ff0d534e354d, type: 3}
+    - target: {fileID: 7100383010815205886, guid: bfcefb9040f1d94499db94c76a5851a6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7100383010836868548, guid: bfcefb9040f1d94499db94c76a5851a6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LaserLevel1_4
       objectReference: {fileID: 0}
+    - target: {fileID: 7100383010922774124, guid: bfcefb9040f1d94499db94c76a5851a6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7100383011002430205, guid: bfcefb9040f1d94499db94c76a5851a6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7100383011259099730, guid: bfcefb9040f1d94499db94c76a5851a6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -383
+      objectReference: {fileID: 0}
     - target: {fileID: 7100383011328753271, guid: bfcefb9040f1d94499db94c76a5851a6, type: 3}
       propertyPath: m_text
       value: Deoxyribose
+      objectReference: {fileID: 0}
+    - target: {fileID: 7100383011494278936, guid: bfcefb9040f1d94499db94c76a5851a6, type: 3}
+      propertyPath: m_text
+      value: RIBOSE
       objectReference: {fileID: 0}
     - target: {fileID: 7100383012030701568, guid: bfcefb9040f1d94499db94c76a5851a6, type: 3}
       propertyPath: m_Name
@@ -1631,6 +1655,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7100383012347427997, guid: bfcefb9040f1d94499db94c76a5851a6, type: 3}
+      propertyPath: m_text
+      value: DEOXYRIBOSE
+      objectReference: {fileID: 0}
+    - target: {fileID: 7100383012393770071, guid: bfcefb9040f1d94499db94c76a5851a6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 96b774b8e2159c141bc6632e92140079, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfcefb9040f1d94499db94c76a5851a6, type: 3}
 --- !u!4 &1151620338 stripped
