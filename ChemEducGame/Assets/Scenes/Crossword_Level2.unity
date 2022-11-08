@@ -13355,6 +13355,14 @@ PrefabInstance:
       value: WordCheck, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7518943653821519916, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: minutes
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518943653821519916, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: timeRemaining
+      value: 480
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518943653821519916, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
       propertyPath: onTimerEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1538516811}
