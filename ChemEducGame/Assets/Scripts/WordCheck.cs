@@ -39,6 +39,7 @@ public class WordCheck : MonoBehaviour
     public int previousPerfectScore;
     public Score previousScoreSO;
     public int beakerPowerupCount = 1;
+    public TMP_Text beakerPowerUpCountText;
     public GameObject beakerPowerupGameobject;
     void Awake()
     {
@@ -67,12 +68,21 @@ public class WordCheck : MonoBehaviour
       if (previousPerfectScore == previousScoreSO.scoreValue)
       {
         beakerPowerupGameobject.SetActive(true);
+        beakerPowerUpCountText.text = beakerPowerupCount.ToString();
       }
     }
 
+    public void ShowBeakerPowerupIfValid()
+    {
+      if (beakerPowerupCount > 0)
+      {
+        beakerPowerupGameobject.SetActive(true);
+      }
+    }
     public void BeakerPowerup()
     {
       beakerPowerupCount -= 1;
+      beakerPowerUpCountText.text = beakerPowerupCount.ToString();
       if (beakerPowerupCount <= 0)
       {
         beakerPowerupGameobject.SetActive(false);
