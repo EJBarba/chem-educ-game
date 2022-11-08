@@ -87,3 +87,27 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: tutorialMusic
+    clip: {fileID: 8300000, guid: 5658d350789cddc47acbb18ae5243f00, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: missionCompleteMusic
+    clip: {fileID: 8300000, guid: 97f15dc90f0827046a3dca3782f8b931, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: laserMusic
+    clip: {fileID: 8300000, guid: 107195a139a551f40961d2470173f0e6, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: laserSound
+    clip: {fileID: 8300000, guid: 9a6b368616b88f140b56e15f6ded2d93, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}

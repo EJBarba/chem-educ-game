@@ -1,0 +1,8 @@
+{
+    "name": "DaiMangou.BridgedData",
+    "references": ["Unity.TextMeshPro"],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}

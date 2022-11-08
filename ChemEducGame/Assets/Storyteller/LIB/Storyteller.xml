@@ -1,0 +1,3819 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Storyteller</name>
+    </assembly>
+    <members>
+        <member name="F:DaiMangou.Storyteller.AudioSettings.DeviceName">
+            <summary>
+                name of the microphone
+            </summary>
+        </member>
+        <member name="T:DaiMangou.Storyteller.Scene">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DaiMangou.Storyteller.Story">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Story.OnEnable">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Story.CharacterNodes">
+            <summary>
+                character nodes are special as they are what defines the start of any story and character path, we will store them
+                in a linst so that the timeline can use them
+            </summary>
+        </member>
+        <member name="T:DaiMangou.Storyteller.Elements.StoryElement">
+            <summary>
+            The base dataset of all nodes
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Elements.StoryElement.OnEnable">
+            <summary>
+            used for initialization 
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Elements.StoryElement.OnDisable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Elements.StoryElement.MakeConnection">
+            <summary>
+                Connection to another node
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Elements.StoryElement.MakeAutoConnection">
+            <summary>
+                make an automatic connection to a duplicated node
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Elements.StoryElement.DrawNode">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Elements.StoryElement.AggregateNodesInChain">
+            <summary>
+            triggers a refresh of all nodes in the chain of events for a character
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Elements.StoryElement.DeAggregateNodesInChain(System.Boolean)">
+            <summary>
+            </summary>
+            <param name="reset"></param>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Elements.StoryElement.DeleteNode">
+            <summary>
+                this function will delete the last selected node
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Elements.StoryElement.DetatchInputs">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Elements.StoryElement.DetatchOutputs">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Elements.StoryElement.DetatchSpecificNode(DaiMangou.Storyteller.Elements.StoryElement)">
+            <summary>
+            </summary>
+            <param name="node"></param>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Elements.StoryElement.Reset(System.Boolean)">
+            <summary>
+            </summary>
+            <param name="basic"></param>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Elements.StoryElement.MakePersistent(DaiMangou.Storyteller.Elements.StoryElement)">
+            <summary>
+                takes the story elements data and passes them to the story project
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.StoryElement.Name">
+            <summary>
+             The name of the node
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.StoryElement.UID">
+            <summary>
+            The ID value used to track nodes
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.StoryElement.Drag">
+            <summary>
+                drag system for node body
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.StoryElement.IndexInList">
+            <summary>
+            intenal use ony, used to track the position of nodes in list
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.StoryElement.NodeRect">
+            <summary>
+                The default rect of the node
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.StoryElement.NodesIMadeConnectionsTo">
+            <summary>
+                list of nodes that this node connected to
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.StoryElement.NodesThatMadeAConnectionToMe">
+            <summary>
+                Nodes that have connections to this node
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.StoryElement._attemptingToMakeConnection">
+            <summary>
+                Called when a drag is detected on LocalOutputArea
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.StoryElement.ConnectingNode">
+            <summary>
+                The node making the connection to another
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.StoryElement.MessengerNode">
+            <summary>
+                literally the node that caused us to play
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.StoryElement.HasInputArea">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.StoryElement.HasOutputArea">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.StoryElement.ChainingColour">
+            <summary>
+                the color of the connocter tht every node atached will give their connector
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.StoryElement.UsesTime">
+            <summary>
+                this determines if the node uses time.
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.StoryElement.DelayTimeInSeconds">
+            <summary>
+            what is the duration of the delay time until this node is played
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.StoryElement.TimeInSeconds">
+            <summary>
+             what is the duration of the playback of the node
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.StoryElement.NodeDurationSum">
+            <summary>
+             The total duration of the nodes playtime. delay + start time
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.StoryElement.StartingTime">
+            <summary>
+            the Actual  point in time where the node dtats will be trigered. this is after the delay
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.StoryElement.CallingNode">
+            <summary>
+            this is the character who controls the flow of data to this node
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.StoryElement.Environment">
+            <summary>
+            thi is the environment which controls the flow of environmental data to this node until a new environment emergesin the chain of events
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.StoryElement.Text">
+            <summary>
+            This is the text data that exists in an Action, Dialogue and Abstract Node
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.StoryElement.Tag">
+            <summary>
+             represents any added definition or emphasys you wish to place on what a nodes content represents
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.StoryElement.Pass">
+            <summary>
+             Determines if the  node data is procesid in the timeline (edit with caution or not at all)
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.StoryElement.MySceneId">
+            <summary>
+             This is the index representation of the scene which theis node exists in
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.StoryElement.OverrideTime">
+            <summary>
+            on rare occasions , This is used when a node that does not use time, needs to be forced into a specific stime position.
+            </summary>
+        </member>
+        <member name="T:DaiMangou.Storyteller.Elements.ActionNode">
+            <summary>
+            Action nodes are used to document character actions which can be emphasized through storyboard images and sound efects
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.ActionNode.SoundEffect">
+            <summary>
+             The sound effect attached to the action node.
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.ActionNode.LocalizedSoundEffects">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DaiMangou.Storyteller.Elements.ActionNode.StoryboardImage">
+            <summary>
+            The storyboard image which is attached to the action node.
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.ActionNode.StoryboardImagePath">
+            <summary>
+             The path of the storyboard image to be loaded from memory
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Elements.ActionNode.MakePersistent(DaiMangou.Storyteller.Elements.StoryElement)">
+            <summary>
+            INTERNAL USE ONLY
+            </summary>
+            <param name="storyElement"></param>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Elements.ActionNode.MakePersistentForTemplate(DaiMangou.Storyteller.Elements.StoryElement)">
+            <summary>
+            INTERNAL USE ONLY
+            </summary>
+            <param name="storyElement"></param>
+        </member>
+        <member name="T:DaiMangou.Storyteller.Elements.CharacterNode">
+            <summary>
+            this is your character , characters can hold various data sets such as character personality, features , history and evolution.
+            </summary>
+        </member>
+        <member name="T:DaiMangou.Storyteller.Elements.CharacterNode.PositiveTraits">
+            <summary>
+             Collection of int values representing positive traits
+            </summary>
+        </member>
+        <member name="T:DaiMangou.Storyteller.Elements.CharacterNode.NeutralTraits">
+            <summary>
+            Collection of int values representing neutral traits
+            </summary>
+        </member>
+        <member name="T:DaiMangou.Storyteller.Elements.CharacterNode.NegativeTraits">
+            <summary>
+            Collection of int values representing negative traits
+            </summary>
+        </member>
+        <member name="T:DaiMangou.Storyteller.Elements.CharacterNode.Personality">
+            <summary>
+             Three sets of values used to help define your characters personality.
+            </summary>
+        </member>
+        <member name="T:DaiMangou.Storyteller.Elements.CharacterNode.CharacterType">
+            <summary>
+            Used to outline the character type
+            </summary>
+        </member>
+        <member name="T:DaiMangou.Storyteller.Elements.CharacterNode.VoiceSample">
+            <summary>
+            Character voice sample dtaset.
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.CharacterNode.VoiceSample.SampleName">
+            <summary>
+            the name of the voice sample as saved
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.CharacterNode.VoiceSample.SamplePath">
+            <summary>
+            the local path of the voice sample clip
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.CharacterNode.VoiceSample.Sample">
+            <summary>
+            the audioclip which makesuse of the voice sample clip
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.CharacterNode.VoiceSample.Playing">
+            <summary>
+            Flag used to check if the voice sample is playing in editor
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.CharacterNode.VoiceSample.Recording">
+            <summary>
+            Flag used to check to see if the voice sample is being layed in the editor
+            </summary>
+        </member>
+        <member name="T:DaiMangou.Storyteller.Elements.CharacterNode.Sex">
+            <summary>
+            the sex of your character
+            </summary>
+        </member>
+        <member name="T:DaiMangou.Storyteller.Elements.CharacterNode.CharacterBio">
+            <summary>
+            your character or characters evolution states biography and character data
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.CharacterNode.AllNodesInMyChain">
+            <summary>
+             A collection of all the nodes in this characters chain of events.
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.CharacterNode.NodesInMyChain">
+            <summary>
+             A collection of all the nodes in this characters chain of events that are on the active story path as seen in the timeline.
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.CharacterNode.NodesInMyChainWithRoutes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.CharacterNode.TimelineNodes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.CharacterNode.TimelineNodesWithRoutes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.CharacterNode.CharacterBios">
+            <summary>
+            Your characters History and Evolution organized into lists
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.CharacterNode.LinkedCharacter">
+            <summary>
+             The character which this character has been linked to.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:DaiMangou.Storyteller.Elements.CharacterNode.BioID" -->
+        <member name="M:DaiMangou.Storyteller.Elements.CharacterNode.CalculateDurationSumInChain">
+            <summary>
+                this is only called by the character nodes in each scene
+            </summary>
+        </member>
+        <member name="T:DaiMangou.Storyteller.Elements.DialogueNode">
+            <summary>
+            Dilogue nodes are used  specifying timed character dialogue in the form of text or voiceover ercording
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.DialogueNode._max">
+            <summary>
+                // scale handle
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.DialogueNode.LocalizedSoundEffects">
+            <summary>
+            
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:DaiMangou.Storyteller.Elements.DialogueNode.wordCount" -->
+        <member name="F:DaiMangou.Storyteller.Elements.DialogueNode.StoryboardImagePath">
+            <summary>
+            The path of the storyboard image to be loaded from memory
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.DialogueNode.LocalizedVoiceRecordings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DaiMangou.Storyteller.Elements.AbstractNode">
+            <summary>
+            Abstract node data is onlt used in storyteller
+            </summary>
+        </member>
+        <member name="T:DaiMangou.Storyteller.Elements.LinkNode">
+            <summary>
+            Perform time skips and time loops or simply connect nodes at a distance to keep the canvas clean
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.LinkNode.IterationCount">
+            <summary>
+            The number of times we must perform the time loop before exitin via a Route Node
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.LinkNode.Loop">
+            <summary>
+            Flag which checks if we are in time loop mode or not
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.LinkNode.LoopRoute">
+            <summary>
+            The route node which will be used to excape the time loop or exit a time skip
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.LinkNode.LoopValue">
+            <summary>
+            The amount of times the time loop has run
+            </summary>
+        </member>
+        <member name="T:DaiMangou.Storyteller.Elements.MediaNode">
+            <summary>
+            Used to play a characters chain of events
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:DaiMangou.Storyteller.Elements.CustomEnvironmentData" -->
+        <member name="T:DaiMangou.Storyteller.Elements.EnvironmentNode">
+            <summary>
+            Represents an environment which a chin of events is taking place in.
+            </summary>
+        </member>
+        <member name="T:DaiMangou.Storyteller.Elements.EnvironmentNode.EnvironmentInfo">
+            <summary>
+            General information obout the environment
+            </summary>
+        </member>
+        <member name="T:DaiMangou.Storyteller.Elements.EnvironmentNode.EnvironmentInfo.PhysicalSetting">
+            <summary>
+            The hysical setting of the rnvironment
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.EnvironmentNode.EnvironmentInfo.Mood">
+            <summary>
+            The mood of the environment
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.EnvironmentNode.EnvironmentInfo.Location">
+            <summary>
+            The location of the environment
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.EnvironmentNode.EnvironmentInfo.PhysicalDescription">
+            <summary>
+            Physical description of the environment
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.EnvironmentNode.EnvironmentInfo.History">
+            <summary>
+            History of the environment
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.EnvironmentNode.EnvironmentInfo.Setting">
+            <summary>
+            Enum selection for either an Indoor or Outdoor environment.
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.EnvironmentNode.EnvironmentInfo.EnvironmentImagePath">
+            <summary>
+            Image represention your environment
+            </summary>
+        </member>
+        <member name="P:DaiMangou.Storyteller.Elements.EnvironmentNode.EnvironmentInfo.EnvironmentImage">
+            <summary>
+            the image representation of yur environment
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.EnvironmentNode.EnvironmentInformation">
+            <summary>
+             General information obout the environment
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.EnvironmentNode.LinkedEnvironment">
+            <summary>
+            The environment which this enviornment is linked to
+            </summary>
+        </member>
+        <member name="T:DaiMangou.Storyteller.Elements.EndNode">
+            <summary>
+            representing the ending of a chain of events.
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.EndNode.continuingCharacter">
+            <summary>
+             The character in the next scene whose events we will automatically play through
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.EndNode.sceneID">
+            <summary>
+            The index position of the scene that we wish to continue to
+            </summary>
+        </member>
+        <member name="T:DaiMangou.Storyteller.Elements.RouteNode">
+            <summary>
+            Allows for branching of a chain of events into multiple chains 
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.RouteNode.LinkedRout">
+            <summary>
+             The route node which this route is linked to
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.RouteNode.RoutesIControl">
+            <summary>
+             The route node which controls this route
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.RouteNode.AutoSwitchValue">
+            <summary>
+             the Id of the route we will switch to automatically
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Elements.RouteNode.RouteId">
+            <summary>
+            the route which the route will take
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Elements.RouteNode.OnEnable">
+            <summary>
+             this link node is only available when it is being used as the time loop link node that controls this route node
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Elements.RouteNode.ElementName">
+            <summary>
+            INYTERNAL USE ONLY
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Elements.RouteNode.DrawNode">
+            <summary>
+            INYTERNAL USE ONLY
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Elements.RouteNode.MakePersistent(DaiMangou.Storyteller.Elements.StoryElement)">
+            <summary>
+            INYTERNAL USE ONLY
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Elements.RouteNode.MakePersistentForTemplate(DaiMangou.Storyteller.Elements.StoryElement)">
+            <summary>
+            INYTERNAL USE ONLY
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:DaiMangou.Storyteller.CurrentStory.ActiveStory">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.CurrentStory.NodeToAdd">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.CurrentStory.NodeToAutoConnect">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.CurrentStory.ShowIngContextMenu">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.CurrentStory.TempPan">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.CurrentStory.StorytellerWindowSize">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.CurrentStory.CashedPan">
+            <summary>
+                cashed for use in node cut and copy
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.CurrentStory.AmountOfNodesPlaying">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.CurrentStory.ActiveSceneIndex">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.CurrentStory.TempClipboardElements">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.CurrentStory.ClipboardElements">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.CurrentStory.CurrentPlayingNode">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.CurrentStory.ActiveChainPlaybackTime">
+            <summary>
+            will feed the timeline the current time of the playing chain or chaings
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.CurrentStory.SceneOrderEdited">
+            <summary>
+            flag to check if we have deleted or rearranged the scene order
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.CurrentStory.Select(System.String)">
+            <summary>
+            From any extension, use a nodes UID to find and select it in the canvas
+            </summary>
+            <param name="UID"></param>
+        </member>
+        <member name="M:DaiMangou.Storyteller.NodeSelector.DrawSelector">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.NodeSelector._draw">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.NodeSelector.SelectedNodes">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.NodeSelector._selectionRect">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.NodeSelector._clickStartPosition">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.NodeSelector._clickEndPosition">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.NodeSelector._drag">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.NodeSelector._readyForDrag">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.NodeSelector.DoSelect">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.NodeSelector.NodeSelectorIsActive">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.NodeSelector._checkForCloseRequest">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.NodeSelector.scalehandle">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.NodeSelector.SubsequentNodes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.StoryAssetCreator.Create">
+            <summary>
+                Creates sceneToOverwrite new Story project at the location of the currently or last selected folder when called
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:DaiMangou.Storyteller.StoryAssetCreator.SearchAndCreate" -->
+        <member name="M:DaiMangou.Storyteller.StoryAssetCreator.CreateNode(System.Type)">
+            <summary>
+                create sceneToOverwrite node on the canvas by passing in sceneToOverwrite type of the node you wish to create and
+                calling this function
+            </summary>
+            <param name="typeOfNode"></param>
+        </member>
+        <member name="T:DaiMangou.Storyteller.StorytellerEditor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.StorytellerEditor.CopyList(DaiMangou.Storyteller.Story,DaiMangou.Storyteller.Story)">
+            <summary>
+            </summary>
+            <param name="storyToOverwrite"></param>
+            <param name="overwritingStory"></param>
+        </member>
+        <member name="M:DaiMangou.Storyteller.StorytellerEditor.Save">
+            <summary>
+             begin saving story data
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.TimedTextEditor.Areas">
+            private int targetLanguageIndex;
+            public string[] LanguageNameArray = new string[] { "" };
+        </member>
+        <member name="M:DaiMangou.Storyteller.TimelineEditor.OnEnable">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.TimelineEditor.OnGUI">
+            <summary>
+            </summary>
+            <param name="rect"></param>
+            <param name="showTimeline"></param>
+            <param name="story"></param>
+        </member>
+        <member name="T:DaiMangou.Storyteller.ImageLibrary">
+            <summary>
+            INTERNAL USE ONLY
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.SettingsIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.speakerIconEmpty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.speakerIconFull">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.StopclockW">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.StopclockY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.stopIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.Storyboard">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.Storyteller">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.StorytellerHXBkgn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.StorytellerIconDark">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.StorytellerIconSmall">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.textIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.twoColourdBackground">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.upArrow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.waveformIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.waveformIconfull">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.addIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.audioIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.audioIconFull">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.Book">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.chatIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.CloudExportIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.CopyIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.defaultFemaleCharacterImage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.downArrow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.flipIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.GridIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.GridTexture">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.ImageMask">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.imageSettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.incomplete_scene_file_icons">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.InputConnected">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.InputEmpty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.LinkBroken">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.LinkMade">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.MediaNodeHead">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.MenuArrow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.microphoneIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.microphoneIconActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.microphoneIconActiveT2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.microphoneIconInactiveT2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.NewIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.NoCoverImage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.OutputConnected">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.OutputEmpty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.PasteIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.PausedIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.pauseIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.pictureIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.playheadIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.playIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.PlayingIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.PowerOffRed">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.PowerOff">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.PowerOffpro">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.PowerOn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.PowerOnpro">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.routeIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.ConvergenceRouteIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.Saveicon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.sceneIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.More_Blue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.More_White">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.refreshIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.SnapperBackground">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.video1Icon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.BookHover">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.StoryboardHover">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.ZoomIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.BookActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.StoryboardActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.selectionGraphic">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.GameBridgeIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.TimelineIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.ScenesIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.PropertiesIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.binIconLight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.scenesViewIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.updateDataIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.smallAddIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.GameBridgeIconSmall">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.StoryInfoAndSettingsLogo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.LargeLinkIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.CheckmarkIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.defaultStoryboardImage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.defaultEnvironmentImage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.activeRoute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.inactiveRoute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.activeRouteError">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.loopInactiveIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.loopActiveIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.sampleEditorIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.loopErrorIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.TemplateIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.TemplateIconSmall">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.addTemplateIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.CameraIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.ScaleHandleIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.ColourWheel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.selectionCircle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.SelectecColourMask">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.bigAddIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.binIconDark">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.blueCircle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.editIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.quickEditIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.sceneIconDark">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.smallHTMLicon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.addConditionIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.deleteConditionIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.MaximizeIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.MinimizeIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.ScaleToFitIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.ScaleToFillIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.FolderIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.defaultSceneImage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.logo_footer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.DownEqualSign">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.DownFlowArrow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.SceneManagerIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.RedBulb">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.OrangeBulb">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.IllegalConnectionIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.UnusedNodeIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.LockLocked">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.LockUnlocked">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.AddComponentImage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.CrownOn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.CrownOff">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.RGBRing">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.RGBIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.Visible">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.NotVisible">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.LinkManagerIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.HeaderImage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.RepeatableStipe">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.RepeatableStipeBlue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.CharacterIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.WrenchIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.MarkupIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.LanguageIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.TextFile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.TimelineRouteNodeIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.rightArrow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.FoldoutDown">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.FoldoutRight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.RGBBackground">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.loopInactiveIconWhite">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.InteractionTriggerManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.Interaction">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.InteractableCharacter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.CollisionReceiver">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.CollisionTrigger">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.ClickListener">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.microphoneIconSmall">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.Voiced">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.VoicedActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.VoicedHover">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.CreateIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.WaveformVisualizationDisabled">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.WaveformVisualizationEnabled">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.TextVisualizationDisabled">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.TextVisualizationEnabled">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.GridView">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.ListView">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.GridViewHover">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.ListViewHover">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.Trollface">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.HideIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.HiddenIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.mainBackgroundImage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.PublisherPageCover">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.Background">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.sceneDataIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.AudioFileIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.Reset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.ImageLibrary.warningIconYellow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DaiMangou.Storyteller.URMS">
+            <summary>
+                undo redo management systm
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.DmuiControl.DisableControls(System.Int32,System.Boolean)">
+            <summary>
+                you are stil required to give disableState a value
+            </summary>
+            <param name="controlId"></param>
+            <param name="disableState"></param>
+        </member>
+        <member name="T:DaiMangou.Storyteller.SnapPosition">
+            <summary>
+                Contains 9 values relating to areas of a rect.
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.SnapPosition.TopLeft">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.SnapPosition.TopRight">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.SnapPosition.BottomLeft">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.SnapPosition.BottomRight">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.SnapPosition.TopMiddle">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.SnapPosition.BottomMiddle">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.SnapPosition.LeftMiddle">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.SnapPosition.RightMiddle">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.SnapPosition.Center">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.SnapPosition.None">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Theme.Skin">
+            <summary>
+                The current GUI.Skin
+            </summary>
+        </member>
+        <member name="P:DaiMangou.Storyteller.Theme.Fog">
+            <summary>
+                gray theme
+            </summary>
+        </member>
+        <member name="P:DaiMangou.Storyteller.Theme.Dusk">
+            <summary>
+                dark theme
+            </summary>
+        </member>
+        <member name="T:DaiMangou.Storyteller.RectExt">
+            <summary>
+                Extensions of the Rect class
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.RectExt.SetToMouseCenter(UnityEngine.Rect)">
+            <summary>
+                Will set <paramref name="rect" /> to be positioned at the mouse position
+            </summary>
+            <param name="rect"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaiMangou.Storyteller.RectExt.SetToMouseCenter(UnityEngine.Rect,System.Single,UnityEngine.Vector2)">
+            <summary>
+                will set <paramref name="rect" /> to be positioned at the mouse positiom at the <paramref name="rect" /> center and
+                scaled by <paramref name="scale" /> with its pivot point at  <paramref name="pivotPoint" />
+            </summary>
+            <param name="rect"></param>
+            <param name="scale"></param>
+            <param name="pivotPoint"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaiMangou.Storyteller.RectExt.ToCenter(UnityEngine.Rect,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                Will set create a Rect to be of <paramref name="width" /> and <paramref name="height" /> at the center of
+                <paramref name="rect" /> with <paramref name="xPaddin" /> and <paramref name="yPadding" />
+            </summary>
+            <param name="rect"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <param name="xPadding"></param>
+            <param name="yPadding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaiMangou.Storyteller.RectExt.ToUpperRight(UnityEngine.Rect,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                Will set create a Rect to be of <paramref name="width" /> and <paramref name="height" /> at the upper right of
+                <paramref name="rect" /> with <paramref name="xPaddin" /> and <paramref name="yPadding" />
+            </summary>
+            <param name="rect"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <param name="xPadding"></param>
+            <param name="yPadding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaiMangou.Storyteller.RectExt.ToLowerRight(UnityEngine.Rect,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                Will set create a Rect to be of <paramref name="width" /> and <paramref name="height" /> at the lower right
+                <paramref name="rect" /> with <paramref name="xPaddin" /> and <paramref name="yPadding" />
+            </summary>
+            <param name="rect"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <param name="xPadding"></param>
+            <param name="yPadding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaiMangou.Storyteller.RectExt.ToUpperLeft(UnityEngine.Rect,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                Will set create a Rect to be of <paramref name="width" /> and <paramref name="height" /> at the upper left of
+                <paramref name="rect" /> with <paramref name="xPaddin" /> and <paramref name="yPadding" />
+            </summary>
+            <param name="rect"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <param name="xPadding"></param>
+            <param name="yPadding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaiMangou.Storyteller.RectExt.ToLowerLeft(UnityEngine.Rect,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                Will set create a Rect to be of <paramref name="width" /> and <paramref name="height" /> at the lower left of
+                <paramref name="rect" /> with <paramref name="xPaddin" /> and <paramref name="yPadding" />
+            </summary>
+            <param name="rect"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <param name="xPadding"></param>
+            <param name="yPadding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaiMangou.Storyteller.RectExt.ToCenterTop(UnityEngine.Rect,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                Will set create a Rect to be of <paramref name="width" /> and <paramref name="height" /> at the top center of
+                <paramref name="rect" /> with <paramref name="xPaddin" /> and <paramref name="yPadding" />
+            </summary>
+            <param name="rect"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <param name="xPadding"></param>
+            <param name="yPadding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaiMangou.Storyteller.RectExt.ToCenterBottom(UnityEngine.Rect,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                Will set create a Rect to be of <paramref name="width" /> and <paramref name="height" /> at the bottom center of
+                <paramref name="rect" /> with <paramref name="xPaddin" /> and <paramref name="yPadding" />
+            </summary>
+            <param name="rect"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <param name="xPadding"></param>
+            <param name="yPadding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaiMangou.Storyteller.RectExt.ToCenterLeft(UnityEngine.Rect,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                Will set create a Rect to be of <paramref name="width" /> and <paramref name="height" /> at the left center of
+                <paramref name="rect" /> with <paramref name="xPaddin" /> and <paramref name="yPadding" />
+            </summary>
+            <param name="rect"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <param name="xPadding"></param>
+            <param name="yPadding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaiMangou.Storyteller.RectExt.ToCenterRight(UnityEngine.Rect,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                Will set create a Rect to be of <paramref name="width" /> and <paramref name="height" /> at the right center of
+                <paramref name="rect" /> with <paramref name="xPaddin" /> and <paramref name="yPadding" />
+            </summary>
+            <param name="rect"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <param name="xPadding"></param>
+            <param name="yPadding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaiMangou.Storyteller.RectExt.AddRect(UnityEngine.Rect,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                Increases the size of <paramref name="rect" /> by <paramref name="width" /> and <paramref name="height" /> and
+                position of  <paramref name="rect" /> by <paramref name="x" /> and <paramref name="y" />
+            </summary>
+            <param name="rect"></param>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaiMangou.Storyteller.RectExt.AddRect(UnityEngine.Rect,UnityEngine.Rect)">
+            <summary>
+            Increases the size of <paramref name="rect" /> by <paramref name="sourceRect" /> 
+            </summary>
+            <param name="rect"></param>
+            <param name="sourceRect"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DaiMangou.Storyteller.Vector2Ext">
+            <summary>
+                Extension of the Vector2 Class
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:DaiMangou.Storyteller.Vector2Ext.AddPadding(UnityEngine.Vector2,System.Single,System.Single)" -->
+        <member name="T:DaiMangou.Storyteller.Vector3Ext">
+            <summary>
+                Extensions of the Vecor3 Class
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Vector3Ext.Modify(UnityEngine.Vector3,System.Single,System.Single,System.Single)">
+            <summary>
+                Modifies the x,y,z values of <paramref name="vector3" /> by <paramref name="x" />  , <paramref name="y" /> ,
+                <paramref name="z" />
+            </summary>
+            <param name="vector3"></param>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DaiMangou.Storyteller.ListExt">
+            <summary>
+                Extension of the List classs
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.ListExt.Resize``1(System.Collections.Generic.List{``0},System.Int32,``0)">
+            <summary>
+                Resize <paramref name="list" /> by <paramref name="size" />
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="list"></param>
+            <param name="size"></param>
+            <param name="c"></param>
+        </member>
+        <member name="M:DaiMangou.Storyteller.ListExt.AddMany``1(System.Collections.Generic.List{``0},``0[])">
+            <summary>
+                Add multiple values to <paramref name="List" />
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="list"></param>
+            <param name="elements"></param>
+        </member>
+        <member name="T:DaiMangou.Storyteller.BoolExt">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.BoolExt.Set(System.Boolean,System.Boolean)">
+            <summary>
+            </summary>
+            <param name="state"></param>
+            <param name="newstate"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DaiMangou.Storyteller.FloatExt">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.FloatExt.Modify(System.Single,System.Single)">
+            <summary>
+            </summary>
+            <param name="Float"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DaiMangou.Storyteller.Colour">
+            <summary>
+                Colour class allowing for the setting of colours via RGBA changels
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Colour.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                Takes in RGBA values
+            </summary>
+            <param name="r"></param>
+            <param name="g"></param>
+            <param name="b"></param>
+            <param name="a"></param>
+        </member>
+        <member name="P:DaiMangou.Storyteller.Colour.Black">
+            <summary>
+                Returns the colour black
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Colour.colour(System.Single,System.Single,System.Single)">
+            <summary>
+                Returns the expected resultant RGB colour at defaut alpha
+            </summary>
+            <param name="r"></param>
+            <param name="g"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Colour.colour(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                Returns the expected resultant RGB colour at custom alpha <paramref name="a" />
+            </summary>
+            <param name="r"></param>
+            <param name="g"></param>
+            <param name="b"></param>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DaiMangou.Storyteller.Grid">
+            <summary>
+                Create GUI which you can use to display scalable gui with padding or workspace grids
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Grid.BeginDynaicGuiGrid(UnityEngine.Rect,System.Int32,System.Int32,System.Collections.Generic.List{UnityEngine.Rect},System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                Create a grid in <paramref name="area" /> withh <paramref name="rows" /> and <paramref name="colimns" /> with
+                optional  padding of <paramref name="xpadding" /> and <paramref name="ypadding" /> betweeen each and optional
+                content dimentions of <paramref name="contentWidth" /> and <paramref name="contentHeight" />
+                Each area in the gird is added to <paramref name="rect" />
+            </summary>
+            <param name="area"></param>
+            <param name="columns"></param>
+            <param name="rows"></param>
+            <param name="rect"></param>
+            <param name="xpadding"></param>
+            <param name="ypadding"></param>
+            <param name="contentWidth"></param>
+            <param name="contentHeight"></param>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Grid.BeginDynaicGuiGrid(UnityEngine.Rect,System.Collections.Generic.List{UnityEngine.Rect},System.Single,System.Single,System.Single,System.Single,System.Int32,System.Single,System.Boolean,UnityEngine.Vector2)">
+            <summary>
+            </summary>
+            <param name="area"></param>
+            <param name="rect"></param>
+            <param name="xpadding"></param>
+            <param name="ypadding"></param>
+            <param name="contentWidth"></param>
+            <param name="contentHeight"></param>
+            <param name="contentCount"></param>
+            <param name="extraRects"></param>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Grid.EndDynaicGuiGrid">
+            <summary>
+                End the dynamic GUI Grid what uses scroll
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Grid.BeginSelectionGrid(System.Int32,UnityEngine.Rect,System.Int32,System.Int32,System.Collections.Generic.List{UnityEngine.Rect},System.Single)">
+            <summary>
+                navigate through a grid by using the arrow keys
+                Create a grid with <paramref name="columns" /> and <paramref name="rows" /> in <paramref name="area" /> with
+                <paramref name="padding" />
+            </summary>
+            <param name="area"></param>
+            <param name="columns"></param>
+            <param name="rows"></param>
+            <param name="rect"></param>
+            <param name="padding"></param>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Grid.EndSelectionGrid">
+            <summary>
+                End the selection grid
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Grid.BeginEditorGuiGrid(UnityEngine.Rect,System.Single,System.Single,UnityEngine.Vector2,System.Boolean,UnityEngine.Color,System.Boolean,System.Single,DaiMangou.Storyteller.GridType)">
+            <summary>
+                lay down a Grid in <paramref name="rect" /> with spacing of <paramref name="space" /> / colour of
+                <paramref name="colour" /> , <paramref name="opacity" /> ,  <paramref name="zoom" /> and <paramref name="pan" />
+            </summary>
+            <param name="rect"></param>
+            <param name="space"></param>
+            <param name="zoom"></param>
+            <param name="colour"></param>
+            <param name="opacity"></param>
+            <param name="pan"></param>
+        </member>
+        <member name="T:DaiMangou.Storyteller.Drag">
+            <summary>
+                Drag and Rect
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.Drag.Dragging">
+            <summary>
+                Is dragging taking place
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:DaiMangou.Storyteller.Drag.DragRect" -->
+        <member name="M:DaiMangou.Storyteller.Drag.DragThis(System.Int32,UnityEngine.Rect,System.Single,System.Single)">
+            <summary>
+                the distance from 0,0 which the dragged rect travel
+            </summary>
+            <summary>
+                Drags <paramref name="rect" /> with a padding of <paramref name="xPading" /> and <paramref name="yPading" />
+            </summary>
+            <param name="rect"></param>
+            <param name="xPadding"></param>
+            <param name="yPading"></param>
+        </member>
+        <member name="T:DaiMangou.Storyteller.ScaleHandle">
+            <summary>
+                Static drag class which will execute only drag of rects
+            </summary>
+        </member>
+        <member name="T:DaiMangou.Storyteller.ClickEvent">
+            <summary>
+                Reads clicks in any Rect
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.ClickEvent.DoubleClick(System.Int32,UnityEngine.Rect,UnityEditor.MouseCursor)">
+            <summary>
+                Checks for a double click
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:DaiMangou.Storyteller.GraphicTexture">
+            <summary>
+                Returns a RGBA32 bit texture as Texture2D or draw a Drawa a RGBA32 bit Texture in a specified Rect
+            </summary>
+        </member>
+        <member name="T:DaiMangou.Storyteller.GetResource">
+            <summary>
+                Allows you to directly acces image resources in any assembly (dll)
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.GetResource.LoadDllImageResource(System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+                access an image resource in the assembly under which this function was called
+            </summary>
+            <param name="resourceFolder"></param>
+            <param name="resourceName"></param>
+            <param name="imageExtension"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaiMangou.Storyteller.GetResource.LoadDllImageResource(System.Type,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+                Accesses the Assembly under which target Object is defined
+            </summary>
+            <param name="objectTargetAssembly"></param>
+            <param name="resourceFolder"></param>
+            <param name="resourceName"></param>
+            <param name="imageExtension"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaiMangou.Storyteller.GetResource.LoadDllAudioResource(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="resourceFolder"></param>
+            <param name="resourceName"></param>
+            <param name="imageExtension"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DaiMangou.Storyteller.ChangeChecker">
+            <summary>
+                <paramref name="O" />  - the object whose value you wish to check for change
+            </summary>
+            <typeparam name="O"></typeparam>
+        </member>
+        <member name="T:DaiMangou.Storyteller.Invoke">
+            <summary>
+                Calls the MethodInfo Invoke method parameteres and overloads
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Invoke.#ctor(System.Type,System.String)">
+            <summary>
+                Invoke a <paramref name="method" /> of type <paramref name="ctype" />
+            </summary>
+            <param name="ctype"></param>
+            <param name="method"></param>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Invoke.#ctor(System.Type,System.String,System.Object[])">
+            <summary>
+            </summary>
+            <param name="ctype"></param>
+            <param name="method"></param>
+            <param name="parameteres"></param>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Invoke.#ctor(System.Type,System.String,System.Object[],System.Type[])">
+            <summary>
+            </summary>
+            <param name="ctype"></param>
+            <param name="method"></param>
+            <param name="parameteres"></param>
+            <param name="paramType"></param>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Invoke.#ctor(System.Type,System.String,System.Object[],System.Reflection.BindingFlags)">
+            <summary>
+            </summary>
+            <param name="ctype"></param>
+            <param name="method"></param>
+            <param name="parameteres"></param>
+            <param name="bindingAttr"></param>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Invoke.#ctor(System.Type,System.String,System.Object[],System.Type[],System.Reflection.ParameterModifier[])">
+            <summary>
+            </summary>
+            <param name="ctype"></param>
+            <param name="method"></param>
+            <param name="parameteres"></param>
+            <param name="paramType"></param>
+            <param name="modifiers"></param>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Invoke.#ctor(System.Type,System.String,System.Object[],System.Reflection.BindingFlags,System.Reflection.Binder,System.Type[],System.Reflection.ParameterModifier[])">
+            <summary>
+            </summary>
+            <param name="ctype"></param>
+            <param name="method"></param>
+            <param name="parameteres"></param>
+            <param name="bindingAttr"></param>
+            <param name="binder"></param>
+            <param name="paramType"></param>
+            <param name="modifiers"></param>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Invoke.#ctor(System.Type,System.String,System.Object[],System.Reflection.BindingFlags,System.Reflection.Binder,System.Globalization.CultureInfo)">
+            <summary>
+            </summary>
+            <param name="ctype"></param>
+            <param name="method"></param>
+            <param name="parameteres"></param>
+            <param name="bindingAttrB"></param>
+            <param name="binderB"></param>
+            <param name="culture"></param>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Invoke.#ctor(System.Type,System.String,System.Object[],System.Type[],System.Reflection.BindingFlags,System.Reflection.Binder,System.Globalization.CultureInfo)">
+            <summary>
+            </summary>
+            <param name="ctype"></param>
+            <param name="method"></param>
+            <param name="parameteres"></param>
+            <param name="paramType"></param>
+            <param name="bindingAttrB"></param>
+            <param name="binderB"></param>
+            <param name="culture"></param>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Invoke.#ctor(System.Type,System.String,System.Object[],System.Reflection.BindingFlags,System.Reflection.BindingFlags,System.Reflection.Binder,System.Globalization.CultureInfo)">
+            <summary>
+            </summary>
+            <param name="ctype"></param>
+            <param name="method"></param>
+            <param name="parameteres"></param>
+            <param name="bindingAttrA"></param>
+            <param name="bindingAttrB"></param>
+            <param name="binderB"></param>
+            <param name="culture"></param>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Invoke.#ctor(System.Type,System.String,System.Object[],System.Type[],System.Reflection.ParameterModifier[],System.Reflection.BindingFlags,System.Reflection.Binder,System.Globalization.CultureInfo)">
+            <summary>
+            </summary>
+            <param name="ctype"></param>
+            <param name="method"></param>
+            <param name="parameteres"></param>
+            <param name="paramType"></param>
+            <param name="modifiers"></param>
+            <param name="bindingAttrB"></param>
+            <param name="binderB"></param>
+            <param name="culture"></param>
+        </member>
+        <member name="M:DaiMangou.Storyteller.Invoke.#ctor(System.Type,System.String,System.Object[],System.Reflection.BindingFlags,System.Reflection.Binder,System.Type[],System.Reflection.ParameterModifier[],System.Reflection.BindingFlags,System.Reflection.Binder,System.Globalization.CultureInfo)">
+            <summary>
+            </summary>
+            <param name="ctype"></param>
+            <param name="method"></param>
+            <param name="parameteres"></param>
+            <param name="bindingAttrA"></param>
+            <param name="binderA"></param>
+            <param name="paramType"></param>
+            <param name="modifiers"></param>
+            <param name="bindingAttrB"></param>
+            <param name="binderB"></param>
+            <param name="culture"></param>
+        </member>
+        <member name="M:DaiMangou.Storyteller.SendMail.Send(System.String,System.String,System.String)">
+            <summary>
+            </summary>
+            <param name="yourEemail"></param>
+            <param name="subject"></param>
+            <param name="message"></param>
+            <param name="bug"></param>
+        </member>
+        <member name="M:DaiMangou.Storyteller.SendMail.Send(System.String,System.String,System.String,System.String)">
+            <summary>
+            </summary>
+            <param name="yourEemail"></param>
+            <param name="otherEmail"></param>
+            <param name="subject"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:DaiMangou.Storyteller.SendMail.Form">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.TextureGenerator.RoundTextureCreator(System.Int32,System.Int32,System.Single,System.Single,System.Single,UnityEngine.Texture2D)">
+            <summary>
+            </summary>
+            <param name="h"></param>
+            <param name="w"></param>
+            <param name="r"></param>
+            <param name="cx"></param>
+            <param name="cy"></param>
+            <param name="sourceTex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaiMangou.Storyteller.TextureGenerator.RoundTextureCreator(System.Int32,System.Int32,System.Single,System.Single,System.Single,System.Single,UnityEngine.Color)">
+            <summary>
+            </summary>
+            <param name="h"></param>
+            <param name="w"></param>
+            <param name="r"></param>
+            <param name="cx"></param>
+            <param name="cy"></param>
+            <param name="ir"></param>
+            <param name="colour"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaiMangou.Storyteller.TextureGenerator.RoundTextureCreator(System.Single,System.Single,System.Single,UnityEngine.Texture2D,System.Single)">
+            <summary>
+                Used when creating a circular testure2D image from a preexistin texture2D and rescaling it to a custm size
+                regardles od dimentions
+            </summary>
+            <param name="r"></param>
+            <param name="cx"></param>
+            <param name="cy"></param>
+            <param name="sourceTex"></param>
+            <param name="newScale"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaiMangou.Storyteller.TextureGenerator.ImageConstructor(System.String,System.String,System.String,System.Int32)">
+            <summary>
+                will generate a image of dimentions 'newImageSize' from a image file specified at wwwPath and store the image in a
+                fromder at toPath
+            </summary>
+            <param name="fromwwwPath"></param>
+            <param name="toPath"></param>
+            <param name="name"></param>
+            <param name="newImageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaiMangou.Storyteller.TextureGenerator.ImageConstructor(System.String,System.Int32)">
+            <summary>
+                will generate a image of dimentions 'newImageSize' from a image file specified at wwwPath
+            </summary>
+            <param name="wwwwPath"></param>
+            <param name="newImageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaiMangou.Storyteller.TextureGenerator.ImageConstructor(System.String,System.Int32,System.Int32)">
+            <summary>
+            </summary>
+            <param name="wwwwPath"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <returns></returns>
+        </member>
+        <member name="P:DaiMangou.Storyteller.Shortcut.Ev1">
+            <summary>
+                Ctrl + Shift + R
+            </summary>
+        </member>
+        <member name="P:DaiMangou.Storyteller.Shortcut.Ev2">
+            <summary>
+                Ctrl + D
+            </summary>
+        </member>
+        <member name="P:DaiMangou.Storyteller.Shortcut.Ev3">
+            <summary>
+                alt +  p
+            </summary>
+        </member>
+        <member name="P:DaiMangou.Storyteller.Shortcut.Ev4">
+            <summary>
+                Ctrl + X
+            </summary>
+        </member>
+        <member name="P:DaiMangou.Storyteller.Shortcut.Ev5">
+            <summary>
+                ctrl + '
+            </summary>
+        </member>
+        <member name="P:DaiMangou.Storyteller.Shortcut.Ev6">
+            <summary>
+                ctrl + ;
+            </summary>
+        </member>
+        <member name="P:DaiMangou.Storyteller.Shortcut.Ev7">
+            <summary>
+                ctrl + right arow
+            </summary>
+        </member>
+        <member name="P:DaiMangou.Storyteller.Shortcut.Ev8">
+            <summary>
+                ctrl + left arow
+            </summary>
+        </member>
+        <member name="P:DaiMangou.Storyteller.Shortcut.Ev9">
+            <summary>
+                Ctlr + Shift + D
+            </summary>
+        </member>
+        <member name="P:DaiMangou.Storyteller.Shortcut.Ev10">
+            <summary>
+                Ctrl + U
+            </summary>
+        </member>
+        <member name="P:DaiMangou.Storyteller.Shortcut.Ev11">
+            <summary>
+            CTRL + I
+            </summary>
+        </member>
+        <member name="P:DaiMangou.Storyteller.Shortcut.Ev12">
+            <summary>
+            CTRL + ALT+ N
+            </summary>
+        </member>
+        <member name="P:DaiMangou.Storyteller.Shortcut.Ev13">
+            <summary>
+            CTRL + ALT+ A
+            </summary>
+        </member>
+        <member name="P:DaiMangou.Storyteller.Shortcut.CycleRight">
+            <summary>
+                shift + forward arrow
+            </summary>
+        </member>
+        <member name="P:DaiMangou.Storyteller.Shortcut.CycleLeft">
+            <summary>
+                shift + back arrow
+            </summary>
+        </member>
+        <member name="T:DaiMangou.Storyteller.InfoBlock">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.InfoBlock.Interface(UnityEngine.Rect,UnityEngine.Texture2D,DaiMangou.Storyteller.SnapPosition,UnityEngine.Color,DaiMangou.Storyteller.InfoBlock.HoverEvent,UnityEngine.GUIStyle,UnityEngine.GUIStyle,System.String,System.String,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            </summary>
+            <param name="rect"></param>
+            <param name="image"></param>
+            <param name="snap"></param>
+            <param name="colour"></param>
+            <param name="titleStyle"></param>
+            <param name="infoStyle"></param>
+            <param name="title"></param>
+            <param name="info"></param>
+        </member>
+        <member name="M:DaiMangou.Storyteller.InfoBlock.Click(System.Int32,UnityEngine.Rect,UnityEngine.Texture2D,DaiMangou.Storyteller.SnapPosition,UnityEngine.Color,DaiMangou.Storyteller.InfoBlock.HoverEvent,UnityEngine.GUIStyle,UnityEngine.GUIStyle,System.String,System.String,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            </summary>
+            <param name="rect"></param>
+            <param name="image"></param>
+            <param name="titleStyle"></param>
+            <param name="infoStyle"></param>
+            <param name="title"></param>
+            <param name="info"></param>
+            <param name="textWidth"></param>
+            <param name="textHeight"></param>
+            <param name="imageWidth"></param>
+            <param name="imageHeight"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DaiMangou.Storyteller.MenuContent">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.MenuContent.Icon">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.MenuContent.Method">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.MenuContent.Name">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.MenuContent.Parameters">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.MenuContent.Shortcut">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.MenuContent.StringMethod">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DaiMangou.Storyteller.MenuContent.Type">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:DaiMangou.Storyteller.MenuContent.#ctor(System.Type,System.String,System.String,System.Object[],System.String,DaiMangou.Storyteller.Menu,UnityEngine.Texture2D)">
+            <summary>
+            </summary>
+            <param name="type"></param>
+            <param name="stringMethod"></param>
+            <param name="name"></param>
+            <param name="param"></param>
+            <param name="shortcut"></param>
+            <param name="expandingMenu"></param>
+            <param name="icon"></param>
+        </member>
+        <member name="M:DaiMangou.Storyteller.MenuContent.#ctor(System.Type,System.String,System.String,System.String,DaiMangou.Storyteller.Menu,UnityEngine.Texture2D)">
+            <summary>
+            </summary>
+            <param name="T"></param>
+            <param name="SM"></param>
+            <param name="N"></param>
+            <param name="I"></param>
+        </member>
+        <member name="T:DaiMangou.Storyteller.Menu">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Storyteller.Properties.AudioResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.AudioResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.AudioResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.AudioResources.magicSound">
+            <summary>
+              Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+            </summary>
+        </member>
+        <member name="T:Storyteller.Properties.cssResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.cssResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.cssResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.cssResources.character_style">
+             <summary>
+               Looks up a localized string similar to 
+            
+            
+            body {
+                border-radius: 2px;
+                padding: 20px 5vw 50px;
+                font-size:14px;
+                line-height: 15px;  
+                font-family: &apos;Noto Sans TC&apos;, sans-serif;
+            }
+            
+            .p {
+                background-color:rgb(241, 241, 241);
+                font-weight: bold; 
+                line-height: 25px;
+                Padding:12px 20px;
+                border-radius:3px;
+                color:  rgb(0, 116, 184);
+                width:870px;
+                margin:auto;
+                
+            }
+            
+            hr{
+                border:.5px solid rgb(228, 228, 228);
+            }
+            
+            .container{
+                display: flex;
+            	flex-wrap: wrap;
+                justify-content: center;  
+            }
+            
+            
+            
+            .card{   
+               [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:Storyteller.Properties.cssResources.environment_style">
+             <summary>
+               Looks up a localized string similar to 
+            
+            
+            body {
+                border-radius: 2px;
+                padding: 20px 5vw 50px 5vw;
+                font-size:14px;
+                line-height: 12px;  
+                font-family: &apos;Noto Sans TC&apos;, sans-serif;
+            }
+            
+            .p {
+                background-color:rgb(241, 241, 241);
+                line-height: 25px;
+                Padding:12px 20px;
+                border-radius:3px;
+                color:  rgb(0, 116, 184);
+                font-weight: bold;
+                width:870px;
+                margin:auto;
+            }
+            
+            .container{
+                display: flex;
+            	flex-wrap: wrap;
+                justify-content: center;  
+            }
+            .card {
+                transition: all 0.3s linear; 
+                border:1px solid lig [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:Storyteller.Properties.cssResources.overview_style">
+             <summary>
+               Looks up a localized string similar to 
+            
+            
+            body {
+                border-radius: 2px;
+                padding: 20px 5vw 50px 5vw;
+                font-size:14px;
+                line-height: 12px;  
+                font-family: &apos;Noto Sans TC&apos;, sans-serif;
+            }
+            
+            
+            
+            hr{
+                border:.5px solid rgb(228, 228, 228);
+            }
+            
+            .container{
+                display: flex;
+            	flex-wrap: wrap;
+                justify-content: center;  
+            }
+            
+            
+            
+            .card{
+                
+                box-shadow: 0 0 0 1px #e3ebf3;
+                border:1px solid lightgrey;
+                background-color:white;   
+                transition: all 0.3s linear; 
+                overflow-y: hidden;
+                justify-items: start;
+                display:flex;
+                w [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Storyteller.Properties.cssResources.scene_style" -->
+        <member name="T:Storyteller.Properties.ImageResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.activeRoute">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.activeRouteError">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.AddComponentImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.addConditionIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.addIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.addTemplateIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.AudioFileIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.audioIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.audioIconFull">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.Background">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.bigAddIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.binIconDark">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.binIconLight">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.blueCircle">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.Book">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.BookActive">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.BookHover">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.CameraIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.CharacterIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.chatIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.CheckmarkIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.ClickListener">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.CloudExportIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.CollisionReceiver">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.CollisionTrigger">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.ColourWheel">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.ConvergenceRouteIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.CopyIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.CreateIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.CrownOff">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.CrownOn">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.defaultEnvironmentImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.defaultFemaleCharacterImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.defaultSceneImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.defaultStoryboardImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.deleteConditionIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.downArrow">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.DownEqualSign">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.DownFlowArrow">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.editIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.flipIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.FolderIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.FoldoutDown">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.FoldoutRight">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.GameBridgeIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.GameBridgeIconSmall">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.goToArrow">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.GridIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.GridTexture">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.GridView">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.GridViewHover">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.HeaderImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.HiddenIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.HideIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.IllegalConnectionIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.ImageMask">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.imageSettings">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.inactiveRoute">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.incomplete_scene_file_icons">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.InputConnected">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.InputEmpty">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.InteractableCharacter">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.Interaction">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.InteractionTriggerManager">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.LanguageIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.LargeLinkIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.LinkBroken">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.LinkMade">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.LinkManagerIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.ListView">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.ListViewHover">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.LockLocked">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.LockUnlocked">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.logo_footer">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.loopActiveIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.loopErrorIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.loopInactiveIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.loopInactiveIconWhite">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.mainBackgroundImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.MarkupIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.MaximizeIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.MediaNodeHead">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.MenuArrow">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.microphoneIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.microphoneIconActive">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.microphoneIconActiveT2">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.microphoneIconInactiveT2">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.microphoneIconSmall">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.MinimizeIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.More_Blue">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.More_White">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.NewIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.NoCoverImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.NotVisible">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.OrangeBulb">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.OutputConnected">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.OutputEmpty">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.PasteIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.PausedIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.pauseIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.pictureIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.playheadIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.playIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.PlayingIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.PowerOff">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.PowerOffpro">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.PowerOffRed">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.PowerOn">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.PowerOnpro">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.PropertiesIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.PublisherPageCover">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.quickEditIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.RedBulb">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.ReflectedData">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.refreshIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.RepeatableStipe">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.RepeatableStipeBlue">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.Reset">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.RGBBackground">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.RGBIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.RGBRing">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.rightArrow">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.routeIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.sampleEditorIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.Saveicon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.ScaleHandleIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.ScaleToFillIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.ScaleToFitIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.sceneDataIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.sceneIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.sceneIconDark">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.SceneManagerIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.ScenesIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.scenesViewIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.SelectecColourMask">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.selectionCircle">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.selectionGraphic">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.SettingsIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.smallAddIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.smallHTMLicon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.speakerIconEmpty">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.speakerIconFull">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.StopclockW">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.StopclockY">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.stopIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.Storyboard">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.StoryboardActive">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.StoryboardHover">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.StoryInfoAndSettingsLogo">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.Storyteller">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.StorytellerHXBkgn">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.StorytellerIconDark">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.StorytellerIconSmall">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.TemplateIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.TemplateIconSmall">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.TextFile">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.textIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.TextVisualizationDisabled">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.TextVisualizationEnabled">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.TimelineIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.TimelineRouteNodeIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.Trollface">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.twoColourdBackground">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.UnusedNodeIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.upArrow">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.updateDataIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.Visible">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.Voiced">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.VoicedActive">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.VoicedHover">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.warningIconYellow">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.waveformIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.waveformIconfull">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.WaveformVisualizationDisabled">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.WaveformVisualizationEnabled">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.WrenchIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.ImageResources.ZoomIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:Storyteller.Properties.SkinUI">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.BoxButtonNormal">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.BoxButtonOver">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.chatBox">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.chatBoxActive">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.ConditionBody">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.ConditionBodyFooter">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.FlatBoxButtonHover">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.FlatBoxButtonNormal">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.floatField_">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.HorizontalScrollbar">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.HorizontalScrollbarHover">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.HorizontalScrollbarThumb">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.HorizontalSlider">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.NodeBodyDark">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.NodeBodyLight">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.selectionBox">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.Slider_Normal">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.SliderThumb">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.SliderThumb_Normal">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.SliderThumbArrow">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.TextArea">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.TextArea2">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.textArea3">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.TimelineTimeBox">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.toggleActive">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.toggleHover">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.toggleInactive">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.TooltipBox">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.VerticalScrollBar">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.SkinUI.VerticalScrollbarThumbBlue">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:Storyteller.Properties.JavascriptResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.JavascriptResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.JavascriptResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.JavascriptResources.Test_js">
+             <summary>
+               Looks up a localized string similar to   class test
+             {
+            
+                afunction()
+               {
+            
+               }
+            
+             }.
+             </summary>
+        </member>
+        <member name="T:Storyteller.Properties.TextResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.TextResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.TextResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.TextResources.ActionNode">
+             <summary>
+               Looks up a localized string similar to The Action Node is used to illustrate actions in audio form and text such as ,
+            &quot;Glass breakes and a shard cuts the hair&quot;
+            &quot;earthquake&quot;
+            &quot;Jumps to the left&quot;
+            &quot;jumps to the right&quot;
+            ...etc.
+             </summary>
+        </member>
+        <member name="P:Storyteller.Properties.TextResources.BETATasks">
+             <summary>
+               Looks up a localized string similar to BETA task 1 )  Try to create a max 2 minute long story, storyboard with or without voice and audio
+            
+            BETA task 2) Replicate 1 minute of the most memorable moment of any movie or animation that you remember.
+            .
+             </summary>
+        </member>
+        <member name="P:Storyteller.Properties.TextResources.CharacterNode">
+             <summary>
+               Looks up a localized string similar to The Character Node is the first nod ethat you usually create , is defines your character.
+            You can add an picture of your character to the character node by double clicking the picture area in the character node.
+            You can determine if you want your character to be a Main, supporting or Background character and also add a backstory to the character.
+            There is a section under the character image where you set a color the represent the character. this color will be used to chain along all the nodes you connect [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:Storyteller.Properties.TextResources.EnvironmentNode">
+             <summary>
+               Looks up a localized string similar to Scene Nodes allow you to display where an entire et of Dialogues take place . 
+            Dialogues take place wherever your scene node begins and ends where another scene node is connected.
+            .
+             </summary>
+        </member>
+        <member name="P:Storyteller.Properties.TextResources.EventNode">
+             <summary>
+               Looks up a localized string similar to Dialogue nodes are the most powerful nodes, they allows for you to do immediate voiceovers for your character instead of writing out an Dialogue. Simply double click the microphone icon in the Dialogue node to begin recording. You have the option of selection for any microphone connected to your computer by right clicking anywhere in the canvas and opening &quot;Settings and Overview&quot;, under the audio folder tab, click on any microphone listed in order to use it for your recordings.
+            
+            Alternatively you have the [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:Storyteller.Properties.TextResources.Feedback">
+             <summary>
+               Looks up a localized string similar to We ask that you send any feedback or additional question you have for us to daimangou@gmail.com
+            
+            .
+             </summary>
+        </member>
+        <member name="P:Storyteller.Properties.TextResources.LinkNode">
+             <summary>
+               Looks up a localized string similar to Link nodes allow for you to maintain a cleanlaytout by allowing you to connect your nodes withut drawing a visible line.
+            This is particularly useful for reintroducing character in later scenes..
+             </summary>
+        </member>
+        <member name="P:Storyteller.Properties.TextResources.Main">
+             <summary>
+               Looks up a localized string similar to Thank you for BETA testing Storyteller for Unity.
+            This interface will walk you through the basic use of the Storyteller.
+            
+            Storyteller is a new way of telling stories. See into the past and present and future simultaneously while telling your story and visualize where, why , when and how every Dialogue in your story took place and who or what caused it to happen.
+            .
+             </summary>
+        </member>
+        <member name="P:Storyteller.Properties.TextResources.MediaNode">
+             <summary>
+               Looks up a localized string similar to The media node allows you to play your story back to you . 
+            Note ,  the media node cannot be paused or stopped at the moment.
+             </summary>
+        </member>
+        <member name="P:Storyteller.Properties.TextResources.RouteNode">
+            <summary>
+              Looks up a localized string similar to The Route node allows your character to pick between multiple routs. This is especially useful for games where players must make decisions and have the story flow correctly regardless of which route is selected..
+            </summary>
+        </member>
+        <member name="P:Storyteller.Properties.TextResources.tutorialInfo">
+             <summary>
+               Looks up a localized string similar to Storyteller is an easy to use node editor a storytelling and storyboarding application which allows anyone writing stories or storyboarding ;
+            to tell linier and non-linier stories, visually by giving you the ability to see the past present and future of a story simultaneously 
+            and make changes at will without breaking the flow of your story.  This of course being a way of writing which is not possible in linier text based documents.
+            
+            To begin using Storyteller,
+            
+            - select a project type from the storyt [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:Storyteller.Properties.TextResources.versionInfo">
+             <summary>
+               Looks up a localized string similar to You sre now using Storyteler 2019
+            
+            Here are a list of updates and change made to this version.
+            
+            
+            -Added Zoomable canvas.
+            -Canvas rebuild.
+            -Rebuild story editor window.
+            -NEW html Exporter tool.
+            -NEW Settings Window.
+            -NEW: Abstract node.
+            -NEW: BETA end node.
+            -Full Template Editor.
+            -Story Sample Editor in Late BETA.
+            -Updated Context menu.
+            -Updated Screenshot system.
+            -Updated Shortcut Keys.
+            -Added new Character biography system with history and evolution editor and tracking voice sample section [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+    </members>
+</doc>

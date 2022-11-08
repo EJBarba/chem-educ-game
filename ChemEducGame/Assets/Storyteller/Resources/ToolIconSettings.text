@@ -1,0 +1,28 @@
+{
+    "toolIconData": [
+        {
+            "scriptPath": "Assets/Storyteller/Game Bridge/Bridged Data/Scripts/CollisionInteractionReceiver.cs",
+            "scriptGUID": "d8628477649049b4e80207161b44b671"
+        },
+        {
+            "scriptPath": "Assets/Storyteller/Game Bridge/Bridged Data/Scripts/CollisionInteractionTrigger.cs",
+            "scriptGUID": "567bc4034b4937a4d92fb4fc97429fb8"
+        },
+        {
+            "scriptPath": "Assets/Storyteller/Game Bridge/Bridged Data/Scripts/Interaction.cs",
+            "scriptGUID": "6f291853d651a5849b784bde6ea622f4"
+        },
+        {
+            "scriptPath": "Assets/Storyteller/Game Bridge/Bridged Data/Scripts/ClickListener.cs",
+            "scriptGUID": "bcbc1964f47581044add792822e1d627"
+        },
+        {
+            "scriptPath": "Assets/Storyteller/Game Bridge/Bridged Data/Scripts/InteractableCharacter.cs",
+            "scriptGUID": "d0ca32951c28a784db1c1774d1e00d31"
+        },
+        {
+            "scriptPath": "Assets/Storyteller/Game Bridge/Bridged Data/Scripts/InteractionTriggerManager.cs",
+            "scriptGUID": "aa0ed63610fb15e41ba9a2e442d66d73"
+        }
+    ]
+}

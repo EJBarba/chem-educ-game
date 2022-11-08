@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba77a23bad7f4fa42b536b399b7443d5, type: 3}
+  m_Name: ScoreDataLaserLevel1
+  m_EditorClassIdentifier: 
+  scoreList:
+  - {fileID: 11400000, guid: c10f583cf94497446828c22fa387bfc2, type: 2}
+  - {fileID: 11400000, guid: 9752d491d154a3a4fa7987294e9cdbdc, type: 2}
+  - {fileID: 11400000, guid: 5271dc2a2c6e1df4993706e379144772, type: 2}
+  - {fileID: 11400000, guid: f8812cc13a4c0cb4bbe7deb387cd2f1e, type: 2}
+  - {fileID: 11400000, guid: d08d088e2d083e5498a29058c696bd44, type: 2}
+  - {fileID: 11400000, guid: ca5a7cd81a94d9246aa3d72e07bd9ddb, type: 2}
+  - {fileID: 11400000, guid: 3d64644b31428334fb855a552d5d7bcc, type: 2}
+  - {fileID: 11400000, guid: 59a4cadd29e391941975358e8742c5fb, type: 2}
+  - {fileID: 11400000, guid: 1085e429167d253418a6aaaa3572b8a0, type: 2}
+  - {fileID: 11400000, guid: 8e30d90c55e79034a90e3966c4f60001, type: 2}

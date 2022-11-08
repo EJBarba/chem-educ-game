@@ -8,13 +8,14 @@ public class ScoreKeeper : MonoBehaviour
 {
     public TMP_Text scoreText;
     public TMP_Text highScoreText;
+    public Score scoreSO;
 
     int score = 0;
     int highScore = 0;
 
     private void Start() {
         highScore = PlayerPrefs.GetInt("highscore", 0);
-        scoreText.text ="SCORE: " + score.ToString();
+        scoreText.text ="LEVEL 1 SCORE: " + score.ToString();
         highScoreText.text ="HIGH SCORE: " + highScore.ToString();
     }
 
@@ -30,8 +31,11 @@ public class ScoreKeeper : MonoBehaviour
         {
             highScoreText.text = "HIGH SCORE: " + highScore.ToString();
         }
-        
-        
-        
-    }    
+        scoreSO.updateScore(newScore);
+    } 
+
+    public void SetToZero()
+    {
+       scoreSO.updateScore(0); 
+    }   
 }
