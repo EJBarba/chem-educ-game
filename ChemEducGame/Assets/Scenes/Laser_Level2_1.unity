@@ -2017,7 +2017,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887311035}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.6399994, y: 0, z: 0}
+  m_LocalPosition: {x: -4.6, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -2485,6 +2485,7 @@ MonoBehaviour:
   scoreSO: {fileID: 11400000, guid: 85e560f78bdff1642bfd7c0a58f559f8, type: 2}
   scoreListSO: {fileID: 11400000, guid: 547f27391a5434548baef4e7e7ce9c30, type: 2}
   world: {fileID: 1493638450}
+  worldCanvas: {fileID: 1364886604}
   promptText: {fileID: 241564067}
   hasDestroyed: 0
   playerChance: 2
@@ -2981,6 +2982,11 @@ MonoBehaviour:
   BoolChecks: []
   InteractionGameObject: {fileID: 1952412266}
   interaction: {fileID: 1952412268}
+--- !u!1 &1364886604 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8239778225473248634, guid: cdd96888ba48c1843a24a21d202ac161, type: 3}
+  m_PrefabInstance: {fileID: 8239778225882887279}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1482483666 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8239778225214165949, guid: cdd96888ba48c1843a24a21d202ac161, type: 3}
