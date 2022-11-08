@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
     }
     void Start()
     {
-        audioManager.Stop("bgmusic1");
+        audioManager.StopAllBGMusic();
         audioManager.Play("bgmusicmainmenu");
     }
 

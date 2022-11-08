@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!121 &12100000
+Flare:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: LightRedSun
+  m_FlareTexture: {fileID: 2800000, guid: 7ae3141e81291e84ca0024d8b89ebc1f, type: 3}
+  m_TextureLayout: 1
+  m_Elements:
+  - m_ImageIndex: 2
+    m_Position: 0
+    m_Size: 9.63
+    m_Color: {r: 0.25735295, g: 0.25735295, b: 0.25735295, a: 0}
+    m_UseLightColor: 1
+    m_Rotate: 1
+    m_Zoom: 1
+    m_Fade: 1
+  - m_ImageIndex: 2
+    m_Position: 0
+    m_Size: 150
+    m_Color: {r: 0.47794116, g: 0.47794116, b: 0.47794116, a: 0}
+    m_UseLightColor: 1
+    m_Rotate: 0
+    m_Zoom: 1
+    m_Fade: 1
+  - m_ImageIndex: 6
+    m_Position: 0
+    m_Size: 17.1
+    m_Color: {r: 1, g: 1, b: 1, a: 0}
+    m_UseLightColor: 1
+    m_Rotate: 0
+    m_Zoom: 1
+    m_Fade: 1
+  - m_ImageIndex: 8
+    m_Position: 0
+    m_Size: 45.8
+    m_Color: {r: 0.21323532, g: 0.21323532, b: 0.21323532, a: 0}
+    m_UseLightColor: 1
+    m_Rotate: 0
+    m_Zoom: 1
+    m_Fade: 1
+  - m_ImageIndex: 8
+    m_Position: 0
+    m_Size: 10.2
+    m_Color: {r: 0.29411763, g: 0.29411763, b: 0.29411763, a: 0}
+    m_UseLightColor: 1
+    m_Rotate: 1
+    m_Zoom: 1
+    m_Fade: 1
+  - m_ImageIndex: 6
+    m_Position: 0
+    m_Size: 8.76
+    m_Color: {r: 1, g: 1, b: 1, a: 0}
+    m_UseLightColor: 1
+    m_Rotate: 0
+    m_Zoom: 1
+    m_Fade: 1
+  m_UseFog: 1

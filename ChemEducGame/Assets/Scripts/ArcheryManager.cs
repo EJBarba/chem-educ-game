@@ -8,32 +8,74 @@ public class ArcheryManager : MonoBehaviour
 {
     
     [SerializeField] GameObject resultModal;
+    [SerializeField] TMP_Text itemText;
     [SerializeField] TMP_Text resultText;
-    [SerializeField] GameObject nextLevelButton;
-    public bool birdCollided = false;
-    public bool isTargetCollided = false;
-    private bool isHitOnce = true;
+    [SerializeField] GameObject laser;
+    [SerializeField] Score scoreSO;
+    [SerializeField] ScoreData scoreListSO;
+    [SerializeField] GameObject world;
+    [SerializeField] GameObject worldCanvas;
+    private Laser laserScript;
+    public bool hasDestroyed = false;
+    public int playerChance = 1;
+    public bool setToZero = false;
+    public float waitSeconds = 3f;
+    public bool endGame = false;
+    public int score = 0;
+    private AudioManager audioManager;
+    public int scoreValueLaser = 5;
+    public bool isLevel2 = false;
+    public int level2Targets = 999;
+
+    private void Awake() {
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+    }
+
+    private void Start() {
+        laserScript = laser.GetComponent<Laser>();
+        score = 0;
+        scoreSO.updateScore(score);
+    }
     void Update()
     {
-        if(birdCollided == true && isHitOnce == true)
+        if(hasDestroyed == true && playerChance <= 0 || hasDestroyed == true && level2Targets <= 0)
         {
-            resultModal.SetActive(true);
-
-            if (isTargetCollided == true)
-            {
-                resultText.text = "YOU WIN";
-                if(SceneManager.GetActiveScene().name != "Archery1")
-                {
-                    nextLevelButton.SetActive(true); 
-                }
-                
-            }
-            else
-            {
-                resultText.text = "YOU LOSE";
-            }
-            isHitOnce = false;
-            return;
+            endGame = true;
+        }
+        if (endGame)
+        {
+            hasDestroyed = false;
+            endGame = false;
+            StartCoroutine(ShowResultsModal());
         }
     }
+
+    IEnumerator ShowResultsModal()
+    {
+        laserScript.enabled = false;
+        audioManager.Stop("laserSound");
+        yield return new WaitForSeconds(waitSeconds);
+
+        resultModal.SetActive(true);
+        laser.SetActive(false);
+        world.SetActive(false);
+        worldCanvas.SetActive(false);
+        
+        itemText.text = "ITEM #" + scoreSO.name + " OUT OF " + scoreListSO.scoreList.Count;
+        if(setToZero)
+        {
+            scoreSO.updateScore(0);
+            resultText.text = "YOU LOSE";
+            resultText.color = Color.red;
+            audioManager.Play("bgmusicdefeat");
+        }
+        else
+        {
+            scoreSO.updateScore(scoreValueLaser);
+            resultText.text = "YOU WIN!";
+            resultText.color = Color.green;
+            audioManager.Play("bgmusicvictory");
+        } 
+    }
+           
 }

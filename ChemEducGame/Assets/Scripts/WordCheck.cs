@@ -27,12 +27,26 @@ public class WordCheck : MonoBehaviour
     public PlayFabManager playFabManager;
     [HideInInspector]
     public ScoreKeeper scoreKeeper;
+    public int playerScore = 25;
+    public int penaltyScore = 5;
+    private int perfectScore;
+    private bool playerAnswered = true;
+    public Sprite badgeUnlocked;
+    public Image badgeImage;
+    public TMP_Text badgeText;
     AudioManager audioManager;
+
+    public int previousPerfectScore;
+    public Score previousScoreSO;
+    public int beakerPowerupCount = 1;
+    public TMP_Text beakerPowerUpCountText;
+    public GameObject beakerPowerupGameobject;
     void Awake()
     {
       playFabManager = GameObject.Find("PLAYER").GetComponent<PlayFabManager>();
       scoreKeeper = GameObject.Find("PLAYER").GetComponent<ScoreKeeper>();
       audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+      perfectScore = playerScore;
 
       for (int i = 0; i < word.Count; i++)
       {
@@ -47,8 +61,65 @@ public class WordCheck : MonoBehaviour
 
     void Start() 
     {
-      audioManager.Stop("bgmusicmainmenu");
+      audioManager.StopAllBGMusic();
       audioManager.Play("bgmusic1");
+
+      //check if eligible for powerup
+      if (previousPerfectScore == previousScoreSO.scoreValue)
+      {
+        beakerPowerupGameobject.SetActive(true);
+        beakerPowerUpCountText.text = beakerPowerupCount.ToString();
+      }
+    }
+
+    public void ShowBeakerPowerupIfValid()
+    {
+      if (beakerPowerupCount > 0)
+      {
+        beakerPowerupGameobject.SetActive(true);
+      }
+    }
+    public void BeakerPowerup()
+    {
+      beakerPowerupCount -= 1;
+      beakerPowerUpCountText.text = beakerPowerupCount.ToString();
+      if (beakerPowerupCount <= 0)
+      {
+        beakerPowerupGameobject.SetActive(false);
+      }
+      for (int i = 0; i < word.Count; i++)
+      {
+         if(word[i].tag == "Player" && answer.Length != 0 && playerWin != true)
+          {
+            answer = word[i].GetComponent<TileCheck>().GetTileGameObjects();
+            
+            
+            bool createRandomIndex = false;
+            int randomIndex = 0;
+            for (int j = 0; i < answer.Length; j++)
+            {
+              if(answer[j].GetComponent<TMP_InputField>().text.Length <= 0)
+              {
+                if (createRandomIndex == false)
+                {
+                  randomIndex = Random.Range(j, answer.Length);
+                  createRandomIndex = true;
+                }
+
+                if (j == randomIndex)
+                {
+                answer[j].GetComponent<TMP_InputField>().text = answer[j].name; 
+                answer[j].GetComponent<Animator>().SetBool("isSolved", true);
+                answer[j].GetComponent<Animator>().SetBool("hasAnswered", true);
+                answer[j].GetComponent<TMP_InputField>().readOnly = true;
+                answer[j].GetComponent<TileSolveToggle>().TileSolved(true);
+
+                Debug.Log(answer[j]);
+                }
+              } 
+            }
+          }
+      }
     }
 
     void Update()
@@ -143,7 +214,14 @@ public class WordCheck : MonoBehaviour
                 winTime = (int)timer.GetComponent<Timer>().timeRemaining;
                 
                 //display score in winModal, record if highscore 
-                scoreKeeper.RecordScore(winTime);
+                scoreKeeper.RecordScore(playerScore);
+                Debug.Log(playerScore);
+                if (playerScore == perfectScore)
+                {
+                  badgeImage.sprite = badgeUnlocked;
+                  badgeText.text = "You earned a badge!";
+                }
+
                 //online leaderboards
                 if (PlayerPrefs.GetString("email").Length > 0 && PlayerPrefs.GetString("password").Length > 0 )
                 {
@@ -188,7 +266,13 @@ public class WordCheck : MonoBehaviour
             // if wrong
             else
             {
-              
+              if (playerAnswered == true)
+              {
+                playerAnswered = false;
+                playerScore -= penaltyScore;
+                Debug.Log(playerScore);
+                
+              }
               // change into red tile
               for (int j = 0; j < answer.Length; j++)
               {
@@ -223,6 +307,7 @@ public class WordCheck : MonoBehaviour
                   }
                 }
                 timerReached = true;
+                playerAnswered = true;
               }
             }
           }

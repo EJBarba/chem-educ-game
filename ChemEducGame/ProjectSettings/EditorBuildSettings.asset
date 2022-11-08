@@ -9,12 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Home.unity
     guid: c4138ae34fdc90a4db700fda9bf41322
   - enabled: 1
-    path: Assets/Scenes/Crossword.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Tutorial1.unity
+    guid: 078a9f7dbd99dda4d9dd603b5b816f3a
   - enabled: 1
-    path: Assets/Scenes/Archery.unity
-    guid: d0ea28f5bdb7e3e4fb10dfde0b9d5299
+    path: Assets/Scenes/Crossword_Level1.unity
+    guid: 505aea57b0960ac46aeb5d8b8a41bcbe
   - enabled: 1
-    path: Assets/Scenes/Archery1.unity
-    guid: c76f899971e4f6d4cbd057761b427110
+    path: Assets/Scenes/Crossword_Level2.unity
+    guid: 93887a9c6eeab6e4e9316285cb8b80ea
+  - enabled: 1
+    path: Assets/Scenes/Crossword_Level3.unity
+    guid: c6f5c9c347b2eb84ab076632e70d689b
+  - enabled: 1
+    path: Assets/Scenes/Crossword_Results.unity
+    guid: 86b312977d100ff47b05b3b60374ef8d
   m_configObjects: {}
