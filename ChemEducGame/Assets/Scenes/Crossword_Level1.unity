@@ -7089,7 +7089,8 @@ MonoBehaviour:
   badgeText: {fileID: 1617206771}
   previousPerfectScore: 0
   previousScoreSO: {fileID: 0}
-  beakerPowerupCount: 1
+  beakerPowerupCount: 0
+  beakerPowerUpCountText: {fileID: 0}
   beakerPowerupGameobject: {fileID: 0}
 --- !u!1001 &1541018724
 PrefabInstance:
@@ -10187,9 +10188,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 687136533}
     - target: {fileID: 7518943653784657492, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[8].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518943653784657492, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
       objectReference: {fileID: 1538516811}
+    - target: {fileID: 7518943653784657492, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[8].m_Target
+      value: 
+      objectReference: {fileID: 1538516816}
+    - target: {fileID: 7518943653784657492, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[8].m_MethodName
+      value: ShowBeakerPowerupIfValid
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518943653784657492, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[8].m_TargetAssemblyTypeName
+      value: WordCheck, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7518943653821519916, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
       propertyPath: onTimerEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -10215,9 +10232,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 687136533}
     - target: {fileID: 7518943654784134829, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[8].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518943654784134829, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
       objectReference: {fileID: 1538516811}
+    - target: {fileID: 7518943654784134829, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[8].m_Target
+      value: 
+      objectReference: {fileID: 1538516816}
+    - target: {fileID: 7518943654784134829, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[8].m_MethodName
+      value: ShowBeakerPowerupIfValid
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518943654784134829, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[8].m_TargetAssemblyTypeName
+      value: WordCheck, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7518943654886320025, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -10338,6 +10371,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 687136533}
+    - target: {fileID: 7518943655842758811, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CrosswordLevel2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
 --- !u!1001 &7654981134707997878
