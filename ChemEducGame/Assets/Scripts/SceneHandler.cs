@@ -133,4 +133,8 @@ public class SceneHandler : MonoBehaviour
     {
         SceneManager.LoadScene("Laser_Level2_Results");
     }
+    public void Game3()
+    {
+        SceneManager.LoadScene("Game3");
+    }
 }
