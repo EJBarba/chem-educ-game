@@ -5,6 +5,8 @@ using UnityEngine;
 public class Game3Manager : MonoBehaviour
 {
     private AudioManager audioManager;
+    [SerializeField] List<GameObject> spawnPoints;
+    [SerializeField] GameObject foodPrefab;
     private void Awake() {
         audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
     }
@@ -13,11 +15,11 @@ public class Game3Manager : MonoBehaviour
     {
         audioManager.StopAllBGMusic();
         audioManager.Play("bgGame3");
+        spawnFood();
     }
 
-    // Update is called once per frame
-    void Update()
+    void spawnFood()
     {
-        
+        Instantiate(foodPrefab, spawnPoints[0].transform);
     }
 }
