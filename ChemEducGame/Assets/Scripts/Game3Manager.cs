@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Game3Manager : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class Game3Manager : MonoBehaviour
 
     void spawnFood()
     {
-        Instantiate(foodPrefab, spawnPoints[0].transform);
+        var food = Instantiate(foodPrefab, spawnPoints[0].transform);
+        food.transform.DOMove(new Vector3(10,0,0), 2);
+
     }
 }
