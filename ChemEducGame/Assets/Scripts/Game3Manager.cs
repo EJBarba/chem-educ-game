@@ -24,8 +24,8 @@ public class Game3Manager : MonoBehaviour
 
     void spawnFood()
     {
-        var food = Instantiate(foodPrefab, spawnPoints[0].transform);
-        food.transform.DOMove(new Vector3(-10,spawnPoints[0].transform.position.y,0), secondsToOutOfScreen);
+        var food = Instantiate(foodPrefab, spawnPoints[Random.Range(0,spawnPoints.Count)].transform);
+        food.transform.DOMove(new Vector3(-10,food.transform.position.y,0), secondsToOutOfScreen);
     }
 
     private void Update() 
