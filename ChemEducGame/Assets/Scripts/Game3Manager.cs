@@ -7,9 +7,10 @@ public class Game3Manager : MonoBehaviour
 {
     private AudioManager audioManager;
     [SerializeField] List<GameObject> spawnPoints;
-    [SerializeField] GameObject foodPrefab;
-    [SerializeField] int secondsToOutOfScreen = 2;
-    private float spawnTimeCopy = 2f;
+    //[SerializeField] GameObject foodPrefab;
+    [SerializeField] List<FoodLevel> foodLevels;
+    [SerializeField] int secondsToOutOfScreen;
+    private float spawnTimeCopy;
     [SerializeField] float spawnTime;
     private void Awake() {
         audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
@@ -19,12 +20,19 @@ public class Game3Manager : MonoBehaviour
     {
         audioManager.StopAllBGMusic();
         audioManager.Play("bgGame3");
-        spawnTime = spawnTimeCopy;
+        spawnTimeCopy = spawnTime;
     }
 
     void spawnFood()
     {
-        var food = Instantiate(foodPrefab, spawnPoints[Random.Range(0,spawnPoints.Count)].transform);
+        // add dummy and target tags
+        var foodLevel = foodLevels[Random.Range(0,foodLevels.Count)];
+        var food = Instantiate(foodLevel.list[Random.Range(0,foodLevel.list.Count)], spawnPoints[Random.Range(0,spawnPoints.Count)].transform);
+        if (foodLevel.name.ToLower() == "carbohydrates")
+        {
+            food.tag = "Target";
+        }
+
         food.transform.DOMove(new Vector3(-20,food.transform.position.y,0), secondsToOutOfScreen)
         .OnComplete(() => 
         {

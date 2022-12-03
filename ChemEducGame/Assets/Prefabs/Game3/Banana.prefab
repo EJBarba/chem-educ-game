@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7702860012934029967}
   - component: {fileID: 4885951121066875256}
   m_Layer: 0
-  m_Name: Food
-  m_TagString: Untagged
+  m_Name: Banana
+  m_TagString: Dummy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

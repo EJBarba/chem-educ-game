@@ -623,7 +623,9 @@ MonoBehaviour:
   - {fileID: 337736129}
   - {fileID: 33350559}
   - {fileID: 1066471255}
-  foodPrefab: {fileID: 731249455615570503, guid: e5a2e4fe337530641a0512a893c856b6, type: 3}
+  foodLevels:
+  - {fileID: 11400000, guid: 484e3635975b5704aaa9bdbfc7085f27, type: 2}
+  - {fileID: 11400000, guid: 0b24864a127689c4182fb39eccc12ad6, type: 2}
   secondsToOutOfScreen: 5
   spawnTime: 0.5
 --- !u!114 &247740560
