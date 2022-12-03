@@ -25,7 +25,7 @@ public class Game3Manager : MonoBehaviour
     void spawnFood()
     {
         var food = Instantiate(foodPrefab, spawnPoints[Random.Range(0,spawnPoints.Count)].transform);
-        food.transform.DOMove(new Vector3(-10,food.transform.position.y,0), secondsToOutOfScreen)
+        food.transform.DOMove(new Vector3(-20,food.transform.position.y,0), secondsToOutOfScreen)
         .OnComplete(() => 
         {
             Destroy(food);

@@ -572,8 +572,8 @@ MonoBehaviour:
   - {fileID: 33350559}
   - {fileID: 1066471255}
   foodPrefab: {fileID: 731249455615570503, guid: e5a2e4fe337530641a0512a893c856b6, type: 3}
-  secondsToOutOfScreen: 2
-  spawnTime: 2
+  secondsToOutOfScreen: 5
+  spawnTime: 0.5
 --- !u!114 &247740560
 MonoBehaviour:
   m_ObjectHideFlags: 0
