@@ -8,6 +8,9 @@ public class Game3Manager : MonoBehaviour
     private AudioManager audioManager;
     [SerializeField] List<GameObject> spawnPoints;
     [SerializeField] GameObject foodPrefab;
+    [SerializeField] int secondsToOutOfScreen = 2;
+    private float spawnTimeCopy = 2f;
+    [SerializeField] float spawnTime;
     private void Awake() {
         audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
     }
@@ -16,13 +19,22 @@ public class Game3Manager : MonoBehaviour
     {
         audioManager.StopAllBGMusic();
         audioManager.Play("bgGame3");
-        spawnFood();
+        spawnTime = spawnTimeCopy;
     }
 
     void spawnFood()
     {
         var food = Instantiate(foodPrefab, spawnPoints[0].transform);
-        food.transform.DOMove(new Vector3(10,0,0), 2);
+        food.transform.DOMove(new Vector3(-10,spawnPoints[0].transform.position.y,0), secondsToOutOfScreen);
+    }
 
+    private void Update() 
+    {
+        spawnTimeCopy -= Time.deltaTime;
+        if (spawnTimeCopy <= 0f)
+        {
+            spawnFood();
+            spawnTimeCopy = spawnTime;
+        }
     }
 }
