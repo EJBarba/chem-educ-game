@@ -5,13 +5,14 @@ using DG.Tweening;
 
 public class Game3Manager : MonoBehaviour
 {
-    private AudioManager audioManager;
+    
     [SerializeField] List<GameObject> spawnPoints;
-    //[SerializeField] GameObject foodPrefab;
     [SerializeField] List<FoodLevel> foodLevels;
     [SerializeField] int secondsToOutOfScreen;
-    private float spawnTimeCopy;
     [SerializeField] float spawnTime;
+    [SerializeField] Game3Level level;
+    private AudioManager audioManager;
+    private float spawnTimeCopy;
     private void Awake() {
         audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
     }
@@ -26,9 +27,10 @@ public class Game3Manager : MonoBehaviour
     void spawnFood()
     {
         // add dummy and target tags
-        var foodLevel = foodLevels[Random.Range(0,foodLevels.Count)];
+        var foodLevelIndex = Random.Range(0,foodLevels.Count);
+        var foodLevel = foodLevels[foodLevelIndex];
         var food = Instantiate(foodLevel.list[Random.Range(0,foodLevel.list.Count)], spawnPoints[Random.Range(0,spawnPoints.Count)].transform);
-        if (foodLevel.name.ToLower() == "carbohydrates")
+        if (foodLevelIndex == level.currentLevel)
         {
             food.tag = "Target";
         }

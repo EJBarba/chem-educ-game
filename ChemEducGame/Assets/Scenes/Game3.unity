@@ -631,6 +631,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: caab7e64f49573445937eb4467de2a6e, type: 2}
   secondsToOutOfScreen: 5
   spawnTime: 0.5
+  level: {fileID: 11400000, guid: cfb21d72fe69fcf42963010106bf748b, type: 2}
 --- !u!114 &247740560
 MonoBehaviour:
   m_ObjectHideFlags: 0
