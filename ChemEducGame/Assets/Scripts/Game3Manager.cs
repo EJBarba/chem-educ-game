@@ -14,6 +14,7 @@ public class Game3Manager : MonoBehaviour
     [SerializeField] float spawnTime;
     [SerializeField] Game3Level level;
     [SerializeField] TextMeshProUGUI targetCount;
+    [SerializeField] TextMeshProUGUI targetTitle;
 
     //local variables
     private AudioManager audioManager;
@@ -28,15 +29,17 @@ public class Game3Manager : MonoBehaviour
     {
         audioManager.StopAllBGMusic();
         audioManager.Play("bgGame3");
+        
         // reset values
         _spawnTime = spawnTime;
-
+        targetFoodLevel.list.Clear();
         for (int i = 0; i < foodLevels[level.currentLevel].list.Count; i++)
         {
             targetFoodLevel.list.Add(foodLevels[level.currentLevel].list[i]);
         }
 
         targetCount.text = foodLevels[level.currentLevel].list.Count.ToString();
+        targetTitle.text = foodLevels[level.currentLevel].name;
     }
 
     void spawnFood()

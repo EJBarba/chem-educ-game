@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d30e39fd76e5cec4e957c52fdbf82a0f, type: 3}
-  m_Name: Sugars
+  m_Name: Sugar & Sweets
   m_EditorClassIdentifier: 
   list:
   - {fileID: 731249455615570503, guid: 830522d639e84d04fabfac022de34115, type: 3}

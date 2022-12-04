@@ -846,6 +846,7 @@ MonoBehaviour:
   spawnTime: 0.5
   level: {fileID: 11400000, guid: cfb21d72fe69fcf42963010106bf748b, type: 2}
   targetCount: {fileID: 1211524476}
+  targetTitle: {fileID: 1212314346}
 --- !u!114 &247740560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1778,7 +1779,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CARBOHYDRATES
+  m_text: Title here
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
