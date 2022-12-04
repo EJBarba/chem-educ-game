@@ -2,21 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using TMPro;
 
 public class Game3Manager : MonoBehaviour
 {
     
     [SerializeField] List<GameObject> spawnPoints;
     [SerializeField] List<FoodLevel> foodLevels;
+    [SerializeField] FoodLevel targetFoodLevel;
     [SerializeField] int secondsToOutOfScreen;
     [SerializeField] float spawnTime;
     [SerializeField] Game3Level level;
+    [SerializeField] TextMeshProUGUI targetCount;
 
     //local variables
     private AudioManager audioManager;
     private float _spawnTime;
-    private List<FoodLevel> _foodLevels;
-
 
 
     private void Awake() {
@@ -27,24 +28,29 @@ public class Game3Manager : MonoBehaviour
     {
         audioManager.StopAllBGMusic();
         audioManager.Play("bgGame3");
-
         // reset values
         _spawnTime = spawnTime;
-        _foodLevels = foodLevels;
+
+        for (int i = 0; i < foodLevels[level.currentLevel].list.Count; i++)
+        {
+            targetFoodLevel.list.Add(foodLevels[level.currentLevel].list[i]);
+        }
+
+        targetCount.text = foodLevels[level.currentLevel].list.Count.ToString();
     }
 
     void spawnFood()
     {
         // add dummy and target tags
 
-        var foodLevelIndex = Random.Range(0,_foodLevels.Count);
+        var foodLevelIndex = Random.Range(0,foodLevels.Count);
      
-        if ( _foodLevels[foodLevelIndex].list.Count <=0)
+        if (targetFoodLevel.list.Count <= 0)
         {
             Debug.Log("WIN");
         }
 
-        var food = Instantiate(_foodLevels[foodLevelIndex].list[Random.Range(0,_foodLevels[foodLevelIndex].list.Count)], spawnPoints[Random.Range(0,spawnPoints.Count)].transform);
+        var food = Instantiate(foodLevels[foodLevelIndex].list[Random.Range(0,foodLevels[foodLevelIndex].list.Count)], spawnPoints[Random.Range(0,spawnPoints.Count)].transform);
         if (foodLevelIndex == level.currentLevel)
         {
             food.tag = "Target";
@@ -59,12 +65,14 @@ public class Game3Manager : MonoBehaviour
 
     public void TargetHit(string name)
     {
-        for (int i = 0; i < _foodLevels[level.currentLevel].list.Count; i++)
+        for (int i = 0; i < foodLevels[level.currentLevel].list.Count; i++)
         {
-            if (name.ToLower().Contains(_foodLevels[level.currentLevel].list[i].gameObject.name.ToLower()))
+            if (name.ToLower().Contains(foodLevels[level.currentLevel].list[i].gameObject.name.ToLower()))
             {
-                _foodLevels[level.currentLevel].list.Remove(_foodLevels[level.currentLevel].list[i].gameObject);
-                Debug.Log(_foodLevels[level.currentLevel].list.Count);
+                //foodLevels[level.currentLevel].list.Remove(foodLevels[level.currentLevel].list[i].gameObject);
+                targetFoodLevel.list.Remove(foodLevels[level.currentLevel].list[i].gameObject);
+                targetCount.text = targetFoodLevel.list.Count.ToString();
+                //Debug.Log(_foodLevels[level.currentLevel].list.Count);
                 break;
             }
         }
