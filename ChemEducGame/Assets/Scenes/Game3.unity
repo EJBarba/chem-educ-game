@@ -627,6 +627,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 484e3635975b5704aaa9bdbfc7085f27, type: 2}
   - {fileID: 11400000, guid: 0b24864a127689c4182fb39eccc12ad6, type: 2}
   - {fileID: 11400000, guid: 2d5b261baf4764d4e82168aa4fd9286c, type: 2}
+  - {fileID: 11400000, guid: 63663b8a6f024dd4aaa0c38c1869975e, type: 2}
   secondsToOutOfScreen: 5
   spawnTime: 0.5
 --- !u!114 &247740560
