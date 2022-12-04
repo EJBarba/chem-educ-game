@@ -15,6 +15,9 @@ public class Game3Manager : MonoBehaviour
     [SerializeField] Game3Level level;
     [SerializeField] TextMeshProUGUI targetCount;
     [SerializeField] TextMeshProUGUI targetTitle;
+    [SerializeField] GameObject panelWin;
+    [SerializeField] GameObject foreground;
+    [SerializeField] GameObject foregroundUI;
 
     //local variables
     private AudioManager audioManager;
@@ -29,7 +32,7 @@ public class Game3Manager : MonoBehaviour
     {
         audioManager.StopAllBGMusic();
         audioManager.Play("bgGame3");
-        
+
         // reset values
         _spawnTime = spawnTime;
         targetFoodLevel.list.Clear();
@@ -51,6 +54,9 @@ public class Game3Manager : MonoBehaviour
         if (targetFoodLevel.list.Count <= 0)
         {
             Debug.Log("WIN");
+            panelWin.SetActive(true);
+            foreground.SetActive(false);
+            foregroundUI.SetActive(false);
         }
 
         var food = Instantiate(foodLevels[foodLevelIndex].list[Random.Range(0,foodLevels[foodLevelIndex].list.Count)], spawnPoints[Random.Range(0,spawnPoints.Count)].transform);
