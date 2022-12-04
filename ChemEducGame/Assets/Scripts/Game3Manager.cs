@@ -42,6 +42,16 @@ public class Game3Manager : MonoBehaviour
         });
     }
 
+    public void PauseAnimations()
+    {
+        DOTween.PauseAll();
+    }
+
+    public void ResumeAnimations()
+    {
+        DOTween.PlayAll();
+    }
+
     private void Update() 
     {
         spawnTimeCopy -= Time.deltaTime;
