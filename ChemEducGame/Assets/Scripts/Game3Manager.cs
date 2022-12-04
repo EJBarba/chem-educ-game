@@ -18,6 +18,7 @@ public class Game3Manager : MonoBehaviour
     [SerializeField] GameObject panelWin;
     [SerializeField] GameObject foreground;
     [SerializeField] GameObject foregroundUI;
+    private bool isWin = false;
 
     //local variables
     private AudioManager audioManager;
@@ -47,22 +48,28 @@ public class Game3Manager : MonoBehaviour
 
     void spawnFood()
     {
-        // add dummy and target tags
-
         var foodLevelIndex = Random.Range(0,foodLevels.Count);
-     
+        GameObject food;
+
+        //win condition
         if (targetFoodLevel.list.Count <= 0)
         {
-            Debug.Log("WIN");
+            isWin = true;
             panelWin.SetActive(true);
             foreground.SetActive(false);
             foregroundUI.SetActive(false);
         }
 
-        var food = Instantiate(foodLevels[foodLevelIndex].list[Random.Range(0,foodLevels[foodLevelIndex].list.Count)], spawnPoints[Random.Range(0,spawnPoints.Count)].transform);
+        //spawn target
         if (foodLevelIndex == level.currentLevel)
         {
+            food = Instantiate(targetFoodLevel.list[Random.Range(0,targetFoodLevel.list.Count)], spawnPoints[Random.Range(0,spawnPoints.Count)].transform);
             food.tag = "Target";
+        }
+        //spawn dummy
+        else
+        {
+            food = Instantiate(foodLevels[foodLevelIndex].list[Random.Range(0,foodLevels[foodLevelIndex].list.Count)], spawnPoints[Random.Range(0,spawnPoints.Count)].transform);
         }
 
         food.transform.DOMove(new Vector3(-20,food.transform.position.y,0), secondsToOutOfScreen)
@@ -101,11 +108,14 @@ public class Game3Manager : MonoBehaviour
 
     private void Update() 
     {
-        _spawnTime -= Time.deltaTime;
+       if (!isWin)
+       {
+         _spawnTime -= Time.deltaTime;
         if (_spawnTime <= 0f)
         {
             spawnFood();
             _spawnTime = spawnTime;
         }
+       }
     }
 }
