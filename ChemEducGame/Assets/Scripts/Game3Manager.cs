@@ -11,8 +11,14 @@ public class Game3Manager : MonoBehaviour
     [SerializeField] int secondsToOutOfScreen;
     [SerializeField] float spawnTime;
     [SerializeField] Game3Level level;
+
+    //local variables
     private AudioManager audioManager;
-    private float spawnTimeCopy;
+    private float _spawnTime;
+    private List<FoodLevel> _foodLevels;
+
+
+
     private void Awake() {
         audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
     }
@@ -21,15 +27,24 @@ public class Game3Manager : MonoBehaviour
     {
         audioManager.StopAllBGMusic();
         audioManager.Play("bgGame3");
-        spawnTimeCopy = spawnTime;
+
+        // reset values
+        _spawnTime = spawnTime;
+        _foodLevels = foodLevels;
     }
 
     void spawnFood()
     {
         // add dummy and target tags
-        var foodLevelIndex = Random.Range(0,foodLevels.Count);
-        var foodLevel = foodLevels[foodLevelIndex];
-        var food = Instantiate(foodLevel.list[Random.Range(0,foodLevel.list.Count)], spawnPoints[Random.Range(0,spawnPoints.Count)].transform);
+
+        var foodLevelIndex = Random.Range(0,_foodLevels.Count);
+     
+        if ( _foodLevels[foodLevelIndex].list.Count <=0)
+        {
+            Debug.Log("WIN");
+        }
+
+        var food = Instantiate(_foodLevels[foodLevelIndex].list[Random.Range(0,_foodLevels[foodLevelIndex].list.Count)], spawnPoints[Random.Range(0,spawnPoints.Count)].transform);
         if (foodLevelIndex == level.currentLevel)
         {
             food.tag = "Target";
@@ -40,6 +55,21 @@ public class Game3Manager : MonoBehaviour
         {
             Destroy(food);
         });
+    }
+
+    public void TargetHit(string name)
+    {
+        for (int i = 0; i < _foodLevels[level.currentLevel].list.Count; i++)
+        {
+            if (name.ToLower().Contains(_foodLevels[level.currentLevel].list[i].gameObject.name.ToLower()))
+            {
+                _foodLevels[level.currentLevel].list.Remove(_foodLevels[level.currentLevel].list[i].gameObject);
+                Debug.Log(_foodLevels[level.currentLevel].list.Count);
+                break;
+            }
+        }
+
+
     }
 
     public void PauseAnimations()
@@ -54,11 +84,11 @@ public class Game3Manager : MonoBehaviour
 
     private void Update() 
     {
-        spawnTimeCopy -= Time.deltaTime;
-        if (spawnTimeCopy <= 0f)
+        _spawnTime -= Time.deltaTime;
+        if (_spawnTime <= 0f)
         {
             spawnFood();
-            spawnTimeCopy = spawnTime;
+            _spawnTime = spawnTime;
         }
     }
 }
