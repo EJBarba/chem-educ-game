@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f638ef9f44070854596e28ab6297df79, type: 3}
   m_Name: Game3Level
   m_EditorClassIdentifier: 
-  currentLevel: 0
+  currentLevel: 4

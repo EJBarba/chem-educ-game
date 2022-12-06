@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using TMPro;
+using UnityEngine.UI;
 
 public class Game3Manager : MonoBehaviour
 {
@@ -19,6 +20,11 @@ public class Game3Manager : MonoBehaviour
     [SerializeField] GameObject foreground;
     [SerializeField] GameObject foregroundUI;
     [SerializeField] GameObject tutorialCanvas;
+
+    [Header("FoodLevelUI")]
+    [SerializeField] GameObject panelFoodlevelModal;
+    [SerializeField] Image foodLevelImageUI;
+    [SerializeField] List<Sprite> foodLevelSprites;
     private bool isWin = false;
     private bool isReady = false;
 
@@ -31,6 +37,7 @@ public class Game3Manager : MonoBehaviour
     private void Awake() {
         audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         previousSceneData = GameObject.Find("PreviousSceneData").GetComponent<PreviousSceneData>();
+
     }
 
     void Start()
@@ -38,13 +45,21 @@ public class Game3Manager : MonoBehaviour
         audioManager.StopAllBGMusic();
         audioManager.Play("bgGame3");
 
+        foreground.SetActive(false);
+        foregroundUI.SetActive(false);
+
         // reset level to 1
         if (previousSceneData.previousScene == "Home")
         {
             level.resetLevel();
-            foreground.SetActive(false);
-            foregroundUI.SetActive(false);
             tutorialCanvas.SetActive(true);
+        }
+
+        else
+        {
+            panelFoodlevelModal.SetActive(true);
+            Debug.Log(foodLevelSprites[level.currentLevel].name);
+            foodLevelImageUI.sprite = foodLevelSprites[level.currentLevel];
         }
 
         // reset values
