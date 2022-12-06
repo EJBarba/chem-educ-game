@@ -12,7 +12,7 @@ public class Game3Level : ScriptableObject
         #if UNITY_EDITOR
         EditorUtility.SetDirty(this);
         #endif
-        currentLevel += currentLevel;
+        currentLevel = currentLevel + 1;
 
         #if UNITY_EDITOR
         AssetDatabase.SaveAssets();

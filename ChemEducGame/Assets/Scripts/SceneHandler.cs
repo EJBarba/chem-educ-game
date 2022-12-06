@@ -12,6 +12,7 @@ public class SceneHandler : MonoBehaviour
     public void ReloadScene()
     {
     	SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        previousSceneData.previousScene = SceneManager.GetActiveScene().name;
     }
     public void Home()
     {

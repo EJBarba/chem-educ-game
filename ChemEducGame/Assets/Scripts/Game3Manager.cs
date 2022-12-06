@@ -22,17 +22,25 @@ public class Game3Manager : MonoBehaviour
 
     //local variables
     private AudioManager audioManager;
+    private PreviousSceneData previousSceneData;
     private float _spawnTime;
 
 
     private void Awake() {
         audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        previousSceneData = GameObject.Find("PreviousSceneData").GetComponent<PreviousSceneData>();
     }
 
     void Start()
     {
         audioManager.StopAllBGMusic();
         audioManager.Play("bgGame3");
+
+        // reset level to 1
+        if (previousSceneData.previousScene == "Home")
+        {
+            level.resetLevel();
+        }
 
         // reset values
         _spawnTime = spawnTime;
@@ -104,6 +112,11 @@ public class Game3Manager : MonoBehaviour
     public void ResumeAnimations()
     {
         DOTween.PlayAll();
+    }
+
+    public void GoToNextLevel()
+    {
+        level.nextLevel();
     }
 
     private void Update() 
