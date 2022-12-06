@@ -1530,30 +1530,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1836408143554363391, guid: c4cf6d2a37489034ab02bd577f2ce72c, type: 3}
-      propertyPath: sounds.Array.size
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1836408143554363391, guid: c4cf6d2a37489034ab02bd577f2ce72c, type: 3}
-      propertyPath: sounds.Array.data[11].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 582afe7b8344f6c448fbb679547c29e1, type: 3}
-    - target: {fileID: 1836408143554363391, guid: c4cf6d2a37489034ab02bd577f2ce72c, type: 3}
-      propertyPath: sounds.Array.data[11].loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1836408143554363391, guid: c4cf6d2a37489034ab02bd577f2ce72c, type: 3}
-      propertyPath: sounds.Array.data[11].name
-      value: bgGame3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1836408143554363391, guid: c4cf6d2a37489034ab02bd577f2ce72c, type: 3}
-      propertyPath: sounds.Array.data[11].pitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1836408143554363391, guid: c4cf6d2a37489034ab02bd577f2ce72c, type: 3}
-      propertyPath: sounds.Array.data[11].volume
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4cf6d2a37489034ab02bd577f2ce72c, type: 3}
 --- !u!1 &1180219230

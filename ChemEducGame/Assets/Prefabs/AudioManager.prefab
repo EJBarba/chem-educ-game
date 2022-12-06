@@ -111,3 +111,9 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: bgGame3
+    clip: {fileID: 8300000, guid: 582afe7b8344f6c448fbb679547c29e1, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
