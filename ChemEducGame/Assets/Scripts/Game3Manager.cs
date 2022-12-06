@@ -18,7 +18,9 @@ public class Game3Manager : MonoBehaviour
     [SerializeField] GameObject panelWin;
     [SerializeField] GameObject foreground;
     [SerializeField] GameObject foregroundUI;
+    [SerializeField] GameObject tutorialCanvas;
     private bool isWin = false;
+    private bool isReady = false;
 
     //local variables
     private AudioManager audioManager;
@@ -40,6 +42,9 @@ public class Game3Manager : MonoBehaviour
         if (previousSceneData.previousScene == "Home")
         {
             level.resetLevel();
+            foreground.SetActive(false);
+            foregroundUI.SetActive(false);
+            tutorialCanvas.SetActive(true);
         }
 
         // reset values
@@ -100,8 +105,11 @@ public class Game3Manager : MonoBehaviour
                 break;
             }
         }
+    }
 
-
+    public void SetPlayerReady()
+    {
+        isReady = true;
     }
 
     public void PauseAnimations()
@@ -121,7 +129,7 @@ public class Game3Manager : MonoBehaviour
 
     private void Update() 
     {
-       if (!isWin)
+       if (!isWin && isReady)
        {
          _spawnTime -= Time.deltaTime;
         if (_spawnTime <= 0f)

@@ -1,0 +1,523 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8092749804883721645
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 6_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 6_Dialogue
+  Text: 
+  UID: 52f8e7aa-5002-4339-9ea0-7b79e6b20990
+  CharacterName: Doc
+  CallingNodeData: {fileID: -3858304592623107065}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -827999972046448862}
+  DataIconnectedTo:
+  - {fileID: 6136778125316046370}
+  Duration: 1
+  Delay: 0.013239182
+  RealtimeDelay: 0
+  StartTime: 5.0264783
+  DurationSum: 6.0264783
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - To change lanes, press the up arrow or down arrow.
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-3858304592623107065
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f62fd303fe32d84d939ad01a51f9fdb, type: 3}
+  m_Name: Doc
+  m_EditorClassIdentifier: 
+  Name: Doc
+  Text: 
+  UID: 3b50feaf-9fac-4621-b138-c6a1a5c7434f
+  CharacterName: Doc
+  CallingNodeData: {fileID: -3858304592623107065}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe: []
+  DataIconnectedTo:
+  - {fileID: -2383932784559504308}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  NodeDataInMyChain:
+  - {fileID: -3858304592623107065}
+  - {fileID: 7617296622497194278}
+  - {fileID: -8092749804883721645}
+  - {fileID: 6136778125316046370}
+  - {fileID: 1269540980737482770}
+  - {fileID: -2383932784559504308}
+  - {fileID: 1874615542032537000}
+  - {fileID: -827999972046448862}
+  - {fileID: 2569378277091865439}
+  CharacterImage: {fileID: 0}
+  CharacterPersonality:
+    NegativeTraits:
+      Angry: 0
+      Arrogantt: 0
+      Careless: 0
+      Childish: 0
+      Cowardly: 0
+      Crafty: 0
+      Crazy: 0
+      Cruel: 0
+      Dependent: 0
+      Destructive: 0
+      Devious: 0
+      Disloyal: 0
+      Disobedient: 0
+      Disorderly: 0
+      Disorganized: 0
+      Fearful: 0
+      Fickle: 0
+      Foolish: 0
+      Forgetful: 0
+      Frightening: 0
+      Frivolous: 0
+      Graceless: 0
+      Gullible: 0
+      Hostile: 0
+      Impractical: 0
+      Irritable: 0
+      Lazy: 0
+      Meddlesome: 0
+      Miserable: 0
+      Neglectful: 0
+      Opportunistic: 0
+      Provocative: 0
+      Slow: 0
+      Timid: 0
+      Uncooperative: 0
+      Unreliable: 0
+      Weak: 0
+      WeakWilled: 0
+    NeutralTraits:
+      Aggressive: 0
+      Deceptive: 0
+      Dominating: 0
+      Enigmatic: 0
+      Experimental: 0
+      Iconoclastic: 0
+      Idiosyncratic: 0
+      Impassive: 0
+      Obedient: 0
+      Progressive: 0
+      Questioning: 0
+      Reserved: 0
+      Stubborn: 0
+    PositiveTraits:
+      Accessible: 0
+      Active: 0
+      Adaptable: 0
+      Adventurous: 0
+      Alert: 0
+      Brilliant: 0
+      Calm: 0
+      Capable: 0
+      Challenging: 0
+      Charismatic: 0
+      Clever: 0
+      Confident: 0
+      Cooperative: 0
+      Courageous: 0
+      Curious: 0
+      Daring: 0
+      Decisive: 0
+      Discreet: 0
+      Efficient: 0
+      Energetic: 0
+      Focused: 0
+      Helpful: 0
+      Independent: 0
+      Individualistic: 0
+      Innovative: 0
+      Intelligent: 0
+      Leaderly: 0
+      Logical: 0
+      Loyal: 0
+      Methodical: 0
+      Orderly: 0
+      Organized: 0
+      Patient: 0
+      Patriotic: 0
+      Peaceful: 0
+      Reliable: 0
+      Resourceful: 0
+      Responsible: 0
+      Responsive: 0
+      Sane: 0
+      Selfless: 0
+      Serious: 0
+      Skillful: 0
+      Stoic: 0
+      Strong: 0
+  SortingID: 0
+--- !u!114 &-2383932784559504308
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 1_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 1_Dialogue
+  Text: 
+  UID: 8aa4e565-9b80-431d-87e8-08bf6cc6e4b1
+  CharacterName: Doc
+  CallingNodeData: {fileID: -3858304592623107065}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -3858304592623107065}
+  DataIconnectedTo:
+  - {fileID: 1874615542032537000}
+  Duration: 1
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 1
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - Welcome to Food PyramiDash!
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-827999972046448862
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 5_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 5_Dialogue
+  Text: 
+  UID: ca39ef5e-d319-454c-b617-112960187dc6
+  CharacterName: Doc
+  CallingNodeData: {fileID: -3858304592623107065}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: 7617296622497194278}
+  DataIconnectedTo:
+  - {fileID: -8092749804883721645}
+  Duration: 1
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 4.013239
+  DurationSum: 5.013239
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - To hit the target, simply move the chemist towards the right lane. Hitting the
+    same type of target twice does not count.
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 898e24b5475626c4e801ae0a3c8a1e90, type: 3}
+  m_Name: Game3
+  m_EditorClassIdentifier: 
+  UID: cc5b7cf1-517c-4282-b40b-e5342e1e8777
+  UpdateUID: b68c5ab7-bb36-4da8-a9f8-c7b5cfe8144c
+  SceneID: 6
+  FullCharacterDialogueSet:
+  - {fileID: -3858304592623107065}
+  - {fileID: -2383932784559504308}
+  - {fileID: 1874615542032537000}
+  - {fileID: 2569378277091865439}
+  - {fileID: 7617296622497194278}
+  - {fileID: -827999972046448862}
+  - {fileID: -8092749804883721645}
+  - {fileID: 6136778125316046370}
+  - {fileID: 1269540980737482770}
+  ActiveCharacterDialogueSet:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Characters:
+  - {fileID: -3858304592623107065}
+  Languages:
+  - Name: English
+    CountryCode: en-US
+    Active: 0
+    Default: 0
+  LanguageIndex: 0
+  LanguageNameArray:
+  - English
+--- !u!114 &1269540980737482770
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 8_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 8_Dialogue
+  Text: 
+  UID: 63bb62fd-a008-46ee-8bae-587793d4e57f
+  CharacterName: Doc
+  CallingNodeData: {fileID: -3858304592623107065}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: 6136778125316046370}
+  DataIconnectedTo: []
+  Duration: 1
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 7.0264783
+  DurationSum: 8.026478
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - If you complete all the levels of the pyramid, you will earn a trophy. Good luck!
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &1874615542032537000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 2_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 2_Dialogue
+  Text: 
+  UID: 05fa2af4-70f0-4890-91b1-d2995313cc80
+  CharacterName: Doc
+  CallingNodeData: {fileID: -3858304592623107065}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -2383932784559504308}
+  DataIconnectedTo:
+  - {fileID: 2569378277091865439}
+  Duration: 1
+  Delay: 0.013239182
+  RealtimeDelay: 0
+  StartTime: 1.0132391
+  DurationSum: 2.0132391
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - Your goal here is to classify the food into carbohydrates, vegetable and fruits,
+    proteins, sugar and sweets
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &2569378277091865439
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 3_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 3_Dialogue
+  Text: 
+  UID: c3f1d644-617a-47d7-84d4-046111737108
+  CharacterName: Doc
+  CallingNodeData: {fileID: -3858304592623107065}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: 1874615542032537000}
+  DataIconnectedTo:
+  - {fileID: 7617296622497194278}
+  Duration: 1
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 2.0132391
+  DurationSum: 3.0132391
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - lipids (fats and oils) to form your Healthy Food Pyramid. There are 5 levels
+    in the pyramid, each level consists of targets that you must hit.
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &6136778125316046370
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 7_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 7_Dialogue
+  Text: 
+  UID: 631249f0-cab8-42e4-85cb-45b1b217e90c
+  CharacterName: Doc
+  CallingNodeData: {fileID: -3858304592623107065}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -8092749804883721645}
+  DataIconnectedTo:
+  - {fileID: 1269540980737482770}
+  Duration: 1
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 6.0264783
+  DurationSum: 7.0264783
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 'If you hit a type of food that is not a target, you will lose a life. You have
+    3 lives for the whole game. '
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &7617296622497194278
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 4_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 4_Dialogue
+  Text: 
+  UID: 53581d4f-4eff-4b4f-8338-a770190cd5c9
+  CharacterName: Doc
+  CallingNodeData: {fileID: -3858304592623107065}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: 2569378277091865439}
+  DataIconnectedTo:
+  - {fileID: -827999972046448862}
+  Duration: 1
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 3.0132391
+  DurationSum: 4.013239
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - The food will automatically move towards you, the player.
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
