@@ -5,13 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class SceneHandler : MonoBehaviour
 {
-	public void ReloadScene()
+	PreviousSceneData previousSceneData;
+    private void Awake() {
+        previousSceneData = GameObject.Find("PreviousSceneData").GetComponent<PreviousSceneData>();
+    }
+    public void ReloadScene()
     {
     	SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void Home()
     {
         SceneManager.LoadScene("Home");
+        previousSceneData.previousScene = SceneManager.GetActiveScene().name;
     }
     public void Tutorial1()
     {
@@ -136,5 +141,6 @@ public class SceneHandler : MonoBehaviour
     public void Game3()
     {
         SceneManager.LoadScene("Game3");
+        previousSceneData.previousScene = SceneManager.GetActiveScene().name;
     }
 }
