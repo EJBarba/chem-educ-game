@@ -58,6 +58,8 @@ public class Game3Manager : MonoBehaviour
             level.resetLevel();
             tutorialCanvas.SetActive(true);
             playerLives.resetLives();
+            audioManager.StopAllBGMusic();
+            audioManager.Play("tutorialMusic");  
         }
 
         else
@@ -90,15 +92,19 @@ public class Game3Manager : MonoBehaviour
             isWin = true;
             foreground.SetActive(false);
             foregroundUI.SetActive(false);
+            audioManager.StopAllBGMusic();
+            
 
             //show victory modal if last level
             if (level.currentLevel >= foodLevels.Count - 1)
             {
                 panelVictoryModal.SetActive(true);
+                audioManager.Play("missionCompleteMusic");
             }
             else
             {
                 panelWin.SetActive(true);
+                audioManager.Play("bgmusicvictory");
             }
         }
 
@@ -123,6 +129,7 @@ public class Game3Manager : MonoBehaviour
 
     public void TargetHit(string name)
     {
+        audioManager.Play("wordcorrect"); 
         for (int i = 0; i < foodLevels[level.currentLevel].list.Count; i++)
         {
             if (name.ToLower().Contains(foodLevels[level.currentLevel].list[i].gameObject.name.ToLower()))
@@ -139,7 +146,6 @@ public class Game3Manager : MonoBehaviour
     public void DummyHit()
     {
         playerLives.decreaseLife();
-
         foreground.SetActive(false);
         foregroundUI.SetActive(false);
 
@@ -153,6 +159,9 @@ public class Game3Manager : MonoBehaviour
             panelLose.SetActive(true);
             panelLoseLivesText.text = playerLives.lives.ToString();
         }
+
+        audioManager.StopAllBGMusic();
+        audioManager.Play("bgmusicdefeat");
     }
 
     public void SetPlayerReady()
@@ -173,6 +182,12 @@ public class Game3Manager : MonoBehaviour
     public void GoToNextLevel()
     {
         level.nextLevel();
+    }
+
+    public void TutorialToFirstLevelMusic()
+    {
+        audioManager.StopAllBGMusic();
+        audioManager.Play("bgGame3");
     }
 
     private void Update() 
