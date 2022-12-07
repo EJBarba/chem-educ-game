@@ -1588,11 +1588,11 @@ MonoBehaviour:
   panelFoodlevelModal: {fileID: 1642586035}
   foodLevelImageUI: {fileID: 1875886235}
   foodLevelSprites:
-  - {fileID: 21300000, guid: ce710cafe76f9c94ca172733f74b5b78, type: 3}
-  - {fileID: 21300000, guid: a0378657ff163b34089e8de047cfc49e, type: 3}
-  - {fileID: 21300000, guid: 0f70fd0376551464cba3227b8d2e6482, type: 3}
-  - {fileID: 21300000, guid: 307c78b28e4d6a04ab257d55de9eb587, type: 3}
-  - {fileID: 21300000, guid: 181484d52decc4d4a94fb72736a62f4d, type: 3}
+  - {fileID: 21300000, guid: b1bf2eb65aa03c046973b43593f377e7, type: 3}
+  - {fileID: 21300000, guid: fb6789e1b40234047abd66ede6864914, type: 3}
+  - {fileID: 21300000, guid: a17a78425a1689247b71e068ab68039d, type: 3}
+  - {fileID: 21300000, guid: f0ca918751a25bb41b6186833c5707bb, type: 3}
+  - {fileID: 21300000, guid: fbf3c28a411c1dc4a9a25f49f9ad529f, type: 3}
 --- !u!114 &247740560
 MonoBehaviour:
   m_ObjectHideFlags: 0
