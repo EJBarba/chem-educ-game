@@ -17,6 +17,7 @@ public class Game3Manager : MonoBehaviour
     [SerializeField] TextMeshProUGUI targetCount;
     [SerializeField] TextMeshProUGUI targetTitle;
     [SerializeField] GameObject panelWin;
+    [SerializeField] GameObject panelVictoryModal;
     [SerializeField] GameObject foreground;
     [SerializeField] GameObject foregroundUI;
     [SerializeField] GameObject tutorialCanvas;
@@ -56,7 +57,7 @@ public class Game3Manager : MonoBehaviour
         }
 
         else
-        {
+        {            
             panelFoodlevelModal.SetActive(true);
             Debug.Log(foodLevelSprites[level.currentLevel].name);
             foodLevelImageUI.sprite = foodLevelSprites[level.currentLevel];
@@ -83,9 +84,18 @@ public class Game3Manager : MonoBehaviour
         if (targetFoodLevel.list.Count <= 0)
         {
             isWin = true;
-            panelWin.SetActive(true);
             foreground.SetActive(false);
             foregroundUI.SetActive(false);
+
+            //show victory modal if last level
+            if (level.currentLevel >= foodLevels.Count - 1)
+            {
+                panelVictoryModal.SetActive(true);
+            }
+            else
+            {
+                panelWin.SetActive(true);
+            }
         }
 
         //spawn target
