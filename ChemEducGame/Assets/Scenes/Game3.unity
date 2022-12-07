@@ -1571,8 +1571,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 63663b8a6f024dd4aaa0c38c1869975e, type: 2}
   - {fileID: 11400000, guid: caab7e64f49573445937eb4467de2a6e, type: 2}
   targetFoodLevel: {fileID: 11400000, guid: 6e28c311872f5ff48b36e4b788021ffc, type: 2}
-  secondsToOutOfScreen: 5
-  spawnTime: 0.5
+  secondsToOutOfScreen: 10
+  spawnTime: 1
   level: {fileID: 11400000, guid: cfb21d72fe69fcf42963010106bf748b, type: 2}
   playerLives: {fileID: 11400000, guid: 71968e117ee5c614c8c5ca2d99ab4667, type: 2}
   targetCount: {fileID: 1211524476}
@@ -1588,11 +1588,11 @@ MonoBehaviour:
   panelFoodlevelModal: {fileID: 1642586035}
   foodLevelImageUI: {fileID: 1875886235}
   foodLevelSprites:
-  - {fileID: 21300000, guid: ce710cafe76f9c94ca172733f74b5b78, type: 3}
-  - {fileID: 21300000, guid: a0378657ff163b34089e8de047cfc49e, type: 3}
-  - {fileID: 21300000, guid: 0f70fd0376551464cba3227b8d2e6482, type: 3}
-  - {fileID: 21300000, guid: 307c78b28e4d6a04ab257d55de9eb587, type: 3}
-  - {fileID: 21300000, guid: 181484d52decc4d4a94fb72736a62f4d, type: 3}
+  - {fileID: 21300000, guid: b1bf2eb65aa03c046973b43593f377e7, type: 3}
+  - {fileID: 21300000, guid: fb6789e1b40234047abd66ede6864914, type: 3}
+  - {fileID: 21300000, guid: a17a78425a1689247b71e068ab68039d, type: 3}
+  - {fileID: 21300000, guid: f0ca918751a25bb41b6186833c5707bb, type: 3}
+  - {fileID: 21300000, guid: fbf3c28a411c1dc4a9a25f49f9ad529f, type: 3}
 --- !u!114 &247740560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4236,12 +4236,12 @@ GameObject:
   - component: {fileID: 772414086}
   - component: {fileID: 772414085}
   m_Layer: 5
-  m_Name: Next Button
+  m_Name: Reload Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &772414084
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4260,7 +4260,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -191}
+  m_AnchoredPosition: {x: 26, y: -191}
   m_SizeDelta: {x: 128, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &772414085
@@ -4322,6 +4322,18 @@ MonoBehaviour:
       - m_Target: {fileID: 772414085}
         m_TargetAssemblyTypeName: SceneHandler, Assembly-CSharp
         m_MethodName: ReloadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 247740559}
+        m_TargetAssemblyTypeName: Game3Manager, Assembly-CSharp
+        m_MethodName: ResetLives
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7537,7 +7549,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0803af1505d648b4f8f9f220a2146104, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7001aaab55279f64da18f24def23e55d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8597,7 +8609,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ce710cafe76f9c94ca172733f74b5b78, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b1bf2eb65aa03c046973b43593f377e7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8949,7 +8961,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -79, y: -191}
+  m_AnchoredPosition: {x: -157, y: -191}
   m_SizeDelta: {x: 128, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1972435908
@@ -10309,6 +10321,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 247740559}
+        m_TargetAssemblyTypeName: Game3Manager, Assembly-CSharp
+        m_MethodName: ResetLives
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 247740559}
         m_TargetAssemblyTypeName: Game3Manager, Assembly-CSharp
         m_MethodName: GoToNextLevel
