@@ -184,6 +184,11 @@ public class Game3Manager : MonoBehaviour
         level.nextLevel();
     }
 
+    public void ResetLives()
+    {
+        playerLives.resetLives();
+    }
+
     public void TutorialToFirstLevelMusic()
     {
         audioManager.StopAllBGMusic();
