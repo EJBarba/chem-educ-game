@@ -5,13 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class SceneHandler : MonoBehaviour
 {
-	public void ReloadScene()
+	PreviousSceneData previousSceneData;
+    private void Awake() {
+        previousSceneData = GameObject.Find("PreviousSceneData").GetComponent<PreviousSceneData>();
+    }
+    public void ReloadScene()
     {
     	SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        previousSceneData.previousScene = SceneManager.GetActiveScene().name;
     }
     public void Home()
     {
         SceneManager.LoadScene("Home");
+        previousSceneData.previousScene = SceneManager.GetActiveScene().name;
     }
     public void Tutorial1()
     {
@@ -132,5 +138,10 @@ public class SceneHandler : MonoBehaviour
     public void LaserLevel2_Results()
     {
         SceneManager.LoadScene("Laser_Level2_Results");
+    }
+    public void Game3()
+    {
+        SceneManager.LoadScene("Game3");
+        previousSceneData.previousScene = SceneManager.GetActiveScene().name;
     }
 }

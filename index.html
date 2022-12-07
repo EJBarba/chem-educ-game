@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
-    <!-- <p> Under Maintenance </p> -->
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=960 height=600></canvas>
       <div id="unity-loading-bar">
@@ -57,15 +56,15 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/2.2.0.loader.js";
+      var loaderUrl = buildUrl + "/3.0.1.loader.js";
       var config = {
-        dataUrl: buildUrl + "/2.2.0.data",
-        frameworkUrl: buildUrl + "/2.2.0.framework.js",
-        codeUrl: buildUrl + "/2.2.0.wasm",
+        dataUrl: buildUrl + "/3.0.1.data",
+        frameworkUrl: buildUrl + "/3.0.1.framework.js",
+        codeUrl: buildUrl + "/3.0.1.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "HappyPillGames",
         productName: "ChemEducGame",
-        productVersion: "2.2.0",
+        productVersion: "3.0.1",
         showBanner: unityShowBanner,
       };
 
