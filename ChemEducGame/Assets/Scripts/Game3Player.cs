@@ -11,12 +11,10 @@ public class Game3Player : MonoBehaviour
         {
             Destroy(other.gameObject);
             game3Manager.TargetHit(other.gameObject.name);
-            
-            // add score
         }
         if (other.gameObject.tag == "Dummy")
         {
-            // reduce lives or end game here
+            game3Manager.DummyHit();
         }
           
     }

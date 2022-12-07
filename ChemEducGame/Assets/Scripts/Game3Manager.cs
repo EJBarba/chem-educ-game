@@ -14,10 +14,14 @@ public class Game3Manager : MonoBehaviour
     [SerializeField] int secondsToOutOfScreen;
     [SerializeField] float spawnTime;
     [SerializeField] Game3Level level;
+    [SerializeField] Game3Lives playerLives;
     [SerializeField] TextMeshProUGUI targetCount;
     [SerializeField] TextMeshProUGUI targetTitle;
     [SerializeField] GameObject panelWin;
+    [SerializeField] GameObject panelLose;
+    [SerializeField] TextMeshProUGUI panelLoseLivesText;
     [SerializeField] GameObject panelVictoryModal;
+    [SerializeField] GameObject panelDefeatModal;
     [SerializeField] GameObject foreground;
     [SerializeField] GameObject foregroundUI;
     [SerializeField] GameObject tutorialCanvas;
@@ -38,7 +42,6 @@ public class Game3Manager : MonoBehaviour
     private void Awake() {
         audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         previousSceneData = GameObject.Find("PreviousSceneData").GetComponent<PreviousSceneData>();
-
     }
 
     void Start()
@@ -54,6 +57,7 @@ public class Game3Manager : MonoBehaviour
         {
             level.resetLevel();
             tutorialCanvas.SetActive(true);
+            playerLives.resetLives();
         }
 
         else
@@ -79,7 +83,7 @@ public class Game3Manager : MonoBehaviour
     {
         var foodLevelIndex = Random.Range(0,foodLevels.Count);
         GameObject food;
-
+        
         //win condition
         if (targetFoodLevel.list.Count <= 0)
         {
@@ -129,6 +133,25 @@ public class Game3Manager : MonoBehaviour
                 //Debug.Log(_foodLevels[level.currentLevel].list.Count);
                 break;
             }
+        }
+    }
+
+    public void DummyHit()
+    {
+        playerLives.decreaseLife();
+
+        foreground.SetActive(false);
+        foregroundUI.SetActive(false);
+
+        // defeat condition
+        if (playerLives.lives <= 0)
+        {
+            panelDefeatModal.SetActive(true);
+        }
+        else
+        {
+            panelLose.SetActive(true);
+            panelLoseLivesText.text = playerLives.lives.ToString();
         }
     }
 
