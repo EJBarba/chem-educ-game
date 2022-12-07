@@ -1571,8 +1571,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 63663b8a6f024dd4aaa0c38c1869975e, type: 2}
   - {fileID: 11400000, guid: caab7e64f49573445937eb4467de2a6e, type: 2}
   targetFoodLevel: {fileID: 11400000, guid: 6e28c311872f5ff48b36e4b788021ffc, type: 2}
-  secondsToOutOfScreen: 5
-  spawnTime: 0.5
+  secondsToOutOfScreen: 10
+  spawnTime: 1
   level: {fileID: 11400000, guid: cfb21d72fe69fcf42963010106bf748b, type: 2}
   playerLives: {fileID: 11400000, guid: 71968e117ee5c614c8c5ca2d99ab4667, type: 2}
   targetCount: {fileID: 1211524476}
