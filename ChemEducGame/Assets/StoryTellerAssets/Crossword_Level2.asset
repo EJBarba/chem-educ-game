@@ -1,6 +1,128 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-3794311582399670214
+--- !u!114 &-7828839039743290434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 3_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 3_Dialogue
+  Text: 
+  UID: 829e7249-8740-4d0a-93b8-2c3ce38472bf
+  CharacterName: Doc
+  CallingNodeData: {fileID: 38561791061211927}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -1925358687495664177}
+  DataIconnectedTo:
+  - {fileID: 4389908965523478908}
+  Duration: 1
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 2
+  DurationSum: 3
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 'You will get a +Power Up if you answered the puzzle correctly. You can use it
+    in the next level wherein you can select FIVE clue letters from (A to Z) randomly.
+
+'
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-1925358687495664177
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 2_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 2_Dialogue
+  Text: 
+  UID: 1da6d68c-7ec7-4c62-9be1-7db678fc0fa2
+  CharacterName: Doc
+  CallingNodeData: {fileID: 38561791061211927}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: 3575254523082320113}
+  DataIconnectedTo:
+  - {fileID: -7828839039743290434}
+  Duration: 1
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 1
+  DurationSum: 2
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - There will be a deduction of -5 points if you get a wrong answer. Be careful
+    with the correct spelling. Misspelled word means wrong answer.
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 898e24b5475626c4e801ae0a3c8a1e90, type: 3}
+  m_Name: Crossword_Level2
+  m_EditorClassIdentifier: 
+  UID: 6801b7e1-e060-4062-9b29-5c8f6f8ec89e
+  UpdateUID: ee21d88a-106c-4800-a589-d270c32e32bd
+  SceneID: 2
+  FullCharacterDialogueSet:
+  - {fileID: 38561791061211927}
+  - {fileID: 3575254523082320113}
+  - {fileID: -1925358687495664177}
+  - {fileID: -7828839039743290434}
+  - {fileID: 4389908965523478908}
+  ActiveCharacterDialogueSet:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Characters:
+  - {fileID: 38561791061211927}
+  Languages:
+  - Name: English
+    CountryCode: en-US
+    Active: 0
+    Default: 0
+  LanguageIndex: 0
+  LanguageNameArray:
+  - English
+--- !u!114 &38561791061211927
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -16,14 +138,14 @@ MonoBehaviour:
   Text: 
   UID: 50bf6ddd-4ee5-4700-81af-9ded9983799f
   CharacterName: Doc
-  CallingNodeData: {fileID: -3794311582399670214}
+  CallingNodeData: {fileID: 38561791061211927}
   EnvironmentName: 
   Environment: {fileID: 0}
   Pass: 0
   Runtime_Pass: 0
   DataConnectedToMe: []
   DataIconnectedTo:
-  - {fileID: 6393655561888898750}
+  - {fileID: 3575254523082320113}
   Duration: 0
   Delay: 0
   RealtimeDelay: 0
@@ -35,11 +157,11 @@ MonoBehaviour:
   LocalizedText:
   - 
   NodeDataInMyChain:
-  - {fileID: -3794311582399670214}
-  - {fileID: -3177292916676558862}
-  - {fileID: 8857514152297762010}
-  - {fileID: 6393655561888898750}
-  - {fileID: 7446910069207278804}
+  - {fileID: 38561791061211927}
+  - {fileID: 3575254523082320113}
+  - {fileID: -7828839039743290434}
+  - {fileID: 4389908965523478908}
+  - {fileID: -1925358687495664177}
   CharacterImage: {fileID: 0}
   CharacterPersonality:
     NegativeTraits:
@@ -142,83 +264,7 @@ MonoBehaviour:
       Stoic: 0
       Strong: 0
   SortingID: 0
---- !u!114 &-3177292916676558862
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
-  m_Name: 4_Dialogue
-  m_EditorClassIdentifier: 
-  Name: 4_Dialogue
-  Text: 
-  UID: cd42d80b-f8f1-45db-a254-449148efc5f3
-  CharacterName: Doc
-  CallingNodeData: {fileID: -3794311582399670214}
-  EnvironmentName: 
-  Environment: {fileID: 0}
-  Pass: 0
-  Runtime_Pass: 0
-  DataConnectedToMe:
-  - {fileID: 7446910069207278804}
-  DataIconnectedTo: []
-  Duration: 1
-  Delay: 0
-  RealtimeDelay: 0
-  StartTime: 3
-  DurationSum: 4
-  useTime: 1
-  IsInControl: 0
-  OverrideTime: 0
-  LocalizedText:
-  - Your time limit for this level is 8 minutes
-  LocalizedVoiceRecordings:
-  - {fileID: 0}
-  LocalizedSoundEffects:
-  - {fileID: 0}
-  StoryboardImage: {fileID: 0}
-  Tag: 
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 898e24b5475626c4e801ae0a3c8a1e90, type: 3}
-  m_Name: Crossword_Level2
-  m_EditorClassIdentifier: 
-  UID: 6801b7e1-e060-4062-9b29-5c8f6f8ec89e
-  UpdateUID: 2a319660-e678-42b2-9b4d-90b9f705fd24
-  SceneID: 2
-  FullCharacterDialogueSet:
-  - {fileID: -3794311582399670214}
-  - {fileID: 6393655561888898750}
-  - {fileID: 8857514152297762010}
-  - {fileID: 7446910069207278804}
-  - {fileID: -3177292916676558862}
-  ActiveCharacterDialogueSet:
-  - {fileID: 6393655561888898750}
-  - {fileID: 8857514152297762010}
-  - {fileID: 7446910069207278804}
-  - {fileID: -3177292916676558862}
-  Characters:
-  - {fileID: -3794311582399670214}
-  Languages:
-  - Name: English
-    CountryCode: en-US
-    Active: 0
-    Default: 0
-  LanguageIndex: 0
-  LanguageNameArray:
-  - English
---- !u!114 &6393655561888898750
+--- !u!114 &3575254523082320113
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -234,15 +280,15 @@ MonoBehaviour:
   Text: 
   UID: 8491c201-4f4c-4ceb-93d7-682e83c3b0ed
   CharacterName: Doc
-  CallingNodeData: {fileID: -3794311582399670214}
+  CallingNodeData: {fileID: 38561791061211927}
   EnvironmentName: 
   Environment: {fileID: 0}
   Pass: 0
   Runtime_Pass: 0
   DataConnectedToMe:
-  - {fileID: -3794311582399670214}
+  - {fileID: 38561791061211927}
   DataIconnectedTo:
-  - {fileID: 8857514152297762010}
+  - {fileID: -1925358687495664177}
   Duration: 1
   Delay: 0
   RealtimeDelay: 0
@@ -259,7 +305,7 @@ MonoBehaviour:
   - {fileID: 0}
   StoryboardImage: {fileID: 0}
   Tag: 
---- !u!114 &7446910069207278804
+--- !u!114 &4389908965523478908
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -269,75 +315,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
-  m_Name: 3_Dialogue
+  m_Name: 4_Dialogue
   m_EditorClassIdentifier: 
-  Name: 3_Dialogue
+  Name: 4_Dialogue
   Text: 
-  UID: 829e7249-8740-4d0a-93b8-2c3ce38472bf
+  UID: cd42d80b-f8f1-45db-a254-449148efc5f3
   CharacterName: Doc
-  CallingNodeData: {fileID: -3794311582399670214}
+  CallingNodeData: {fileID: 38561791061211927}
   EnvironmentName: 
   Environment: {fileID: 0}
   Pass: 0
   Runtime_Pass: 0
   DataConnectedToMe:
-  - {fileID: 8857514152297762010}
-  DataIconnectedTo:
-  - {fileID: -3177292916676558862}
+  - {fileID: -7828839039743290434}
+  DataIconnectedTo: []
   Duration: 1
   Delay: 0
   RealtimeDelay: 0
-  StartTime: 2
-  DurationSum: 3
+  StartTime: 3
+  DurationSum: 4
   useTime: 1
   IsInControl: 0
   OverrideTime: 0
   LocalizedText:
-  - 'You will get a +Power Up if you answered the puzzle correctly. You can use it
-    in the next level wherein you can select FIVE clue letters from (A to Z) randomly.
-
-'
-  LocalizedVoiceRecordings:
-  - {fileID: 0}
-  LocalizedSoundEffects:
-  - {fileID: 0}
-  StoryboardImage: {fileID: 0}
-  Tag: 
---- !u!114 &8857514152297762010
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
-  m_Name: 2_Dialogue
-  m_EditorClassIdentifier: 
-  Name: 2_Dialogue
-  Text: 
-  UID: 1da6d68c-7ec7-4c62-9be1-7db678fc0fa2
-  CharacterName: Doc
-  CallingNodeData: {fileID: -3794311582399670214}
-  EnvironmentName: 
-  Environment: {fileID: 0}
-  Pass: 0
-  Runtime_Pass: 0
-  DataConnectedToMe:
-  - {fileID: 6393655561888898750}
-  DataIconnectedTo:
-  - {fileID: 7446910069207278804}
-  Duration: 1
-  Delay: 0
-  RealtimeDelay: 0
-  StartTime: 1
-  DurationSum: 2
-  useTime: 1
-  IsInControl: 0
-  OverrideTime: 0
-  LocalizedText:
-  - There will be a deduction of -5 points if you get a wrong answer.
+  - Your time limit for this level is 8 minutes
   LocalizedVoiceRecordings:
   - {fileID: 0}
   LocalizedSoundEffects:

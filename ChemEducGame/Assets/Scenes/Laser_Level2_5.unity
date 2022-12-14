@@ -2986,7 +2986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8239778225985326538, guid: cdd96888ba48c1843a24a21d202ac161, type: 3}
       propertyPath: m_text
-      value: 'I am polyunsaturated omega-6 fatty acid. (1 target)
+      value: 'I am a polyunsaturated omega-6 fatty acid.  (1 target)
 
 '
       objectReference: {fileID: 0}

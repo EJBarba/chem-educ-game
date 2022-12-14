@@ -4870,8 +4870,8 @@ MonoBehaviour:
   - {fileID: 760993260}
   - {fileID: 762523279}
   isSolved: 0
-  description: ACROSS <BR> 6. A fatty acid that contains several C-C double bonds
-    and is usually liquid at room temperature
+  description: ACROSS <BR> 6. A long chain fatty acid that contains several C-C double
+    bonds and is usually liquid at room temperature
 --- !u!1 &619626053 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1581983284518590359, guid: 37562f5620b02de4fa6919bafb7e4312, type: 3}
@@ -9886,8 +9886,8 @@ MonoBehaviour:
   - {fileID: 1737773964}
   - {fileID: 1667577253}
   isSolved: 0
-  description: ACROSS <BR> 5. A fatty acid that contains only a single C-C bond and
-    is solid at room temperature
+  description: ACROSS <BR> 5. A short chain fatty acid that contains only a single
+    C-C bond and is solid at room temperature
 --- !u!224 &1310006277
 RectTransform:
   m_ObjectHideFlags: 0

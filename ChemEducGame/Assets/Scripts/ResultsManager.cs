@@ -9,6 +9,8 @@ public class ResultsManager : MonoBehaviour
     [SerializeField] List<Score> scoreList;
     [SerializeField] List<TextMeshProUGUI> levelList;
     [SerializeField] TextMeshProUGUI totalScoreUIText;
+    [SerializeField] GameObject trophy;
+    [SerializeField] TextMeshProUGUI laserLevel1Message;
 
     private int totalScore = 0;
 
@@ -28,5 +30,22 @@ public class ResultsManager : MonoBehaviour
         }
 
         totalScoreUIText.text = totalScore.ToString();
+
+        if (trophy!= null && totalScore == 110)
+        {
+            trophy.SetActive(true);
+        }
+
+        if (laserLevel1Message != null)
+        {
+          if (totalScore == 50)
+          {
+            laserLevel1Message.text = "CONGRATULATIONS!";
+          }
+          else
+          {
+            laserLevel1Message.text = "DO BETTER IN THE NEXT LEVEL!";
+          }  
+        }
     }
 }
