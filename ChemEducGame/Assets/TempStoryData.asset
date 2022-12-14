@@ -775,7 +775,7 @@ MonoBehaviour:
   UID: 18cd3d54-779b-4717-a256-7c5cf36a4f5a
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 4
+  IndexInList: 3
   NodeRect:
     serializedVersion: 2
     x: 1372.2
@@ -818,8 +818,8 @@ MonoBehaviour:
   pushTime: 1
   OverrideTime: 0
   LocalizedText:
-  - 'Using the light beam, you must destroy the correct structure of the molecule
-    being asked at each level. '
+  - 'Using the electron beam, you must destroy the correct structure of the molecule
+    being asked in each item. '
   MaxInputConnections: 10000
   MaxOutputConnections: 10000
   Lock: 0
@@ -829,7 +829,7 @@ MonoBehaviour:
   LocalizedSoundEffects:
   - {fileID: 0}
   CachedTimeInSeconds: -1
-  wordCount: 0
+  wordCount: 18
   MyStoryboardImageScalesToFit: 0
   StoryboardImagePath: 
   LocalizedVoiceRecordings:
@@ -2032,7 +2032,7 @@ MonoBehaviour:
   UID: fc382a99-c877-4021-a8a8-dd12e1bc5d90
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 5
+  IndexInList: 4
   NodeRect:
     serializedVersion: 2
     x: 1722.2
@@ -2075,7 +2075,7 @@ MonoBehaviour:
   pushTime: 1
   OverrideTime: 0
   LocalizedText:
-  - 'To use the lightbeam, press the up and down keys to tilt it. Press and hold
+  - 'To use the electron beam, press the up and down keys to tilt it. Press and hold
     spacebar to fire. Use the obstacles to reflect the laser. '
   MaxInputConnections: 10000
   MaxOutputConnections: 10000
@@ -2086,7 +2086,7 @@ MonoBehaviour:
   LocalizedSoundEffects:
   - {fileID: 0}
   CachedTimeInSeconds: -1
-  wordCount: 0
+  wordCount: 26
   MyStoryboardImageScalesToFit: 0
   StoryboardImagePath: 
   LocalizedVoiceRecordings:
@@ -2329,15 +2329,16 @@ MonoBehaviour:
     seneDrag: {fileID: 0}
   - SceneName: LaserLvl1
     UID: e1c3cdc9-f95e-4d60-a69a-c5e2be48be33
-    Pan: {x: 1225.0518, y: -215.4463}
-    Zoom: 0.7000003
+    Pan: {x: -21.960749, y: -72.4459}
+    Zoom: 0.98
     NodeElements:
     - {fileID: 8035684424925682735}
     - {fileID: -7358569099322410082}
     - {fileID: 38083011268774649}
-    - {fileID: 3820686807684785775}
     - {fileID: -5236200850273626522}
     - {fileID: -469681635442526933}
+    - {fileID: 3820686807684785775}
+    - {fileID: 4834148376502519582}
     Characters:
     - {fileID: 8035684424925682735}
     Environments: []
@@ -2345,7 +2346,7 @@ MonoBehaviour:
     Theme: no Theme
     Plot: no plot
     CustomSceneDataset: []
-    Duration: 5
+    Duration: 6
     ShowProjectInfo: 1
     ShowGrid: 1
     alwaysShowNodeNames: 0
@@ -2360,8 +2361,8 @@ MonoBehaviour:
     seneDrag: {fileID: 0}
   - SceneName: LaserLvl2
     UID: 15cf6eed-0bae-4fcd-92eb-416badc38618
-    Pan: {x: -58.373222, y: -256.19046}
-    Zoom: 0.5400004
+    Pan: {x: 457.96582, y: 28.977417}
+    Zoom: 1
     NodeElements:
     - {fileID: 838773230157059041}
     - {fileID: 7250517482917052913}
@@ -2420,7 +2421,7 @@ MonoBehaviour:
     image: {fileID: 0}
     expandCustomSceneDataFoldout: 0
     seneDrag: {fileID: 0}
-  LastSavedScene: 3
+  LastSavedScene: 4
   ProjectType: 0
   image: {fileID: 0}
   CoverImagePath: 
@@ -2431,7 +2432,7 @@ MonoBehaviour:
     MaxFrequency: 0
     MinFrequency: 0
   TimeStamp:
-    Stamp: 14/12/2022 9:51:39 PM
+    Stamp: 14/12/2022 10:25:53 PM
   CreatedDataFolders: 1
   ProjectDataFolder: {fileID: 102900000, guid: 614a293c3f241994d840e7118c2e5652, type: 3}
   AudioFileFolder: {fileID: 102900000, guid: 85c253a51ef0ea44ea09109a8f1ab6fd, type: 3}
@@ -2783,16 +2784,16 @@ MonoBehaviour:
     height: 85
   InputArea:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
+    x: 55.199997
+    y: 196.8
+    width: 10
+    height: 10
   OutputArea:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
+    x: 255.2
+    y: 196.8
+    width: 10
+    height: 10
   NodesIMadeConnectionsTo:
   - {fileID: 7250517482917052913}
   NodesThatMadeAConnectionToMe: []
@@ -3976,7 +3977,7 @@ MonoBehaviour:
   UID: da577c8a-b3fc-4da8-b0fa-4030c087f4bf
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 3
+  IndexInList: 5
   NodeRect:
     serializedVersion: 2
     x: 2072.2
@@ -3995,7 +3996,8 @@ MonoBehaviour:
     y: 174.8
     width: 10
     height: 10
-  NodesIMadeConnectionsTo: []
+  NodesIMadeConnectionsTo:
+  - {fileID: 4834148376502519582}
   NodesThatMadeAConnectionToMe:
   - {fileID: -469681635442526933}
   UsesText: 1
@@ -4018,7 +4020,85 @@ MonoBehaviour:
   pushTime: 1
   OverrideTime: 0
   LocalizedText:
-  - Each correct match is equivalent to 5 points. Are you now ready? Let us start.
+  - 'Each correct match is equivalent to 5 points. '
+  MaxInputConnections: 10000
+  MaxOutputConnections: 10000
+  Lock: 0
+  LockTime: 0
+  Expand: 1
+  ShowImageArea: 0
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  CachedTimeInSeconds: -1
+  wordCount: 0
+  MyStoryboardImageScalesToFit: 0
+  StoryboardImagePath: 
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  storyboardImageAreaSize: {x: 330, y: 120}
+  MaximizedStoryboardArea: 0
+  _textAreaScrollView: {x: 0, y: 0}
+  SoundEffectWaveform: {fileID: 0}
+--- !u!114 &4834148376502519582
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1432923298, guid: 55ffa4d6529f10b4aba0ad6d5d3d05ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 6_Dialogue
+  StoryProject: {fileID: 11400000}
+  UID: 4293198c-a48c-4888-9c3b-f70c2fe0a507
+  Drag: {fileID: 0}
+  UseCustomDragArea: 0
+  IndexInList: 6
+  NodeRect:
+    serializedVersion: 2
+    x: 2490.9756
+    y: 120.820404
+    width: 330
+    height: 120
+  InputArea:
+    serializedVersion: 2
+    x: 2485.9756
+    y: 175.8204
+    width: 10
+    height: 10
+  OutputArea:
+    serializedVersion: 2
+    x: 2815.9756
+    y: 175.8204
+    width: 10
+    height: 10
+  NodesIMadeConnectionsTo: []
+  NodesThatMadeAConnectionToMe:
+  - {fileID: 3820686807684785775}
+  UsesText: 1
+  HasInputArea: 1
+  HasOutputArea: 1
+  ChainingColour: {r: 1, g: 1, b: 1, a: 1}
+  UsesTime: 1
+  MaxMinutes: 5
+  DelayTimeInSeconds: 0
+  TimeInSeconds: 1
+  NodeDurationSum: 6
+  StartingTime: 5
+  CallingNode: {fileID: 8035684424925682735}
+  Environment: {fileID: 0}
+  Text: 
+  Tag: 
+  Pass: 0
+  MySceneId: 4
+  IOofset: {x: 5, y: 0}
+  pushTime: 1
+  OverrideTime: 0
+  LocalizedText:
+  - You only have 10 minutes to complete this level. Are you now ready? Let us start.
   MaxInputConnections: 10000
   MaxOutputConnections: 10000
   Lock: 0
@@ -4382,16 +4462,16 @@ MonoBehaviour:
     height: 120
   InputArea:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
+    x: 411.2
+    y: 224.8
+    width: 10
+    height: 10
   OutputArea:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
+    x: 741.2
+    y: 224.8
+    width: 10
+    height: 10
   NodesIMadeConnectionsTo:
   - {fileID: 8097662299787915876}
   NodesThatMadeAConnectionToMe:
@@ -4665,12 +4745,14 @@ MonoBehaviour:
   - {fileID: -5236200850273626522}
   - {fileID: -469681635442526933}
   - {fileID: 3820686807684785775}
+  - {fileID: 4834148376502519582}
   NodesInMyChainWithRoutes:
   - {fileID: -7358569099322410082}
   - {fileID: 38083011268774649}
   - {fileID: -5236200850273626522}
   - {fileID: -469681635442526933}
   - {fileID: 3820686807684785775}
+  - {fileID: 4834148376502519582}
   CharacterBios:
   - CharacterName: Doc
     CharacterSex: 0
@@ -4823,16 +4905,16 @@ MonoBehaviour:
     height: 120
   InputArea:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
+    x: 941.2
+    y: 224.8
+    width: 10
+    height: 10
   OutputArea:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
+    x: 1271.2
+    y: 224.8
+    width: 10
+    height: 10
   NodesIMadeConnectionsTo: []
   NodesThatMadeAConnectionToMe:
   - {fileID: 7250517482917052913}
