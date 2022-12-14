@@ -1,119 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-3720603226478093191
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
-  m_Name: 1_Dialogue
-  m_EditorClassIdentifier: 
-  Name: 1_Dialogue
-  Text: 
-  UID: b1067d1b-3d3b-4f73-812c-3442bc91b621
-  CharacterName: Doc
-  CallingNodeData: {fileID: 9135649391000099175}
-  EnvironmentName: 
-  Environment: {fileID: 0}
-  Pass: 0
-  Runtime_Pass: 0
-  DataConnectedToMe:
-  - {fileID: 9135649391000099175}
-  DataIconnectedTo:
-  - {fileID: 124547549705519366}
-  Duration: 1
-  Delay: 0
-  RealtimeDelay: 0
-  StartTime: 0
-  DurationSum: 1
-  useTime: 1
-  IsInControl: 0
-  OverrideTime: 0
-  LocalizedText:
-  - Read the riddle as it will give you the clues and shoot the correct structure
-    of the biomolecule.
-  LocalizedVoiceRecordings:
-  - {fileID: 0}
-  LocalizedSoundEffects:
-  - {fileID: 0}
-  StoryboardImage: {fileID: 0}
-  Tag: 
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 898e24b5475626c4e801ae0a3c8a1e90, type: 3}
-  m_Name: LaserLvl2
-  m_EditorClassIdentifier: 
-  UID: 15cf6eed-0bae-4fcd-92eb-416badc38618
-  UpdateUID: 5bd2e863-897b-463d-b939-551b6c817644
-  SceneID: 5
-  FullCharacterDialogueSet:
-  - {fileID: 9135649391000099175}
-  - {fileID: -3720603226478093191}
-  - {fileID: 124547549705519366}
-  ActiveCharacterDialogueSet: []
-  Characters:
-  - {fileID: 9135649391000099175}
-  Languages:
-  - Name: English
-    CountryCode: en-US
-    Active: 0
-    Default: 0
-  LanguageIndex: 0
-  LanguageNameArray:
-  - English
---- !u!114 &124547549705519366
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
-  m_Name: 2_Dialogue
-  m_EditorClassIdentifier: 
-  Name: 2_Dialogue
-  Text: 
-  UID: ac1406b8-7709-4d6c-80e8-99501d6ec419
-  CharacterName: Doc
-  CallingNodeData: {fileID: 9135649391000099175}
-  EnvironmentName: 
-  Environment: {fileID: 0}
-  Pass: 0
-  Runtime_Pass: 0
-  DataConnectedToMe:
-  - {fileID: -3720603226478093191}
-  DataIconnectedTo: []
-  Duration: 1
-  Delay: 0
-  RealtimeDelay: 0
-  StartTime: 1
-  DurationSum: 2
-  useTime: 1
-  IsInControl: 0
-  OverrideTime: 0
-  LocalizedText:
-  - You have two trials to get the correct answer. Your score will depend on your
-    accuracy and time used in targeting and forming the correct structure.
-  LocalizedVoiceRecordings:
-  - {fileID: 0}
-  LocalizedSoundEffects:
-  - {fileID: 0}
-  StoryboardImage: {fileID: 0}
-  Tag: 
---- !u!114 &9135649391000099175
+--- !u!114 &-7075032849064404203
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,14 +16,14 @@ MonoBehaviour:
   Text: 
   UID: 882c7f5f-f9cc-42d9-8493-ca9a5a2c8ca9
   CharacterName: Doc
-  CallingNodeData: {fileID: 9135649391000099175}
+  CallingNodeData: {fileID: -7075032849064404203}
   EnvironmentName: 
   Environment: {fileID: 0}
   Pass: 0
   Runtime_Pass: 0
   DataConnectedToMe: []
   DataIconnectedTo:
-  - {fileID: -3720603226478093191}
+  - {fileID: -2125378791158386936}
   Duration: 0
   Delay: 0
   RealtimeDelay: 0
@@ -148,9 +35,10 @@ MonoBehaviour:
   LocalizedText:
   - 
   NodeDataInMyChain:
-  - {fileID: 9135649391000099175}
-  - {fileID: -3720603226478093191}
-  - {fileID: 124547549705519366}
+  - {fileID: -7075032849064404203}
+  - {fileID: -2125378791158386936}
+  - {fileID: -1762047086391381672}
+  - {fileID: 1584018282628018682}
   CharacterImage: {fileID: 0}
   CharacterPersonality:
     NegativeTraits:
@@ -253,3 +141,158 @@ MonoBehaviour:
       Stoic: 0
       Strong: 0
   SortingID: 0
+--- !u!114 &-2125378791158386936
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 1_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 1_Dialogue
+  Text: 
+  UID: b1067d1b-3d3b-4f73-812c-3442bc91b621
+  CharacterName: Doc
+  CallingNodeData: {fileID: -7075032849064404203}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -7075032849064404203}
+  DataIconnectedTo:
+  - {fileID: -1762047086391381672}
+  Duration: 1
+  Delay: 0.019998502
+  RealtimeDelay: 0
+  StartTime: 0.019998502
+  DurationSum: 1.0199986
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - Read each statement carefully and form the structure being described by choosing
+    the correct combination of structures. Use the electron beam to target the structures.
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-1762047086391381672
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 2_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 2_Dialogue
+  Text: 
+  UID: ac1406b8-7709-4d6c-80e8-99501d6ec419
+  CharacterName: Doc
+  CallingNodeData: {fileID: -7075032849064404203}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -2125378791158386936}
+  DataIconnectedTo:
+  - {fileID: 1584018282628018682}
+  Duration: 1
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 1.0199986
+  DurationSum: 2.0199986
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - You have two trials to get the correct answer. Your score will depend on your
+    accuracy and time used in targeting and forming the correct structure.
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 898e24b5475626c4e801ae0a3c8a1e90, type: 3}
+  m_Name: LaserLvl2
+  m_EditorClassIdentifier: 
+  UID: 15cf6eed-0bae-4fcd-92eb-416badc38618
+  UpdateUID: 3db3f14c-2856-4b0c-a24a-a3d90f0cd617
+  SceneID: 5
+  FullCharacterDialogueSet:
+  - {fileID: -7075032849064404203}
+  - {fileID: -2125378791158386936}
+  - {fileID: -1762047086391381672}
+  - {fileID: 1584018282628018682}
+  ActiveCharacterDialogueSet: []
+  Characters:
+  - {fileID: -7075032849064404203}
+  Languages:
+  - Name: English
+    CountryCode: en-US
+    Active: 0
+    Default: 0
+  LanguageIndex: 0
+  LanguageNameArray:
+  - English
+--- !u!114 &1584018282628018682
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 3_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 3_Dialogue
+  Text: 
+  UID: 9643f23c-f9db-41f2-9b1a-18cef1e2f47c
+  CharacterName: Doc
+  CallingNodeData: {fileID: -7075032849064404203}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -1762047086391381672}
+  DataIconnectedTo: []
+  Duration: 1
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 2.0199986
+  DurationSum: 3.0199986
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - You only have 15 minutes to complete this level. Let us begin!
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 

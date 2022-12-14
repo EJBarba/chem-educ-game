@@ -1653,6 +1653,83 @@ MonoBehaviour:
   MaximizedStoryboardArea: 0
   _textAreaScrollView: {x: 0, y: 0}
   SoundEffectWaveform: {fileID: 0}
+--- !u!114 &-2312035857922885419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1432923298, guid: 55ffa4d6529f10b4aba0ad6d5d3d05ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  StoryProject: {fileID: 0}
+  UID: 
+  Drag: {fileID: 0}
+  UseCustomDragArea: 0
+  IndexInList: 0
+  NodeRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 150
+    height: 50
+  InputArea:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  OutputArea:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  NodesIMadeConnectionsTo: []
+  NodesThatMadeAConnectionToMe: []
+  UsesText: 1
+  HasInputArea: 1
+  HasOutputArea: 1
+  ChainingColour: {r: 1, g: 1, b: 1, a: 1}
+  UsesTime: 1
+  MaxMinutes: 5
+  DelayTimeInSeconds: 0
+  TimeInSeconds: 1
+  NodeDurationSum: 0
+  StartingTime: 0
+  CallingNode: {fileID: 0}
+  Environment: {fileID: 0}
+  Text: 
+  Tag: 
+  Pass: 0
+  MySceneId: -1
+  IOofset: {x: 5, y: 0}
+  pushTime: 1
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  MaxInputConnections: 10000
+  MaxOutputConnections: 10000
+  Lock: 0
+  LockTime: 0
+  Expand: 1
+  ShowImageArea: 0
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  CachedTimeInSeconds: -1
+  wordCount: 0
+  MyStoryboardImageScalesToFit: 0
+  StoryboardImagePath: 
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  storyboardImageAreaSize: {x: 330, y: 120}
+  MaximizedStoryboardArea: 0
+  _textAreaScrollView: {x: 0, y: 0}
+  SoundEffectWaveform: {fileID: 0}
 --- !u!114 &-1516886104370053508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2361,12 +2438,13 @@ MonoBehaviour:
     seneDrag: {fileID: 0}
   - SceneName: LaserLvl2
     UID: 15cf6eed-0bae-4fcd-92eb-416badc38618
-    Pan: {x: 457.96582, y: 28.977417}
+    Pan: {x: 774.9658, y: -15.022583}
     Zoom: 1
     NodeElements:
     - {fileID: 838773230157059041}
     - {fileID: 7250517482917052913}
     - {fileID: 8097662299787915876}
+    - {fileID: 8149181999217523354}
     Characters:
     - {fileID: 838773230157059041}
     Environments: []
@@ -2374,7 +2452,7 @@ MonoBehaviour:
     Theme: no Theme
     Plot: no plot
     CustomSceneDataset: []
-    Duration: 2
+    Duration: 3.0199986
     ShowProjectInfo: 1
     ShowGrid: 1
     alwaysShowNodeNames: 0
@@ -2421,7 +2499,7 @@ MonoBehaviour:
     image: {fileID: 0}
     expandCustomSceneDataFoldout: 0
     seneDrag: {fileID: 0}
-  LastSavedScene: 4
+  LastSavedScene: 5
   ProjectType: 0
   image: {fileID: 0}
   CoverImagePath: 
@@ -2432,7 +2510,7 @@ MonoBehaviour:
     MaxFrequency: 0
     MinFrequency: 0
   TimeStamp:
-    Stamp: 14/12/2022 10:25:53 PM
+    Stamp: 14/12/2022 11:09:45 PM
   CreatedDataFolders: 1
   ProjectDataFolder: {fileID: 102900000, guid: 614a293c3f241994d840e7118c2e5652, type: 3}
   AudioFileFolder: {fileID: 102900000, guid: 85c253a51ef0ea44ea09109a8f1ab6fd, type: 3}
@@ -2827,9 +2905,11 @@ MonoBehaviour:
   NodesInMyChain:
   - {fileID: 7250517482917052913}
   - {fileID: 8097662299787915876}
+  - {fileID: 8149181999217523354}
   NodesInMyChainWithRoutes:
   - {fileID: 7250517482917052913}
   - {fileID: 8097662299787915876}
+  - {fileID: 8149181999217523354}
   CharacterBios:
   - CharacterName: Doc
     CharacterSex: 0
@@ -4482,10 +4562,10 @@ MonoBehaviour:
   ChainingColour: {r: 1, g: 1, b: 1, a: 1}
   UsesTime: 1
   MaxMinutes: 5
-  DelayTimeInSeconds: 0
+  DelayTimeInSeconds: 0.019998502
   TimeInSeconds: 1
-  NodeDurationSum: 1
-  StartingTime: 0
+  NodeDurationSum: 1.0199986
+  StartingTime: 0.019998502
   CallingNode: {fileID: 838773230157059041}
   Environment: {fileID: 0}
   Text: 
@@ -4496,8 +4576,8 @@ MonoBehaviour:
   pushTime: 1
   OverrideTime: 0
   LocalizedText:
-  - Read the riddle as it will give you the clues and shoot the correct structure
-    of the biomolecule.
+  - Read each statement carefully and form the structure being described by choosing
+    the correct combination of structures. Use the electron beam to target the structures.
   MaxInputConnections: 10000
   MaxOutputConnections: 10000
   Lock: 0
@@ -4915,7 +4995,8 @@ MonoBehaviour:
     y: 224.8
     width: 10
     height: 10
-  NodesIMadeConnectionsTo: []
+  NodesIMadeConnectionsTo:
+  - {fileID: 8149181999217523354}
   NodesThatMadeAConnectionToMe:
   - {fileID: 7250517482917052913}
   UsesText: 1
@@ -4926,8 +5007,8 @@ MonoBehaviour:
   MaxMinutes: 5
   DelayTimeInSeconds: 0
   TimeInSeconds: 1
-  NodeDurationSum: 2
-  StartingTime: 1
+  NodeDurationSum: 2.0199986
+  StartingTime: 1.0199986
   CallingNode: {fileID: 838773230157059041}
   Environment: {fileID: 0}
   Text: 
@@ -4940,6 +5021,84 @@ MonoBehaviour:
   LocalizedText:
   - You have two trials to get the correct answer. Your score will depend on your
     accuracy and time used in targeting and forming the correct structure.
+  MaxInputConnections: 10000
+  MaxOutputConnections: 10000
+  Lock: 0
+  LockTime: 0
+  Expand: 1
+  ShowImageArea: 0
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  CachedTimeInSeconds: -1
+  wordCount: 0
+  MyStoryboardImageScalesToFit: 0
+  StoryboardImagePath: 
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  storyboardImageAreaSize: {x: 330, y: 120}
+  MaximizedStoryboardArea: 0
+  _textAreaScrollView: {x: 0, y: 0}
+  SoundEffectWaveform: {fileID: 0}
+--- !u!114 &8149181999217523354
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1432923298, guid: 55ffa4d6529f10b4aba0ad6d5d3d05ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 3_Dialogue
+  StoryProject: {fileID: 11400000}
+  UID: 9643f23c-f9db-41f2-9b1a-18cef1e2f47c
+  Drag: {fileID: 0}
+  UseCustomDragArea: 0
+  IndexInList: 3
+  NodeRect:
+    serializedVersion: 2
+    x: 1476.2
+    y: 169.8
+    width: 330
+    height: 120
+  InputArea:
+    serializedVersion: 2
+    x: 1471.2
+    y: 224.8
+    width: 10
+    height: 10
+  OutputArea:
+    serializedVersion: 2
+    x: 1801.2
+    y: 224.8
+    width: 10
+    height: 10
+  NodesIMadeConnectionsTo: []
+  NodesThatMadeAConnectionToMe:
+  - {fileID: 8097662299787915876}
+  UsesText: 1
+  HasInputArea: 1
+  HasOutputArea: 1
+  ChainingColour: {r: 1, g: 1, b: 1, a: 1}
+  UsesTime: 1
+  MaxMinutes: 5
+  DelayTimeInSeconds: 0
+  TimeInSeconds: 1
+  NodeDurationSum: 3.0199986
+  StartingTime: 2.0199986
+  CallingNode: {fileID: 838773230157059041}
+  Environment: {fileID: 0}
+  Text: 
+  Tag: 
+  Pass: 0
+  MySceneId: 5
+  IOofset: {x: 5, y: 0}
+  pushTime: 1
+  OverrideTime: 0
+  LocalizedText:
+  - You only have 15 minutes to complete this level. Let us begin!
   MaxInputConnections: 10000
   MaxOutputConnections: 10000
   Lock: 0
