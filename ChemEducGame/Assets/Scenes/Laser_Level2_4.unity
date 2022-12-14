@@ -2239,8 +2239,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8239778225985326538, guid: cdd96888ba48c1843a24a21d202ac161, type: 3}
       propertyPath: m_text
-      value: 'I am long and unbranched chain of glucose units that is the major component
-        of tough walls of plant cells. (1 target)
+      value: 'I am long and consists of unbranched chain of glucose units which is
+        the major component of the tough walls of plant cells. (1 target)
 
 '
       objectReference: {fileID: 0}

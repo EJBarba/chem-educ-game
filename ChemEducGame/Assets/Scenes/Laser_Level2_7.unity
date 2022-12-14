@@ -3991,8 +3991,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8239778225985326538, guid: cdd96888ba48c1843a24a21d202ac161, type: 3}
       propertyPath: m_text
-      value: "I am a mono-unsaturated omega-9 fatty acid found in various animal
-        and vegetable sources. \n(1 target)\n"
+      value: 'I am a monounsaturated omega-9 fatty acid found in various animal and
+        vegetable sources.
+
+        (1 target)
+
+'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdd96888ba48c1843a24a21d202ac161, type: 3}

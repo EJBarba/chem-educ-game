@@ -5276,6 +5276,13 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1237247475}
+    - target: {fileID: 8239778225985326538, guid: cdd96888ba48c1843a24a21d202ac161, type: 3}
+      propertyPath: m_text
+      value: 'My backbone is a phosphate group with a ribose sugar and I have a single-ring
+        aromatic compound that is present only in RNA. (3 targets)
+
+'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdd96888ba48c1843a24a21d202ac161, type: 3}
 --- !u!224 &8335535823991692109

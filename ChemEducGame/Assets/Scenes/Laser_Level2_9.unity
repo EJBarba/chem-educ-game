@@ -3321,7 +3321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8239778225985326538, guid: cdd96888ba48c1843a24a21d202ac161, type: 3}
       propertyPath: m_text
-      value: 'I consist of two glucose molecules (2 targets)
+      value: 'I am a disaccharide which consist of two glucose molecules. (2 targets)
 
 '
       objectReference: {fileID: 0}

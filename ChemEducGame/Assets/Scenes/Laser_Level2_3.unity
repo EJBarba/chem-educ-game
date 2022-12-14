@@ -506,7 +506,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8239778225985326538, guid: cdd96888ba48c1843a24a21d202ac161, type: 3}
       propertyPath: m_text
-      value: 'I am formed from two monosaccharides. My common name is table sugar.
+      value: 'My common name is table sugar. I am formed from two monosaccharides.
         (2 targets)
 
 '
