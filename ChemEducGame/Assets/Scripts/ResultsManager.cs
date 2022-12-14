@@ -9,6 +9,7 @@ public class ResultsManager : MonoBehaviour
     [SerializeField] List<Score> scoreList;
     [SerializeField] List<TextMeshProUGUI> levelList;
     [SerializeField] TextMeshProUGUI totalScoreUIText;
+    [SerializeField] GameObject trophy;
 
     private int totalScore = 0;
 
@@ -28,5 +29,10 @@ public class ResultsManager : MonoBehaviour
         }
 
         totalScoreUIText.text = totalScore.ToString();
+
+        if (totalScore == 110)
+        {
+            trophy.SetActive(true);
+        }
     }
 }
