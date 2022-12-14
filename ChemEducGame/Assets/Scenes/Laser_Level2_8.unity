@@ -791,8 +791,10 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: cea9ffb1e6d5ed448b2f8df59f8a5653, type: 3}
     - target: {fileID: 8239778225985326538, guid: cdd96888ba48c1843a24a21d202ac161, type: 3}
       propertyPath: m_text
-      value: 'I have a phosphate backbone with a deoxyribose sugar and a six-membered
-        ring. (3 targets)
+      value: 'My backbone is a phosphate group with a deoxyribose sugar and I have
+        a six-membered ring.
+
+        (3 targets)
 
 '
       objectReference: {fileID: 0}

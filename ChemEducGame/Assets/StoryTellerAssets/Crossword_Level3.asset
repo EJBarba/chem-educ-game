@@ -1,87 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6943627805289347312
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
-  m_Name: 3_Dialogue
-  m_EditorClassIdentifier: 
-  Name: 3_Dialogue
-  Text: 
-  UID: f33b5f2c-2304-49f1-aeab-ea96746b160b
-  CharacterName: Doc
-  CallingNodeData: {fileID: -2591080114562600497}
-  EnvironmentName: 
-  Environment: {fileID: 0}
-  Pass: 0
-  Runtime_Pass: 0
-  DataConnectedToMe:
-  - {fileID: -886444862991440323}
-  DataIconnectedTo: []
-  Duration: 1
-  Delay: 0
-  RealtimeDelay: 0
-  StartTime: 2
-  DurationSum: 3
-  useTime: 1
-  IsInControl: 0
-  OverrideTime: 0
-  LocalizedText:
-  - 'Your time limit for this level is 13 minutes. '
-  LocalizedVoiceRecordings:
-  - {fileID: 0}
-  LocalizedSoundEffects:
-  - {fileID: 0}
-  StoryboardImage: {fileID: 0}
-  Tag: 
---- !u!114 &-5858964488706970205
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
-  m_Name: 1_Dialogue
-  m_EditorClassIdentifier: 
-  Name: 1_Dialogue
-  Text: 
-  UID: 518eeabf-395d-439b-9caa-b3a68f907860
-  CharacterName: Doc
-  CallingNodeData: {fileID: -2591080114562600497}
-  EnvironmentName: 
-  Environment: {fileID: 0}
-  Pass: 0
-  Runtime_Pass: 0
-  DataConnectedToMe:
-  - {fileID: -2591080114562600497}
-  DataIconnectedTo:
-  - {fileID: -886444862991440323}
-  Duration: 1
-  Delay: 0
-  RealtimeDelay: 0
-  StartTime: 0
-  DurationSum: 1
-  useTime: 1
-  IsInControl: 0
-  OverrideTime: 0
-  LocalizedText:
-  - You will earn a perfect score of 50 pts if you complete this level.
-  LocalizedVoiceRecordings:
-  - {fileID: 0}
-  LocalizedSoundEffects:
-  - {fileID: 0}
-  StoryboardImage: {fileID: 0}
-  Tag: 
---- !u!114 &-2591080114562600497
+--- !u!114 &-5182208389504758207
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,14 +16,14 @@ MonoBehaviour:
   Text: 
   UID: 2269e1c9-b3e6-4786-93f3-cfa087bffbdf
   CharacterName: Doc
-  CallingNodeData: {fileID: -2591080114562600497}
+  CallingNodeData: {fileID: -5182208389504758207}
   EnvironmentName: 
   Environment: {fileID: 0}
   Pass: 0
   Runtime_Pass: 0
   DataConnectedToMe: []
   DataIconnectedTo:
-  - {fileID: -5858964488706970205}
+  - {fileID: -4513405683883197276}
   Duration: 0
   Delay: 0
   RealtimeDelay: 0
@@ -116,10 +35,10 @@ MonoBehaviour:
   LocalizedText:
   - 
   NodeDataInMyChain:
-  - {fileID: -2591080114562600497}
-  - {fileID: -5858964488706970205}
-  - {fileID: -886444862991440323}
-  - {fileID: -6943627805289347312}
+  - {fileID: -5182208389504758207}
+  - {fileID: -4513405683883197276}
+  - {fileID: 1322672020133913238}
+  - {fileID: 3724501350771840652}
   CharacterImage: {fileID: 0}
   CharacterPersonality:
     NegativeTraits:
@@ -222,7 +141,7 @@ MonoBehaviour:
       Stoic: 0
       Strong: 0
   SortingID: 0
---- !u!114 &-886444862991440323
+--- !u!114 &-4513405683883197276
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -232,31 +151,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
-  m_Name: 2_Dialogue
+  m_Name: 1_Dialogue
   m_EditorClassIdentifier: 
-  Name: 2_Dialogue
+  Name: 1_Dialogue
   Text: 
-  UID: d629bc40-8f23-4ce2-b4a2-52ebe54e68ee
+  UID: 518eeabf-395d-439b-9caa-b3a68f907860
   CharacterName: Doc
-  CallingNodeData: {fileID: -2591080114562600497}
+  CallingNodeData: {fileID: -5182208389504758207}
   EnvironmentName: 
   Environment: {fileID: 0}
   Pass: 0
   Runtime_Pass: 0
   DataConnectedToMe:
-  - {fileID: -5858964488706970205}
+  - {fileID: -5182208389504758207}
   DataIconnectedTo:
-  - {fileID: -6943627805289347312}
+  - {fileID: 1322672020133913238}
   Duration: 1
   Delay: 0
   RealtimeDelay: 0
-  StartTime: 1
-  DurationSum: 2
+  StartTime: 0
+  DurationSum: 1
   useTime: 1
   IsInControl: 0
   OverrideTime: 0
   LocalizedText:
-  - There will be a deduction of -5 points if you get a wrong answer.
+  - You will earn a perfect score of 50 pts if you complete this level.
   LocalizedVoiceRecordings:
   - {fileID: 0}
   LocalizedSoundEffects:
@@ -276,19 +195,19 @@ MonoBehaviour:
   m_Name: Crossword_Level3
   m_EditorClassIdentifier: 
   UID: 11788d76-6834-4b08-8e6f-7b549755e357
-  UpdateUID: b6a33721-95fa-4fee-9f07-3468dd091661
+  UpdateUID: 5ad6dbdf-04fe-4f13-aa3a-e3f796dafea5
   SceneID: 3
   FullCharacterDialogueSet:
-  - {fileID: -2591080114562600497}
-  - {fileID: -5858964488706970205}
-  - {fileID: -886444862991440323}
-  - {fileID: -6943627805289347312}
+  - {fileID: -5182208389504758207}
+  - {fileID: -4513405683883197276}
+  - {fileID: 1322672020133913238}
+  - {fileID: 3724501350771840652}
   ActiveCharacterDialogueSet:
-  - {fileID: -5858964488706970205}
-  - {fileID: -886444862991440323}
-  - {fileID: -6943627805289347312}
+  - {fileID: -4513405683883197276}
+  - {fileID: 1322672020133913238}
+  - {fileID: 3724501350771840652}
   Characters:
-  - {fileID: -2591080114562600497}
+  - {fileID: -5182208389504758207}
   Languages:
   - Name: English
     CountryCode: en-US
@@ -297,3 +216,85 @@ MonoBehaviour:
   LanguageIndex: 0
   LanguageNameArray:
   - English
+--- !u!114 &1322672020133913238
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 2_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 2_Dialogue
+  Text: 
+  UID: d629bc40-8f23-4ce2-b4a2-52ebe54e68ee
+  CharacterName: Doc
+  CallingNodeData: {fileID: -5182208389504758207}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -4513405683883197276}
+  DataIconnectedTo:
+  - {fileID: 3724501350771840652}
+  Duration: 1
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 1
+  DurationSum: 2
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - There will be a deduction of -5 points if you get a wrong answer. Be careful
+    with the correct spelling. Misspelled word means wrong answer.
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &3724501350771840652
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 3_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 3_Dialogue
+  Text: 
+  UID: f33b5f2c-2304-49f1-aeab-ea96746b160b
+  CharacterName: Doc
+  CallingNodeData: {fileID: -5182208389504758207}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: 1322672020133913238}
+  DataIconnectedTo: []
+  Duration: 1
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 2
+  DurationSum: 3
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 'Your time limit for this level is 13 minutes. '
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 

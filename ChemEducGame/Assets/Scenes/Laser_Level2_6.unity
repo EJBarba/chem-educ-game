@@ -440,7 +440,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8239778225985326538, guid: cdd96888ba48c1843a24a21d202ac161, type: 3}
       propertyPath: m_text
-      value: I can give you the amino acid sequence. (1 Target)
+      value: I can provide you with the amino acid sequence.  (1 Target)
       objectReference: {fileID: 0}
     - target: {fileID: 8239778226054650128, guid: cdd96888ba48c1843a24a21d202ac161, type: 3}
       propertyPath: m_IsActive
