@@ -48,8 +48,8 @@ MonoBehaviour:
   MaxMinutes: 5
   DelayTimeInSeconds: 0
   TimeInSeconds: 1
-  NodeDurationSum: 4
-  StartingTime: 3
+  NodeDurationSum: 4.033824
+  StartingTime: 3.0338242
   CallingNode: {fileID: -3523554784723842183}
   Environment: {fileID: 0}
   Text: 
@@ -538,7 +538,7 @@ MonoBehaviour:
   UID: 6cdfe451-3253-4261-bed8-b3ab946d4c16
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 10
+  IndexInList: 12
   NodeRect:
     serializedVersion: 2
     x: 4833.2
@@ -569,8 +569,8 @@ MonoBehaviour:
   MaxMinutes: 5
   DelayTimeInSeconds: 0
   TimeInSeconds: 1
-  NodeDurationSum: 11.029645
-  StartingTime: 10.029645
+  NodeDurationSum: 11.114204
+  StartingTime: 10.114204
   CallingNode: {fileID: -3523554784723842183}
   Environment: {fileID: 0}
   Text: 
@@ -1015,7 +1015,7 @@ MonoBehaviour:
   UID: dbbad317-4aee-433e-b9e7-419e2e8661a8
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 6
+  IndexInList: 7
   NodeRect:
     serializedVersion: 2
     x: 3113.2
@@ -1046,8 +1046,8 @@ MonoBehaviour:
   MaxMinutes: 5
   DelayTimeInSeconds: 0
   TimeInSeconds: 1
-  NodeDurationSum: 7.016912
-  StartingTime: 6.016912
+  NodeDurationSum: 7.050736
+  StartingTime: 6.050736
   CallingNode: {fileID: -3523554784723842183}
   Environment: {fileID: 0}
   Text: 
@@ -1513,7 +1513,7 @@ MonoBehaviour:
   UID: d149f043-78b0-48d0-b057-7065c1a0f2e4
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 8
+  IndexInList: 10
   NodeRect:
     serializedVersion: 2
     x: 3973.2002
@@ -1544,8 +1544,8 @@ MonoBehaviour:
   MaxMinutes: 5
   DelayTimeInSeconds: 0
   TimeInSeconds: 1
-  NodeDurationSum: 9.016912
-  StartingTime: 8.016912
+  NodeDurationSum: 9.067648
+  StartingTime: 8.067648
   CallingNode: {fileID: -3523554784723842183}
   Environment: {fileID: 0}
   Text: 
@@ -2279,8 +2279,8 @@ MonoBehaviour:
   Scenes:
   - SceneName: Game1InitTutorial
     UID: c4564046-88b7-431a-ad2f-9a33c59703b7
-    Pan: {x: 2098.1323, y: -145.69086}
-    Zoom: 0.68
+    Pan: {x: -540.9062, y: -726.89374}
+    Zoom: 0.28
     NodeElements:
     - {fileID: -3523554784723842183}
     - {fileID: 3756081333274797119}
@@ -2288,13 +2288,13 @@ MonoBehaviour:
     - {fileID: 9176761032459048326}
     - {fileID: -8792246649562965708}
     - {fileID: 3660575124233898483}
+    - {fileID: 6359741322617865645}
     - {fileID: -3745735027414829476}
+    - {fileID: 1040695422154095222}
     - {fileID: 7318325829060749818}
     - {fileID: -2854473363215853764}
     - {fileID: 6845372365505072411}
     - {fileID: -6552217867093302501}
-    - {fileID: 1040695422154095222}
-    - {fileID: 6359741322617865645}
     Characters:
     - {fileID: -3523554784723842183}
     Environments: []
@@ -2302,7 +2302,7 @@ MonoBehaviour:
     Theme: no Theme
     Plot: no plot
     CustomSceneDataset: []
-    Duration: 12.029645
+    Duration: 12.131117
     ShowProjectInfo: 1
     ShowGrid: 1
     alwaysShowNodeNames: 0
@@ -3133,7 +3133,7 @@ MonoBehaviour:
   UID: 9c881145-48de-4f86-a6d7-c89d20b44581
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 11
+  IndexInList: 8
   NodeRect:
     serializedVersion: 2
     x: 5263.2007
@@ -3161,10 +3161,10 @@ MonoBehaviour:
   ChainingColour: {r: 1, g: 1, b: 1, a: 1}
   UsesTime: 1
   MaxMinutes: 5
-  DelayTimeInSeconds: 0
+  DelayTimeInSeconds: 0.016912075
   TimeInSeconds: 1
-  NodeDurationSum: 12.029645
-  StartingTime: 11.029645
+  NodeDurationSum: 12.131117
+  StartingTime: 11.131117
   CallingNode: {fileID: -3523554784723842183}
   Environment: {fileID: 0}
   Text: 
@@ -3769,8 +3769,8 @@ MonoBehaviour:
   MaxMinutes: 5
   DelayTimeInSeconds: 0.016912075
   TimeInSeconds: 1
-  NodeDurationSum: 5.016912
-  StartingTime: 4.016912
+  NodeDurationSum: 5.050736
+  StartingTime: 4.050736
   CallingNode: {fileID: -3523554784723842183}
   Environment: {fileID: 0}
   Text: 
@@ -4293,7 +4293,7 @@ MonoBehaviour:
   UID: 3dc6b95b-fee4-4b1a-bf30-f732fac40c86
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 12
+  IndexInList: 6
   NodeRect:
     serializedVersion: 2
     x: 2683.2
@@ -4324,8 +4324,8 @@ MonoBehaviour:
   MaxMinutes: 5
   DelayTimeInSeconds: 0
   TimeInSeconds: 1
-  NodeDurationSum: 6.016912
-  StartingTime: 5.016912
+  NodeDurationSum: 6.050736
+  StartingTime: 5.050736
   CallingNode: {fileID: -3523554784723842183}
   Environment: {fileID: 0}
   Text: 
@@ -4453,7 +4453,7 @@ MonoBehaviour:
   UID: 36183f7b-b91d-46be-ad00-486c567597db
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 9
+  IndexInList: 11
   NodeRect:
     serializedVersion: 2
     x: 4403.2
@@ -4482,10 +4482,10 @@ MonoBehaviour:
   ChainingColour: {r: 1, g: 1, b: 1, a: 1}
   UsesTime: 1
   MaxMinutes: 5
-  DelayTimeInSeconds: 0.012732422
+  DelayTimeInSeconds: 0.046556573
   TimeInSeconds: 1
-  NodeDurationSum: 10.029645
-  StartingTime: 9.029645
+  NodeDurationSum: 10.114204
+  StartingTime: 9.114204
   CallingNode: {fileID: -3523554784723842183}
   Environment: {fileID: 0}
   Text: 
@@ -4613,7 +4613,7 @@ MonoBehaviour:
   UID: 48a9ad12-3d68-4115-8365-8dea2f354695
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 7
+  IndexInList: 9
   NodeRect:
     serializedVersion: 2
     x: 3543.2
@@ -4642,10 +4642,10 @@ MonoBehaviour:
   ChainingColour: {r: 1, g: 1, b: 1, a: 1}
   UsesTime: 1
   MaxMinutes: 5
-  DelayTimeInSeconds: 0
+  DelayTimeInSeconds: 0.016912075
   TimeInSeconds: 1
-  NodeDurationSum: 8.016912
-  StartingTime: 7.016912
+  NodeDurationSum: 8.067648
+  StartingTime: 7.067648
   CallingNode: {fileID: -3523554784723842183}
   Environment: {fileID: 0}
   Text: 
@@ -5163,10 +5163,10 @@ MonoBehaviour:
   ChainingColour: {r: 1, g: 1, b: 1, a: 1}
   UsesTime: 1
   MaxMinutes: 5
-  DelayTimeInSeconds: 0
+  DelayTimeInSeconds: 0.03382415
   TimeInSeconds: 1
-  NodeDurationSum: 3
-  StartingTime: 2
+  NodeDurationSum: 3.0338242
+  StartingTime: 2.0338242
   CallingNode: {fileID: -3523554784723842183}
   Environment: {fileID: 0}
   Text: 
