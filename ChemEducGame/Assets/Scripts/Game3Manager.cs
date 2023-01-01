@@ -24,6 +24,8 @@ public class Game3Manager : MonoBehaviour
     [SerializeField] GameObject panelDefeatModal;
     [SerializeField] GameObject foreground;
     [SerializeField] GameObject foregroundUI;
+    [SerializeField] GameObject settingsButton;
+    [SerializeField] GameObject touchButtons;
     [SerializeField] GameObject tutorialCanvas;
 
     [Header("FoodLevelUI")]
@@ -51,6 +53,8 @@ public class Game3Manager : MonoBehaviour
 
         foreground.SetActive(false);
         foregroundUI.SetActive(false);
+        settingsButton.SetActive(false);
+        touchButtons.SetActive(false);
 
         // reset level to 1
         if (previousSceneData.previousScene == "Home")
@@ -92,6 +96,8 @@ public class Game3Manager : MonoBehaviour
             isWin = true;
             foreground.SetActive(false);
             foregroundUI.SetActive(false);
+            settingsButton.SetActive(false);
+            touchButtons.SetActive(false);
             audioManager.StopAllBGMusic();
             
 
@@ -148,6 +154,8 @@ public class Game3Manager : MonoBehaviour
         playerLives.decreaseLife();
         foreground.SetActive(false);
         foregroundUI.SetActive(false);
+        settingsButton.SetActive(false);
+        touchButtons.SetActive(false);
 
         // defeat condition
         if (playerLives.lives <= 0)
