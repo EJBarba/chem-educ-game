@@ -54,7 +54,7 @@ public class ArcheryManager : MonoBehaviour
     IEnumerator ShowResultsModal()
     {
         laserScript.enabled = false;
-        audioManager.Stop("laserSound");
+        audioManager.Stop("laserSFX");
         yield return new WaitForSeconds(waitSeconds);
 
         resultModal.SetActive(true);

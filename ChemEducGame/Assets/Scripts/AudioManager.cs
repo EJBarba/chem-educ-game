@@ -65,7 +65,7 @@ public class AudioManager : MonoBehaviour
     }
      public void SfxVolume (float volume)
     {
-         string[] sfxArray = { "wordcorrect", "wordwrong", "tilesfx", "laserSound"};
+         string[] sfxArray = { "wordcorrect", "wordwrong", "tilesfx", "laserSFX"};
          foreach (Sound sound in sounds)
          {
              foreach (var sfx in sfxArray)

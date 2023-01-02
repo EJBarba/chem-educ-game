@@ -105,15 +105,15 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: laserSound
-    clip: {fileID: 8300000, guid: 9a6b368616b88f140b56e15f6ded2d93, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
   - name: bgGame3
     clip: {fileID: 8300000, guid: 582afe7b8344f6c448fbb679547c29e1, type: 3}
     volume: 1
     pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: laserSFX
+    clip: {fileID: 8300000, guid: 9a6b368616b88f140b56e15f6ded2d93, type: 3}
+    volume: 0.9
+    pitch: 1.1
     loop: 1
     source: {fileID: 0}

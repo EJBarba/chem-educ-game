@@ -13,6 +13,9 @@ public class Laser : MonoBehaviour
     private RaycastHit2D hitInfoCheck;
     private Ray2D ray;
     private AudioManager audioManager;
+    [SerializeField] ButtonLongPress upButton;
+    [SerializeField] ButtonLongPress downButton;
+    [SerializeField] ButtonLongPress fireButton;
 
     private void Awake() {
         audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
@@ -20,7 +23,7 @@ public class Laser : MonoBehaviour
     void Update()
     {
         FireLaser(firePoint, lineRendererIronSight, false);
-        if (Input.GetKey(KeyCode.UpArrow) && this.transform.rotation.z <= 0.3f)
+        if ((Input.GetKey(KeyCode.UpArrow) || upButton.buttonPressed == true) && this.transform.rotation.z <= 0.3f)
         {
             this.transform.Rotate(0f,0f,0.1f);
             if (Input.GetKey("space"))
@@ -32,7 +35,7 @@ public class Laser : MonoBehaviour
                 }
             } 
         }
-        if (Input.GetKey(KeyCode.DownArrow) && this.transform.rotation.z >= -0.3f )
+        if ((Input.GetKey(KeyCode.DownArrow) || downButton.buttonPressed == true) && this.transform.rotation.z >= -0.3f )
         { 
             this.transform.Rotate(0f,0f, -0.1f);
             if (Input.GetKey("space"))
@@ -52,18 +55,31 @@ public class Laser : MonoBehaviour
                 targetAnimator.SetBool("TakeDamage", false);
             }
         }
-        if (Input.GetKey("space"))
+        if (Input.GetKey("space") || fireButton.buttonPressed == true)
         {
             FireLaser(firePoint, lineRendererMainLaser, true);
         }
         if (Input.GetKeyUp("space"))
         {
-            audioManager.Stop("laserSound");
+            audioManager.Stop("laserSFX");
         }
         else if (Input.GetKeyDown("space"))
         {
-            audioManager.Play("laserSound");
+            audioManager.Play("laserSFX");
         }
+    }
+    public void FireButtonStopSound()
+    {
+        audioManager.Stop("laserSFX");
+        lineRendererMainLaser.enabled = false;
+        if (targetAnimator != null)
+        {
+            targetAnimator.SetBool("TakeDamage", false);
+        }
+    }
+    public void FireButtonStartSound()
+    {
+        audioManager.Play("laserSFX");   
     }
     public void FireLaser(Transform pointOfOrigin, LineRenderer lineRenderer, bool mainLaser)
     {
