@@ -413,6 +413,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1069108515, guid: bfcefb9040f1d94499db94c76a5851a6, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 887311036}
+    - target: {fileID: 1069108515, guid: bfcefb9040f1d94499db94c76a5851a6, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 887311036}
+    - target: {fileID: 1069108515, guid: bfcefb9040f1d94499db94c76a5851a6, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FireButtonStopSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1069108515, guid: bfcefb9040f1d94499db94c76a5851a6, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FireButtonStartSound
+      objectReference: {fileID: 0}
     - target: {fileID: 7100383010608609739, guid: bfcefb9040f1d94499db94c76a5851a6, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -425,6 +441,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7100383010836868548, guid: bfcefb9040f1d94499db94c76a5851a6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 347381626}
     - target: {fileID: 7100383010836868548, guid: bfcefb9040f1d94499db94c76a5851a6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LaserLevel1_6
@@ -543,6 +563,50 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 19d91f063d3c6584cbf76b3b8db5e625, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfcefb9040f1d94499db94c76a5851a6, type: 3}
+--- !u!114 &347381625 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1069108510, guid: bfcefb9040f1d94499db94c76a5851a6, type: 3}
+  m_PrefabInstance: {fileID: 347381624}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf5144c612778b4c8bbca876ea71550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &347381626 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3436401618007153692, guid: bfcefb9040f1d94499db94c76a5851a6, type: 3}
+  m_PrefabInstance: {fileID: 347381624}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b17519da8c19ecc40bfb5cdddbf16813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &347381627 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1917516195, guid: bfcefb9040f1d94499db94c76a5851a6, type: 3}
+  m_PrefabInstance: {fileID: 347381624}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf5144c612778b4c8bbca876ea71550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &347381628 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1506498319, guid: bfcefb9040f1d94499db94c76a5851a6, type: 3}
+  m_PrefabInstance: {fileID: 347381624}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf5144c612778b4c8bbca876ea71550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &444377705
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,7 +941,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572628577}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.18000007, y: 0.26, z: -10}
+  m_LocalPosition: {x: 1.32, y: 0.26, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1684,6 +1748,9 @@ MonoBehaviour:
   firePoint: {fileID: 52037602}
   lineRendererMainLaser: {fileID: 1614140771}
   lineRendererIronSight: {fileID: 1269348221}
+  upButton: {fileID: 347381628}
+  downButton: {fileID: 347381627}
+  fireButton: {fileID: 347381625}
 --- !u!212 &887311037
 SpriteRenderer:
   m_ObjectHideFlags: 0
