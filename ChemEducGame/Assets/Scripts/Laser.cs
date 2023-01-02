@@ -16,6 +16,7 @@ public class Laser : MonoBehaviour
     [SerializeField] ButtonLongPress upButton;
     [SerializeField] ButtonLongPress downButton;
     [SerializeField] ButtonLongPress fireButton;
+    [SerializeField] float moveSpeed = 0.1f;
 
     private void Awake() {
         audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
@@ -25,7 +26,7 @@ public class Laser : MonoBehaviour
         FireLaser(firePoint, lineRendererIronSight, false);
         if ((Input.GetKey(KeyCode.UpArrow) || upButton.buttonPressed == true) && this.transform.rotation.z <= 0.3f)
         {
-            this.transform.Rotate(0f,0f,0.1f);
+            this.transform.Rotate(0f,0f,moveSpeed);
             if (Input.GetKey("space"))
             {
                 hitInfoCheck = Physics2D.Raycast(firePoint.position, firePoint.right);
@@ -37,7 +38,7 @@ public class Laser : MonoBehaviour
         }
         if ((Input.GetKey(KeyCode.DownArrow) || downButton.buttonPressed == true) && this.transform.rotation.z >= -0.3f )
         { 
-            this.transform.Rotate(0f,0f, -0.1f);
+            this.transform.Rotate(0f,0f, -moveSpeed);
             if (Input.GetKey("space"))
             {
                 hitInfoCheck = Physics2D.Raycast(firePoint.position, firePoint.right);

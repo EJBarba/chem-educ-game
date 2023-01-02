@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9099c9926db52f54eb086c8cbcd2785d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dummyHealth: 75
+  dummyHealth: 20
   archeryManager: {fileID: 0}
   checkMark: {fileID: 6829399254404114065, guid: f92aa229932be44448d9ab7780eb944e, type: 3}
   wrongMark: {fileID: 5901441089554977348, guid: 5446012ef8f5c8a46afdfb5bc0c8d07f, type: 3}

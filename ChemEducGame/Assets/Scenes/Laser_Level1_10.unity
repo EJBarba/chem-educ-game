@@ -1329,6 +1329,7 @@ MonoBehaviour:
   upButton: {fileID: 952311564}
   downButton: {fileID: 952311563}
   fireButton: {fileID: 952311561}
+  moveSpeed: 0.4
 --- !u!212 &887311037
 SpriteRenderer:
   m_ObjectHideFlags: 0
