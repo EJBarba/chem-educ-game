@@ -16,7 +16,7 @@ public class Laser : MonoBehaviour
     [SerializeField] ButtonLongPress upButton;
     [SerializeField] ButtonLongPress downButton;
     [SerializeField] ButtonLongPress fireButton;
-    [SerializeField] float moveSpeed = 0.1f;
+    private float moveSpeed = 0.4f;
 
     private void Awake() {
         audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
