@@ -2007,6 +2007,9 @@ MonoBehaviour:
   firePoint: {fileID: 52037602}
   lineRendererMainLaser: {fileID: 1614140771}
   lineRendererIronSight: {fileID: 1269348221}
+  upButton: {fileID: 0}
+  downButton: {fileID: 0}
+  fireButton: {fileID: 0}
 --- !u!212 &887311037
 SpriteRenderer:
   m_ObjectHideFlags: 0
