@@ -9543,6 +9543,7 @@ MonoBehaviour:
   timer: {fileID: 1033722397}
   pauseButton: {fileID: 1140826269}
   mapButton: {fileID: 788206755}
+  keyboardButton: {fileID: 5735322101749049515}
   tutorialButton: {fileID: 1148448838}
   descriptionBackground: {fileID: 197995561}
   playFabManager: {fileID: 0}
@@ -9557,6 +9558,7 @@ MonoBehaviour:
   beakerPowerupCount: 3
   beakerPowerUpCountText: {fileID: 5735322101749049513}
   beakerPowerupGameobject: {fileID: 5735322101749049514}
+  showKeyboard: 0
 --- !u!1001 &1546173117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11279,7 +11281,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.1641026, y: 1}
+    m_SensorSize: {x: 2.2222223, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -13042,10 +13044,66 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 805742192357749622, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 805742192357749622, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 805742192357749622, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1538516816}
+    - target: {fileID: 805742192357749622, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 805742192357749622, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowKeyboardButtonPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 805742192357749622, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: WordCheck, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 805742192357749622, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4947804441109388965, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1538516816}
+    - target: {fileID: 6356482127734931044, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6356482127734931044, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6356482127734931044, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1538516816}
+    - target: {fileID: 6356482127734931044, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6356482127734931044, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BackspaceButtonPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 6356482127734931044, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: WordCheck, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6356482127734931044, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7518943653775244149, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -13230,6 +13288,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UICanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7518943655573045021, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7518943655655009326, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
       propertyPath: mapCamera
       value: 
@@ -13278,5 +13340,10 @@ MonoBehaviour:
 --- !u!1 &5735322101749049514 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6684320757223999239, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+  m_PrefabInstance: {fileID: 5735322101749049512}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5735322101749049515 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1114832512714309862, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
   m_PrefabInstance: {fileID: 5735322101749049512}
   m_PrefabAsset: {fileID: 0}

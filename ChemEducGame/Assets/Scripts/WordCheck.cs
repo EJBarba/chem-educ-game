@@ -18,6 +18,7 @@ public class WordCheck : MonoBehaviour
     [SerializeField] GameObject timer;
     [SerializeField] GameObject pauseButton;
     [SerializeField] GameObject mapButton;
+    [SerializeField] GameObject keyboardButton;
     [SerializeField] GameObject tutorialButton;
     [SerializeField] GameObject descriptionBackground;
     private bool isPlayed = false;
@@ -42,6 +43,10 @@ public class WordCheck : MonoBehaviour
     public TMP_Text beakerPowerUpCountText;
     public GameObject beakerPowerupGameobject;
     public bool showKeyboard;
+
+    private GameObject currentWord;
+    private GameObject previousWord;
+    private GameObject nextWord;
     void Awake()
     {
       playFabManager = GameObject.Find("PLAYER").GetComponent<PlayFabManager>();
@@ -129,6 +134,21 @@ public class WordCheck : MonoBehaviour
       showKeyboard = true;
     }
 
+    public void BackspaceButtonPress()
+    {
+      currentWord.GetComponent<TileCheck>().DeleteTile();
+    }
+
+    public void PreviousWordButtonPress()
+    {
+      previousWord.tag = "Player";
+      currentWord.tag = "Untagged";
+    }
+    public void NextWordButtonPress()
+    {
+      nextWord.tag = "Player";
+      currentWord.tag = "Untagged";
+    }
     void Update()
     {
       if (playerWin)
@@ -147,6 +167,17 @@ public class WordCheck : MonoBehaviour
 
           if (playerAnswer.Length < correctAnswer.Length)
           {
+            // setup for external buttons
+            currentWord = word[i];
+            if (i > 0)
+            {
+              previousWord = word[i - 1];
+            }
+            if (i < word.Count - 1 && currentIndex == 0)
+            {
+              nextWord = word[i + 1];
+            }
+
             word[i].GetComponent<TileCheck>().GetFirstEmptyTile(showKeyboard);
             timerReached = false;
             timerSeconds = clearDelay;
