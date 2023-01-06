@@ -41,6 +41,7 @@ public class WordCheck : MonoBehaviour
     public int beakerPowerupCount = 1;
     public TMP_Text beakerPowerUpCountText;
     public GameObject beakerPowerupGameobject;
+    public bool showKeyboard;
     void Awake()
     {
       playFabManager = GameObject.Find("PLAYER").GetComponent<PlayFabManager>();
@@ -70,6 +71,7 @@ public class WordCheck : MonoBehaviour
         beakerPowerupGameobject.SetActive(true);
         beakerPowerUpCountText.text = beakerPowerupCount.ToString();
       }
+      showKeyboard = false;
     }
 
     public void ShowBeakerPowerupIfValid()
@@ -122,6 +124,11 @@ public class WordCheck : MonoBehaviour
       }
     }
 
+    public void ShowKeyboardButtonPress()
+    {
+      showKeyboard = true;
+    }
+
     void Update()
     {
       if (playerWin)
@@ -140,7 +147,7 @@ public class WordCheck : MonoBehaviour
 
           if (playerAnswer.Length < correctAnswer.Length)
           {
-            word[i].GetComponent<TileCheck>().GetFirstEmptyTile();
+            word[i].GetComponent<TileCheck>().GetFirstEmptyTile(showKeyboard);
             timerReached = false;
             timerSeconds = clearDelay;
             

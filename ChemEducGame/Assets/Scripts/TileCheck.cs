@@ -11,7 +11,7 @@ public class TileCheck : MonoBehaviour
     public bool isSolved = false;
     public string description;
     private int tileIndex = 0;
-   
+    TouchScreenKeyboard keyboard;
     private void Start() {
         transform.localPosition = new Vector3(0, 0, 0);
    }
@@ -77,13 +77,31 @@ public class TileCheck : MonoBehaviour
    }
 
 
-   public void GetFirstEmptyTile()
+   public void GetFirstEmptyTile(bool showKeyboard)
    {
         //if word is cleared after wrong answer, force active input field on first tile
         if (answer[0].GetComponent<TMP_InputField>().text == "")
         {
             //focus player to type in this tile
-            answer[0].GetComponent<TMP_InputField>().ActivateInputField();
+            // answer[0].GetComponent<TMP_InputField>().interactable = true;
+            // answer[0].GetComponent<TMP_InputField>().ActivateInputField();
+            // answer[0].GetComponent<TMP_InputField>().shouldHideSoftKeyboard = false;
+
+            if (answer[0].GetComponent<TMP_InputField>().isFocused == false && answer[0].GetComponent<TMP_InputField>().interactable == true)
+            {
+                //answer[0].GetComponent<TMP_InputField>().shouldHideSoftKeyboard = true;
+                answer[0].GetComponent<TMP_InputField>().interactable = false;
+                answer[0].GetComponent<TMP_InputField>().DeactivateInputField();
+                GameObject.Find("CrossWordCanvass").GetComponent<WordCheck>().showKeyboard = false;
+            }
+            else if (showKeyboard == true)
+            {
+                answer[0].GetComponent<TMP_InputField>().interactable = true;
+                answer[0].GetComponent<TMP_InputField>().ActivateInputField();
+                //answer[0].GetComponent<TMP_InputField>().shouldHideSoftKeyboard = false;
+            }
+           
+
             //force uppercase
             answer[0].GetComponent<TMP_InputField>().onValidateInput += delegate (string s, int i, char c) { return char.ToUpper(c); };
         }
@@ -102,7 +120,21 @@ public class TileCheck : MonoBehaviour
                     }
                     tileIndex = i;
                     //focus player to type in this tile
+
+                    
+                if (answer[i].GetComponent<TMP_InputField>().isFocused == false && answer[i].GetComponent<TMP_InputField>().interactable == true)
+                {
+                    //answer[i].GetComponent<TMP_InputField>().shouldHideSoftKeyboard = true;
+                    answer[i].GetComponent<TMP_InputField>().interactable = false;
+                    answer[i].GetComponent<TMP_InputField>().DeactivateInputField();
+                    GameObject.Find("CrossWordCanvass").GetComponent<WordCheck>().showKeyboard = false;
+                }
+                else if (showKeyboard == true)
+                {
+                    answer[i].GetComponent<TMP_InputField>().interactable = true;
                     answer[i].GetComponent<TMP_InputField>().ActivateInputField();
+                    //answer[i].GetComponent<TMP_InputField>().shouldHideSoftKeyboard = false;
+                }
                     //force uppercase
                     answer[i].GetComponent<TMP_InputField>().onValidateInput += delegate (string s, int i, char c) { return char.ToUpper(c); };
                     break;
