@@ -18,9 +18,9 @@ public class WordCheck : MonoBehaviour
     [SerializeField] GameObject timer;
     [SerializeField] GameObject pauseButton;
     [SerializeField] GameObject mapButton;
-    [SerializeField] GameObject keyboardButton;
     [SerializeField] GameObject tutorialButton;
     [SerializeField] GameObject descriptionBackground;
+    [SerializeField] GameObject safeArea;
     private bool isPlayed = false;
     private int winTime = 0;
     private bool playerWin = false;
@@ -274,6 +274,7 @@ public class WordCheck : MonoBehaviour
                 tutorialButton.SetActive(false);
                 descriptionBackground.SetActive(false);
                 description.text = "";
+                safeArea.SetActive(false);
                 playerWin = true;
               }
 

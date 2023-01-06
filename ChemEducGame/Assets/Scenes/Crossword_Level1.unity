@@ -1435,11 +1435,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37562f5620b02de4fa6919bafb7e4312, type: 3}
---- !u!1 &282132768 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1114832512714309862, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
-  m_PrefabInstance: {fileID: 7518943654239780105}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &291567568
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4699,6 +4694,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1581983284518590358, guid: 37562f5620b02de4fa6919bafb7e4312, type: 3}
   m_PrefabInstance: {fileID: 770712489}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1079093852 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3395612905272862695, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+  m_PrefabInstance: {fileID: 7518943654239780105}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1079175525
 GameObject:
   m_ObjectHideFlags: 0
@@ -6670,9 +6670,9 @@ MonoBehaviour:
   timer: {fileID: 420881699}
   pauseButton: {fileID: 698369284}
   mapButton: {fileID: 1818087714}
-  keyboardButton: {fileID: 282132768}
   tutorialButton: {fileID: 711686289}
   descriptionBackground: {fileID: 1304505818}
+  safeArea: {fileID: 1079093852}
   playFabManager: {fileID: 0}
   scoreKeeper: {fileID: 0}
   playerScore: 25
@@ -10027,9 +10027,29 @@ PrefabInstance:
       value: WordCheck, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7518943653821519916, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: onTimerEnd.m_PersistentCalls.m_Calls.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518943653821519916, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: onTimerEnd.m_PersistentCalls.m_Calls.Array.data[8].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518943653821519916, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
       propertyPath: onTimerEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1538516811}
+    - target: {fileID: 7518943653821519916, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: onTimerEnd.m_PersistentCalls.m_Calls.Array.data[8].m_Target
+      value: 
+      objectReference: {fileID: 1079093852}
+    - target: {fileID: 7518943653821519916, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: onTimerEnd.m_PersistentCalls.m_Calls.Array.data[8].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518943653821519916, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
+      propertyPath: onTimerEnd.m_PersistentCalls.m_Calls.Array.data[8].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7518943654021950289, guid: 204a614ef647f97479cd8bc10b3d157b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
