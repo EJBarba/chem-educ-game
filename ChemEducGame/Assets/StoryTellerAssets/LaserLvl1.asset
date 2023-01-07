@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5368421817898946253
+--- !u!114 &-9090889623797214243
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,37 +10,39 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
-  m_Name: 6_Dialogue
+  m_Name: 4_Dialogue
   m_EditorClassIdentifier: 
-  Name: 6_Dialogue
+  Name: 4_Dialogue
   Text: 
-  UID: 4293198c-a48c-4888-9c3b-f70c2fe0a507
+  UID: fc382a99-c877-4021-a8a8-dd12e1bc5d90
   CharacterName: Doc
-  CallingNodeData: {fileID: 7866008744619810905}
+  CallingNodeData: {fileID: 375512674685048359}
   EnvironmentName: 
   Environment: {fileID: 0}
   Pass: 0
   Runtime_Pass: 0
   DataConnectedToMe:
-  - {fileID: -3538338784786887631}
-  DataIconnectedTo: []
+  - {fileID: -7373920754423255104}
+  DataIconnectedTo:
+  - {fileID: -8344261688709728546}
   Duration: 1
   Delay: 0
   RealtimeDelay: 0
-  StartTime: 5
-  DurationSum: 6
+  StartTime: 3
+  DurationSum: 4
   useTime: 1
   IsInControl: 0
   OverrideTime: 0
   LocalizedText:
-  - You only have 10 minutes to complete this level. Are you now ready? Let us start.
+  - 'To use the electron beam, press the up and down buttons to tilt it. Press and
+    hold the fire button to shoot. Use the obstacles to reflect the laser. '
   LocalizedVoiceRecordings:
   - {fileID: 0}
   LocalizedSoundEffects:
   - {fileID: 0}
   StoryboardImage: {fileID: 0}
   Tag: 
---- !u!114 &-3538338784786887631
+--- !u!114 &-8344261688709728546
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -56,15 +58,15 @@ MonoBehaviour:
   Text: 
   UID: da577c8a-b3fc-4da8-b0fa-4030c087f4bf
   CharacterName: Doc
-  CallingNodeData: {fileID: 7866008744619810905}
+  CallingNodeData: {fileID: 375512674685048359}
   EnvironmentName: 
   Environment: {fileID: 0}
   Pass: 0
   Runtime_Pass: 0
   DataConnectedToMe:
-  - {fileID: 4777506860744198001}
+  - {fileID: -9090889623797214243}
   DataIconnectedTo:
-  - {fileID: -5368421817898946253}
+  - {fileID: 6396856473124656973}
   Duration: 1
   Delay: 0
   RealtimeDelay: 0
@@ -81,7 +83,49 @@ MonoBehaviour:
   - {fileID: 0}
   StoryboardImage: {fileID: 0}
   Tag: 
---- !u!114 &-2947211726089371266
+--- !u!114 &-7373920754423255104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 3_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 3_Dialogue
+  Text: 
+  UID: 18cd3d54-779b-4717-a256-7c5cf36a4f5a
+  CharacterName: Doc
+  CallingNodeData: {fileID: 375512674685048359}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -4568859440449665563}
+  DataIconnectedTo:
+  - {fileID: -9090889623797214243}
+  Duration: 1
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 2
+  DurationSum: 3
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 'Using the electron beam, you must destroy the correct structure of the molecule
+    being asked in each item. '
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-6051173452938795473
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,15 +141,15 @@ MonoBehaviour:
   Text: 
   UID: 19084ff7-27fc-410e-8b25-e0a5f419afa7
   CharacterName: Doc
-  CallingNodeData: {fileID: 7866008744619810905}
+  CallingNodeData: {fileID: 375512674685048359}
   EnvironmentName: 
   Environment: {fileID: 0}
   Pass: 0
   Runtime_Pass: 0
   DataConnectedToMe:
-  - {fileID: 7866008744619810905}
+  - {fileID: 375512674685048359}
   DataIconnectedTo:
-  - {fileID: 3623765098102732127}
+  - {fileID: -4568859440449665563}
   Duration: 1
   Delay: 0
   RealtimeDelay: 0
@@ -124,7 +168,7 @@ MonoBehaviour:
   - {fileID: 0}
   StoryboardImage: {fileID: 0}
   Tag: 
---- !u!114 &-1982608404993901345
+--- !u!114 &-4568859440449665563
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,32 +178,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
-  m_Name: 3_Dialogue
+  m_Name: 2_Dialogue
   m_EditorClassIdentifier: 
-  Name: 3_Dialogue
+  Name: 2_Dialogue
   Text: 
-  UID: 18cd3d54-779b-4717-a256-7c5cf36a4f5a
+  UID: 6481673b-6b3a-4592-8ec9-1fa8eb0e519d
   CharacterName: Doc
-  CallingNodeData: {fileID: 7866008744619810905}
+  CallingNodeData: {fileID: 375512674685048359}
   EnvironmentName: 
   Environment: {fileID: 0}
   Pass: 0
   Runtime_Pass: 0
   DataConnectedToMe:
-  - {fileID: 3623765098102732127}
+  - {fileID: -6051173452938795473}
   DataIconnectedTo:
-  - {fileID: 4777506860744198001}
+  - {fileID: -7373920754423255104}
   Duration: 1
   Delay: 0
   RealtimeDelay: 0
-  StartTime: 2
-  DurationSum: 3
+  StartTime: 1
+  DurationSum: 2
   useTime: 1
   IsInControl: 0
   OverrideTime: 0
   LocalizedText:
-  - 'Using the electron beam, you must destroy the correct structure of the molecule
-    being asked in each item. '
+  - "This game consists of two levels: Level1 \u2013 Novice and Level 2 \u2013 Expert"
   LocalizedVoiceRecordings:
   - {fileID: 0}
   LocalizedSoundEffects:
@@ -179,16 +222,16 @@ MonoBehaviour:
   m_Name: LaserLvl1
   m_EditorClassIdentifier: 
   UID: e1c3cdc9-f95e-4d60-a69a-c5e2be48be33
-  UpdateUID: 2548879a-75f9-4a47-973c-afe55afe125f
+  UpdateUID: a781510b-7fa0-468c-8042-92c46635b59e
   SceneID: 4
   FullCharacterDialogueSet:
-  - {fileID: 7866008744619810905}
-  - {fileID: -2947211726089371266}
-  - {fileID: 3623765098102732127}
-  - {fileID: -1982608404993901345}
-  - {fileID: 4777506860744198001}
-  - {fileID: -3538338784786887631}
-  - {fileID: -5368421817898946253}
+  - {fileID: 375512674685048359}
+  - {fileID: -6051173452938795473}
+  - {fileID: -4568859440449665563}
+  - {fileID: -7373920754423255104}
+  - {fileID: -9090889623797214243}
+  - {fileID: -8344261688709728546}
+  - {fileID: 6396856473124656973}
   ActiveCharacterDialogueSet:
   - {fileID: 0}
   - {fileID: 0}
@@ -197,7 +240,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   Characters:
-  - {fileID: 7866008744619810905}
+  - {fileID: 375512674685048359}
   Languages:
   - Name: English
     CountryCode: en-US
@@ -206,90 +249,7 @@ MonoBehaviour:
   LanguageIndex: 0
   LanguageNameArray:
   - English
---- !u!114 &3623765098102732127
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
-  m_Name: 2_Dialogue
-  m_EditorClassIdentifier: 
-  Name: 2_Dialogue
-  Text: 
-  UID: 6481673b-6b3a-4592-8ec9-1fa8eb0e519d
-  CharacterName: Doc
-  CallingNodeData: {fileID: 7866008744619810905}
-  EnvironmentName: 
-  Environment: {fileID: 0}
-  Pass: 0
-  Runtime_Pass: 0
-  DataConnectedToMe:
-  - {fileID: -2947211726089371266}
-  DataIconnectedTo:
-  - {fileID: -1982608404993901345}
-  Duration: 1
-  Delay: 0
-  RealtimeDelay: 0
-  StartTime: 1
-  DurationSum: 2
-  useTime: 1
-  IsInControl: 0
-  OverrideTime: 0
-  LocalizedText:
-  - "This game consists of two levels: Level1 \u2013 Novice and Level 2 \u2013 Expert"
-  LocalizedVoiceRecordings:
-  - {fileID: 0}
-  LocalizedSoundEffects:
-  - {fileID: 0}
-  StoryboardImage: {fileID: 0}
-  Tag: 
---- !u!114 &4777506860744198001
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
-  m_Name: 4_Dialogue
-  m_EditorClassIdentifier: 
-  Name: 4_Dialogue
-  Text: 
-  UID: fc382a99-c877-4021-a8a8-dd12e1bc5d90
-  CharacterName: Doc
-  CallingNodeData: {fileID: 7866008744619810905}
-  EnvironmentName: 
-  Environment: {fileID: 0}
-  Pass: 0
-  Runtime_Pass: 0
-  DataConnectedToMe:
-  - {fileID: -1982608404993901345}
-  DataIconnectedTo:
-  - {fileID: -3538338784786887631}
-  Duration: 1
-  Delay: 0
-  RealtimeDelay: 0
-  StartTime: 3
-  DurationSum: 4
-  useTime: 1
-  IsInControl: 0
-  OverrideTime: 0
-  LocalizedText:
-  - 'To use the electron beam, press the up and down keys to tilt it. Press and hold
-    spacebar to fire. Use the obstacles to reflect the laser. '
-  LocalizedVoiceRecordings:
-  - {fileID: 0}
-  LocalizedSoundEffects:
-  - {fileID: 0}
-  StoryboardImage: {fileID: 0}
-  Tag: 
---- !u!114 &7866008744619810905
+--- !u!114 &375512674685048359
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -305,14 +265,14 @@ MonoBehaviour:
   Text: 
   UID: 352b4588-d8cc-40d0-a63b-3ee4ee3f9957
   CharacterName: Doc
-  CallingNodeData: {fileID: 7866008744619810905}
+  CallingNodeData: {fileID: 375512674685048359}
   EnvironmentName: 
   Environment: {fileID: 0}
   Pass: 0
   Runtime_Pass: 0
   DataConnectedToMe: []
   DataIconnectedTo:
-  - {fileID: -2947211726089371266}
+  - {fileID: -6051173452938795473}
   Duration: 0
   Delay: 0
   RealtimeDelay: 0
@@ -324,13 +284,13 @@ MonoBehaviour:
   LocalizedText:
   - 
   NodeDataInMyChain:
-  - {fileID: 7866008744619810905}
-  - {fileID: -2947211726089371266}
-  - {fileID: 3623765098102732127}
-  - {fileID: -1982608404993901345}
-  - {fileID: 4777506860744198001}
-  - {fileID: -3538338784786887631}
-  - {fileID: -5368421817898946253}
+  - {fileID: 375512674685048359}
+  - {fileID: -6051173452938795473}
+  - {fileID: -4568859440449665563}
+  - {fileID: -7373920754423255104}
+  - {fileID: -8344261688709728546}
+  - {fileID: 6396856473124656973}
+  - {fileID: -9090889623797214243}
   CharacterImage: {fileID: 0}
   CharacterPersonality:
     NegativeTraits:
@@ -433,3 +393,43 @@ MonoBehaviour:
       Stoic: 0
       Strong: 0
   SortingID: 0
+--- !u!114 &6396856473124656973
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 6_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 6_Dialogue
+  Text: 
+  UID: 4293198c-a48c-4888-9c3b-f70c2fe0a507
+  CharacterName: Doc
+  CallingNodeData: {fileID: 375512674685048359}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -8344261688709728546}
+  DataIconnectedTo: []
+  Duration: 1
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 5
+  DurationSum: 6
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - You only have 10 minutes to complete this level. Are you now ready? Let us start.
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 

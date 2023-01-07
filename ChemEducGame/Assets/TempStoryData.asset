@@ -17,7 +17,7 @@ MonoBehaviour:
   UID: c5eb6ae1-eaae-4ca9-8c6d-e925b6b8de43
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 12
+  IndexInList: 11
   NodeRect:
     serializedVersion: 2
     x: 1823.2
@@ -934,7 +934,7 @@ MonoBehaviour:
   UID: 315c8b39-a579-42b6-90b3-fe4cf1823a6b
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 10
+  IndexInList: 9
   NodeRect:
     serializedVersion: 2
     x: 963.19995
@@ -2110,7 +2110,7 @@ MonoBehaviour:
   UID: fc382a99-c877-4021-a8a8-dd12e1bc5d90
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 4
+  IndexInList: 6
   NodeRect:
     serializedVersion: 2
     x: 1722.2
@@ -2153,8 +2153,8 @@ MonoBehaviour:
   pushTime: 1
   OverrideTime: 0
   LocalizedText:
-  - 'To use the electron beam, press the up and down keys to tilt it. Press and hold
-    spacebar to fire. Use the obstacles to reflect the laser. '
+  - 'To use the electron beam, press the up and down buttons to tilt it. Press and
+    hold the fire button to shoot. Use the obstacles to reflect the laser. '
   MaxInputConnections: 10000
   MaxOutputConnections: 10000
   Lock: 0
@@ -2407,16 +2407,16 @@ MonoBehaviour:
     seneDrag: {fileID: 0}
   - SceneName: LaserLvl1
     UID: e1c3cdc9-f95e-4d60-a69a-c5e2be48be33
-    Pan: {x: -21.960749, y: -72.4459}
-    Zoom: 0.98
+    Pan: {x: 1502.5573, y: -184.94965}
+    Zoom: 0.8200002
     NodeElements:
     - {fileID: 8035684424925682735}
     - {fileID: -7358569099322410082}
     - {fileID: 38083011268774649}
     - {fileID: -5236200850273626522}
-    - {fileID: -469681635442526933}
     - {fileID: 3820686807684785775}
     - {fileID: 4834148376502519582}
+    - {fileID: -469681635442526933}
     Characters:
     - {fileID: 8035684424925682735}
     Environments: []
@@ -2468,8 +2468,8 @@ MonoBehaviour:
     seneDrag: {fileID: 0}
   - SceneName: Game3
     UID: cc5b7cf1-517c-4282-b40b-e5342e1e8777
-    Pan: {x: 1356.5483, y: -320.00467}
-    Zoom: 0.48000035
+    Pan: {x: 2655.2341, y: -143.2606}
+    Zoom: 0.70000017
     NodeElements:
     - {fileID: 1573804247300317986}
     - {fileID: -7820035348852144767}
@@ -2500,7 +2500,7 @@ MonoBehaviour:
     image: {fileID: 0}
     expandCustomSceneDataFoldout: 0
     seneDrag: {fileID: 0}
-  LastSavedScene: 0
+  LastSavedScene: 4
   ProjectType: 0
   image: {fileID: 0}
   CoverImagePath: 
@@ -2511,7 +2511,7 @@ MonoBehaviour:
     MaxFrequency: 0
     MinFrequency: 0
   TimeStamp:
-    Stamp: 07/01/2023 11:56:07 AM
+    Stamp: 07/01/2023 12:09:03 PM
   CreatedDataFolders: 1
   ProjectDataFolder: {fileID: 102900000, guid: 614a293c3f241994d840e7118c2e5652, type: 3}
   AudioFileFolder: {fileID: 102900000, guid: 85c253a51ef0ea44ea09109a8f1ab6fd, type: 3}
@@ -3739,7 +3739,7 @@ MonoBehaviour:
   UID: 9a043d92-6929-4907-a94d-90222b30f1cc
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 8
+  IndexInList: 12
   NodeRect:
     serializedVersion: 2
     x: 2253.2
@@ -4059,7 +4059,7 @@ MonoBehaviour:
   UID: da577c8a-b3fc-4da8-b0fa-4030c087f4bf
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 5
+  IndexInList: 4
   NodeRect:
     serializedVersion: 2
     x: 2072.2
@@ -4138,7 +4138,7 @@ MonoBehaviour:
   UID: 4293198c-a48c-4888-9c3b-f70c2fe0a507
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 6
+  IndexInList: 5
   NodeRect:
     serializedVersion: 2
     x: 2490.9756
@@ -4295,7 +4295,7 @@ MonoBehaviour:
   UID: 3dc6b95b-fee4-4b1a-bf30-f732fac40c86
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 9
+  IndexInList: 8
   NodeRect:
     serializedVersion: 2
     x: 2683.2
@@ -5136,7 +5136,7 @@ MonoBehaviour:
   UID: c4ff9e2a-a4ad-484f-9f86-74d3c97a9b4c
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 11
+  IndexInList: 10
   NodeRect:
     serializedVersion: 2
     x: 1393.2
