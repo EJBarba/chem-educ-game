@@ -17,7 +17,7 @@ MonoBehaviour:
   UID: c5eb6ae1-eaae-4ca9-8c6d-e925b6b8de43
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 4
+  IndexInList: 12
   NodeRect:
     serializedVersion: 2
     x: 1823.2
@@ -60,7 +60,8 @@ MonoBehaviour:
   pushTime: 1
   OverrideTime: 0
   LocalizedText:
-  - In this game, you will be playing three levels.
+  - ' Use the backspace button to delete the previous letter. Use the left and right
+    buttons to go to the previous or next word.'
   MaxInputConnections: 10000
   MaxOutputConnections: 10000
   Lock: 0
@@ -538,7 +539,7 @@ MonoBehaviour:
   UID: 6cdfe451-3253-4261-bed8-b3ab946d4c16
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 12
+  IndexInList: 6
   NodeRect:
     serializedVersion: 2
     x: 4833.2
@@ -933,7 +934,7 @@ MonoBehaviour:
   UID: 315c8b39-a579-42b6-90b3-fe4cf1823a6b
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 2
+  IndexInList: 10
   NodeRect:
     serializedVersion: 2
     x: 963.19995
@@ -1015,7 +1016,7 @@ MonoBehaviour:
   UID: dbbad317-4aee-433e-b9e7-419e2e8661a8
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 7
+  IndexInList: 1
   NodeRect:
     serializedVersion: 2
     x: 3113.2
@@ -1513,7 +1514,7 @@ MonoBehaviour:
   UID: d149f043-78b0-48d0-b057-7065c1a0f2e4
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 10
+  IndexInList: 4
   NodeRect:
     serializedVersion: 2
     x: 3973.2002
@@ -2279,22 +2280,22 @@ MonoBehaviour:
   Scenes:
   - SceneName: Game1InitTutorial
     UID: c4564046-88b7-431a-ad2f-9a33c59703b7
-    Pan: {x: -540.9062, y: -726.89374}
-    Zoom: 0.28
+    Pan: {x: 1497.3403, y: -397.73605}
+    Zoom: 0.42000002
     NodeElements:
     - {fileID: -3523554784723842183}
-    - {fileID: 3756081333274797119}
-    - {fileID: -4201597453525428908}
-    - {fileID: 9176761032459048326}
-    - {fileID: -8792246649562965708}
-    - {fileID: 3660575124233898483}
-    - {fileID: 6359741322617865645}
     - {fileID: -3745735027414829476}
     - {fileID: 1040695422154095222}
     - {fileID: 7318325829060749818}
     - {fileID: -2854473363215853764}
     - {fileID: 6845372365505072411}
     - {fileID: -6552217867093302501}
+    - {fileID: 3756081333274797119}
+    - {fileID: 6359741322617865645}
+    - {fileID: -4201597453525428908}
+    - {fileID: 9176761032459048326}
+    - {fileID: -8792246649562965708}
+    - {fileID: 3660575124233898483}
     Characters:
     - {fileID: -3523554784723842183}
     Environments: []
@@ -2499,7 +2500,7 @@ MonoBehaviour:
     image: {fileID: 0}
     expandCustomSceneDataFoldout: 0
     seneDrag: {fileID: 0}
-  LastSavedScene: 5
+  LastSavedScene: 0
   ProjectType: 0
   image: {fileID: 0}
   CoverImagePath: 
@@ -2510,7 +2511,7 @@ MonoBehaviour:
     MaxFrequency: 0
     MinFrequency: 0
   TimeStamp:
-    Stamp: 14/12/2022 11:09:45 PM
+    Stamp: 07/01/2023 11:56:07 AM
   CreatedDataFolders: 1
   ProjectDataFolder: {fileID: 102900000, guid: 614a293c3f241994d840e7118c2e5652, type: 3}
   AudioFileFolder: {fileID: 102900000, guid: 85c253a51ef0ea44ea09109a8f1ab6fd, type: 3}
@@ -3133,7 +3134,7 @@ MonoBehaviour:
   UID: 9c881145-48de-4f86-a6d7-c89d20b44581
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 8
+  IndexInList: 2
   NodeRect:
     serializedVersion: 2
     x: 5263.2007
@@ -3738,7 +3739,7 @@ MonoBehaviour:
   UID: 9a043d92-6929-4907-a94d-90222b30f1cc
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 5
+  IndexInList: 8
   NodeRect:
     serializedVersion: 2
     x: 2253.2
@@ -3781,7 +3782,8 @@ MonoBehaviour:
   pushTime: 1
   OverrideTime: 0
   LocalizedText:
-  - " Level 1 \u2013 Apprentice. Level 2 \u2013 Master. Level 3 \u2013 Wizard"
+  - "In this game, you will be playing three levels. \nLevel 1 \u2013 Apprentice.
+    Level 2 \u2013 Master. Level 3 \u2013 Wizard"
   MaxInputConnections: 10000
   MaxOutputConnections: 10000
   Lock: 0
@@ -3817,7 +3819,7 @@ MonoBehaviour:
   UID: a752acb5-00ed-40f6-ac0f-6de2fcc89b5d
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 1
+  IndexInList: 7
   NodeRect:
     serializedVersion: 2
     x: 533.19995
@@ -4293,7 +4295,7 @@ MonoBehaviour:
   UID: 3dc6b95b-fee4-4b1a-bf30-f732fac40c86
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 6
+  IndexInList: 9
   NodeRect:
     serializedVersion: 2
     x: 2683.2
@@ -4453,7 +4455,7 @@ MonoBehaviour:
   UID: 36183f7b-b91d-46be-ad00-486c567597db
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 11
+  IndexInList: 5
   NodeRect:
     serializedVersion: 2
     x: 4403.2
@@ -4613,7 +4615,7 @@ MonoBehaviour:
   UID: 48a9ad12-3d68-4115-8365-8dea2f354695
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 9
+  IndexInList: 3
   NodeRect:
     serializedVersion: 2
     x: 3543.2
@@ -5134,7 +5136,7 @@ MonoBehaviour:
   UID: c4ff9e2a-a4ad-484f-9f86-74d3c97a9b4c
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 3
+  IndexInList: 11
   NodeRect:
     serializedVersion: 2
     x: 1393.2
@@ -5177,8 +5179,8 @@ MonoBehaviour:
   pushTime: 1
   OverrideTime: 0
   LocalizedText:
-  - To start, populate the tiles by pressing any keyboard key. To navigate to previous
-    or next words, use the left and arrow keys.
+  - To start, press the keyboard button to show the keyboard and press any key. To
+    hide the keyboard, press anywhere.
   MaxInputConnections: 10000
   MaxOutputConnections: 10000
   Lock: 0

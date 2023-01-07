@@ -1,92 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8471707175871261779
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
-  m_Name: 2_Dialogue
-  m_EditorClassIdentifier: 
-  Name: 2_Dialogue
-  Text: 
-  UID: 315c8b39-a579-42b6-90b3-fe4cf1823a6b
-  CharacterName: Doc
-  CallingNodeData: {fileID: -3823669145414341296}
-  EnvironmentName: 
-  Environment: {fileID: 0}
-  Pass: 0
-  Runtime_Pass: 0
-  DataConnectedToMe:
-  - {fileID: 8223980404752661795}
-  DataIconnectedTo:
-  - {fileID: -7156122990373436060}
-  Duration: 1
-  Delay: 0
-  RealtimeDelay: 0
-  StartTime: 1
-  DurationSum: 2
-  useTime: 1
-  IsInControl: 0
-  OverrideTime: 0
-  LocalizedText:
-  - 'This is a digital crossword puzzle on the building blocks of biomolecules and
-    terminologies you encountered during lecture.
-
-'
-  LocalizedVoiceRecordings:
-  - {fileID: 0}
-  LocalizedSoundEffects:
-  - {fileID: 0}
-  StoryboardImage: {fileID: 0}
-  Tag: 
---- !u!114 &-7156122990373436060
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
-  m_Name: 3_Dialogue
-  m_EditorClassIdentifier: 
-  Name: 3_Dialogue
-  Text: 
-  UID: c4ff9e2a-a4ad-484f-9f86-74d3c97a9b4c
-  CharacterName: Doc
-  CallingNodeData: {fileID: -3823669145414341296}
-  EnvironmentName: 
-  Environment: {fileID: 0}
-  Pass: 0
-  Runtime_Pass: 0
-  DataConnectedToMe:
-  - {fileID: -8471707175871261779}
-  DataIconnectedTo:
-  - {fileID: 5395903081820193228}
-  Duration: 1
-  Delay: 0
-  RealtimeDelay: 0
-  StartTime: 2
-  DurationSum: 3
-  useTime: 1
-  IsInControl: 0
-  OverrideTime: 0
-  LocalizedText:
-  - To start, populate the tiles by pressing any keyboard key. To navigate to previous
-    or next words, use the left and arrow keys.
-  LocalizedVoiceRecordings:
-  - {fileID: 0}
-  LocalizedSoundEffects:
-  - {fileID: 0}
-  StoryboardImage: {fileID: 0}
-  Tag: 
---- !u!114 &-3823669145414341296
+--- !u!114 &-7386796664870972113
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,14 +16,14 @@ MonoBehaviour:
   Text: 
   UID: 3bf57e2b-fe7c-48a6-9010-2e11617382f4
   CharacterName: Doc
-  CallingNodeData: {fileID: -3823669145414341296}
+  CallingNodeData: {fileID: -7386796664870972113}
   EnvironmentName: 
   Environment: {fileID: 0}
   Pass: 0
   Runtime_Pass: 0
   DataConnectedToMe: []
   DataIconnectedTo:
-  - {fileID: 8223980404752661795}
+  - {fileID: -1916678528062575246}
   Duration: 0
   Delay: 0
   RealtimeDelay: 0
@@ -121,19 +35,19 @@ MonoBehaviour:
   LocalizedText:
   - 
   NodeDataInMyChain:
-  - {fileID: -3823669145414341296}
-  - {fileID: 8223980404752661795}
-  - {fileID: -8471707175871261779}
-  - {fileID: -7156122990373436060}
-  - {fileID: 5395903081820193228}
-  - {fileID: 6787459419392905648}
-  - {fileID: 4258225845268128343}
-  - {fileID: -3332057377710022146}
-  - {fileID: 7600934798859598634}
-  - {fileID: 2748094899723635174}
-  - {fileID: -1091430033028704591}
-  - {fileID: 6051185739495142489}
-  - {fileID: -2135984299700015968}
+  - {fileID: -7386796664870972113}
+  - {fileID: 1501741974804767051}
+  - {fileID: -819054258125359107}
+  - {fileID: 6590956265922153253}
+  - {fileID: -6116836231811966625}
+  - {fileID: -6141799798904890302}
+  - {fileID: -5067555863024118919}
+  - {fileID: -1916678528062575246}
+  - {fileID: 5095968478692066593}
+  - {fileID: 1331021505392503763}
+  - {fileID: 62238032183903455}
+  - {fileID: 9136941654955048664}
+  - {fileID: -5754992171151227446}
   CharacterImage: {fileID: 0}
   CharacterPersonality:
     NegativeTraits:
@@ -236,7 +150,7 @@ MonoBehaviour:
       Stoic: 0
       Strong: 0
   SortingID: 0
---- !u!114 &-3332057377710022146
+--- !u!114 &-6141799798904890302
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -246,38 +160,81 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
-  m_Name: 7_Dialogue
+  m_Name: 9_Dialogue
   m_EditorClassIdentifier: 
-  Name: 7_Dialogue
+  Name: 9_Dialogue
   Text: 
-  UID: 48a9ad12-3d68-4115-8365-8dea2f354695
+  UID: 36183f7b-b91d-46be-ad00-486c567597db
   CharacterName: Doc
-  CallingNodeData: {fileID: -3823669145414341296}
+  CallingNodeData: {fileID: -7386796664870972113}
   EnvironmentName: 
   Environment: {fileID: 0}
   Pass: 0
   Runtime_Pass: 0
   DataConnectedToMe:
-  - {fileID: 4258225845268128343}
+  - {fileID: -6116836231811966625}
   DataIconnectedTo:
-  - {fileID: 7600934798859598634}
+  - {fileID: -5067555863024118919}
   Duration: 1
-  Delay: 0
-  RealtimeDelay: 0
-  StartTime: 7.016912
-  DurationSum: 8.016912
+  Delay: 0.046556573
+  RealtimeDelay: 0.046556473
+  StartTime: 9.114204
+  DurationSum: 10.114204
   useTime: 1
   IsInControl: 0
   OverrideTime: 0
   LocalizedText:
-  - You can collect a total of 3 badges which are equivalent to 15 points.
+  - I recommend pressing the map button first before pressing the beaker powerup
+    to see its work in action
   LocalizedVoiceRecordings:
   - {fileID: 0}
   LocalizedSoundEffects:
   - {fileID: 0}
   StoryboardImage: {fileID: 0}
   Tag: 
---- !u!114 &-2135984299700015968
+--- !u!114 &-6116836231811966625
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 8_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 8_Dialogue
+  Text: 
+  UID: d149f043-78b0-48d0-b057-7065c1a0f2e4
+  CharacterName: Doc
+  CallingNodeData: {fileID: -7386796664870972113}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: 6590956265922153253}
+  DataIconnectedTo:
+  - {fileID: -6141799798904890302}
+  Duration: 1
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 8.067648
+  DurationSum: 9.067648
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - Power-ups (beaker) are available in levels 2 and 3. When clicked, it solves one
+    empty tile within the word.
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-5754992171151227446
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -293,20 +250,20 @@ MonoBehaviour:
   Text: 
   UID: 3dc6b95b-fee4-4b1a-bf30-f732fac40c86
   CharacterName: Doc
-  CallingNodeData: {fileID: -3823669145414341296}
+  CallingNodeData: {fileID: -7386796664870972113}
   EnvironmentName: 
   Environment: {fileID: 0}
   Pass: 0
   Runtime_Pass: 0
   DataConnectedToMe:
-  - {fileID: 6787459419392905648}
+  - {fileID: 9136941654955048664}
   DataIconnectedTo:
-  - {fileID: 4258225845268128343}
+  - {fileID: 1501741974804767051}
   Duration: 1
   Delay: 0
   RealtimeDelay: 0
-  StartTime: 5.016912
-  DurationSum: 6.016912
+  StartTime: 5.050736
+  DurationSum: 6.050736
   useTime: 1
   IsInControl: 0
   OverrideTime: 0
@@ -319,7 +276,7 @@ MonoBehaviour:
   - {fileID: 0}
   StoryboardImage: {fileID: 0}
   Tag: 
---- !u!114 &-1091430033028704591
+--- !u!114 &-5067555863024118919
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -335,25 +292,106 @@ MonoBehaviour:
   Text: 
   UID: 6cdfe451-3253-4261-bed8-b3ab946d4c16
   CharacterName: Doc
-  CallingNodeData: {fileID: -3823669145414341296}
+  CallingNodeData: {fileID: -7386796664870972113}
   EnvironmentName: 
   Environment: {fileID: 0}
   Pass: 0
   Runtime_Pass: 0
   DataConnectedToMe:
-  - {fileID: 2748094899723635174}
+  - {fileID: -6141799798904890302}
   DataIconnectedTo:
-  - {fileID: 6051185739495142489}
+  - {fileID: -819054258125359107}
   Duration: 1
   Delay: 0
   RealtimeDelay: 0
-  StartTime: 10.029645
-  DurationSum: 11.029645
+  StartTime: 10.114204
+  DurationSum: 11.114204
   useTime: 1
   IsInControl: 0
   OverrideTime: 0
   LocalizedText:
   - You need to complete level 1 to unlock the succeeding levels.
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-1916678528062575246
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 1_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 1_Dialogue
+  Text: 
+  UID: a752acb5-00ed-40f6-ac0f-6de2fcc89b5d
+  CharacterName: Doc
+  CallingNodeData: {fileID: -7386796664870972113}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -7386796664870972113}
+  DataIconnectedTo:
+  - {fileID: 5095968478692066593}
+  Duration: 1
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 1
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - Welcome to PuzzBuild!
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-819054258125359107
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 11_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 11_Dialogue
+  Text: 
+  UID: 9c881145-48de-4f86-a6d7-c89d20b44581
+  CharacterName: Doc
+  CallingNodeData: {fileID: -7386796664870972113}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -5067555863024118919}
+  DataIconnectedTo: []
+  Duration: 1
+  Delay: 0.016912075
+  RealtimeDelay: 0.01691246
+  StartTime: 11.131117
+  DurationSum: 12.131117
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - LET US BEGIN!
   LocalizedVoiceRecordings:
   - {fileID: 0}
   LocalizedSoundEffects:
@@ -373,37 +411,37 @@ MonoBehaviour:
   m_Name: Game1InitTutorial
   m_EditorClassIdentifier: 
   UID: c4564046-88b7-431a-ad2f-9a33c59703b7
-  UpdateUID: 27874be8-ef12-4eab-bf87-20e65fff5590
+  UpdateUID: 10db52e8-a358-4c60-b38c-383c586ca389
   SceneID: 0
   FullCharacterDialogueSet:
-  - {fileID: -3823669145414341296}
-  - {fileID: 8223980404752661795}
-  - {fileID: -8471707175871261779}
-  - {fileID: -7156122990373436060}
-  - {fileID: 5395903081820193228}
-  - {fileID: 6787459419392905648}
-  - {fileID: -2135984299700015968}
-  - {fileID: 4258225845268128343}
-  - {fileID: -3332057377710022146}
-  - {fileID: 7600934798859598634}
-  - {fileID: 2748094899723635174}
-  - {fileID: -1091430033028704591}
-  - {fileID: 6051185739495142489}
+  - {fileID: -7386796664870972113}
+  - {fileID: -1916678528062575246}
+  - {fileID: 5095968478692066593}
+  - {fileID: 1331021505392503763}
+  - {fileID: 62238032183903455}
+  - {fileID: 9136941654955048664}
+  - {fileID: -5754992171151227446}
+  - {fileID: 1501741974804767051}
+  - {fileID: 6590956265922153253}
+  - {fileID: -6116836231811966625}
+  - {fileID: -6141799798904890302}
+  - {fileID: -5067555863024118919}
+  - {fileID: -819054258125359107}
   ActiveCharacterDialogueSet:
-  - {fileID: 8223980404752661795}
-  - {fileID: -8471707175871261779}
-  - {fileID: -7156122990373436060}
-  - {fileID: 5395903081820193228}
-  - {fileID: 6787459419392905648}
-  - {fileID: -2135984299700015968}
-  - {fileID: 4258225845268128343}
-  - {fileID: -3332057377710022146}
-  - {fileID: 7600934798859598634}
-  - {fileID: 2748094899723635174}
-  - {fileID: -1091430033028704591}
-  - {fileID: 6051185739495142489}
+  - {fileID: -1916678528062575246}
+  - {fileID: 5095968478692066593}
+  - {fileID: 1331021505392503763}
+  - {fileID: 62238032183903455}
+  - {fileID: 9136941654955048664}
+  - {fileID: -5754992171151227446}
+  - {fileID: 1501741974804767051}
+  - {fileID: 6590956265922153253}
+  - {fileID: -6116836231811966625}
+  - {fileID: -6141799798904890302}
+  - {fileID: -5067555863024118919}
+  - {fileID: -819054258125359107}
   Characters:
-  - {fileID: -3823669145414341296}
+  - {fileID: -7386796664870972113}
   Languages:
   - Name: English
     CountryCode: en-US
@@ -412,91 +450,7 @@ MonoBehaviour:
   LanguageIndex: 0
   LanguageNameArray:
   - English
---- !u!114 &2748094899723635174
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
-  m_Name: 9_Dialogue
-  m_EditorClassIdentifier: 
-  Name: 9_Dialogue
-  Text: 
-  UID: 36183f7b-b91d-46be-ad00-486c567597db
-  CharacterName: Doc
-  CallingNodeData: {fileID: -3823669145414341296}
-  EnvironmentName: 
-  Environment: {fileID: 0}
-  Pass: 0
-  Runtime_Pass: 0
-  DataConnectedToMe:
-  - {fileID: 7600934798859598634}
-  DataIconnectedTo:
-  - {fileID: -1091430033028704591}
-  Duration: 1
-  Delay: 0.012732422
-  RealtimeDelay: 0.012732506
-  StartTime: 9.029645
-  DurationSum: 10.029645
-  useTime: 1
-  IsInControl: 0
-  OverrideTime: 0
-  LocalizedText:
-  - I recommend pressing the map button first before pressing the beaker powerup
-    to see its work in action
-  LocalizedVoiceRecordings:
-  - {fileID: 0}
-  LocalizedSoundEffects:
-  - {fileID: 0}
-  StoryboardImage: {fileID: 0}
-  Tag: 
---- !u!114 &4258225845268128343
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
-  m_Name: 6_Dialogue
-  m_EditorClassIdentifier: 
-  Name: 6_Dialogue
-  Text: 
-  UID: dbbad317-4aee-433e-b9e7-419e2e8661a8
-  CharacterName: Doc
-  CallingNodeData: {fileID: -3823669145414341296}
-  EnvironmentName: 
-  Environment: {fileID: 0}
-  Pass: 0
-  Runtime_Pass: 0
-  DataConnectedToMe:
-  - {fileID: -2135984299700015968}
-  DataIconnectedTo:
-  - {fileID: -3332057377710022146}
-  Duration: 1
-  Delay: 0
-  RealtimeDelay: 0
-  StartTime: 6.016912
-  DurationSum: 7.016912
-  useTime: 1
-  IsInControl: 0
-  OverrideTime: 0
-  LocalizedText:
-  - If you complete and answer the crossword puzzle perfectly, you will earn a reward
-    badge and unlock a power-up that you can use in the next level.
-  LocalizedVoiceRecordings:
-  - {fileID: 0}
-  LocalizedSoundEffects:
-  - {fileID: 0}
-  StoryboardImage: {fileID: 0}
-  Tag: 
---- !u!114 &5395903081820193228
+--- !u!114 &62238032183903455
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -512,32 +466,33 @@ MonoBehaviour:
   Text: 
   UID: c5eb6ae1-eaae-4ca9-8c6d-e925b6b8de43
   CharacterName: Doc
-  CallingNodeData: {fileID: -3823669145414341296}
+  CallingNodeData: {fileID: -7386796664870972113}
   EnvironmentName: 
   Environment: {fileID: 0}
   Pass: 0
   Runtime_Pass: 0
   DataConnectedToMe:
-  - {fileID: -7156122990373436060}
+  - {fileID: 1331021505392503763}
   DataIconnectedTo:
-  - {fileID: 6787459419392905648}
+  - {fileID: 9136941654955048664}
   Duration: 1
   Delay: 0
   RealtimeDelay: 0
-  StartTime: 3
-  DurationSum: 4
+  StartTime: 3.0338242
+  DurationSum: 4.033824
   useTime: 1
   IsInControl: 0
   OverrideTime: 0
   LocalizedText:
-  - In this game, you will be playing three levels.
+  - ' Use the backspace button to delete the previous letter. Use the left and right
+    buttons to go to the previous or next word.'
   LocalizedVoiceRecordings:
   - {fileID: 0}
   LocalizedSoundEffects:
   - {fileID: 0}
   StoryboardImage: {fileID: 0}
   Tag: 
---- !u!114 &6051185739495142489
+--- !u!114 &1331021505392503763
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -547,37 +502,166 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
-  m_Name: 11_Dialogue
+  m_Name: 3_Dialogue
   m_EditorClassIdentifier: 
-  Name: 11_Dialogue
+  Name: 3_Dialogue
   Text: 
-  UID: 9c881145-48de-4f86-a6d7-c89d20b44581
+  UID: c4ff9e2a-a4ad-484f-9f86-74d3c97a9b4c
   CharacterName: Doc
-  CallingNodeData: {fileID: -3823669145414341296}
+  CallingNodeData: {fileID: -7386796664870972113}
   EnvironmentName: 
   Environment: {fileID: 0}
   Pass: 0
   Runtime_Pass: 0
   DataConnectedToMe:
-  - {fileID: -1091430033028704591}
-  DataIconnectedTo: []
+  - {fileID: 5095968478692066593}
+  DataIconnectedTo:
+  - {fileID: 62238032183903455}
   Duration: 1
-  Delay: 0
-  RealtimeDelay: 0
-  StartTime: 11.029645
-  DurationSum: 12.029645
+  Delay: 0.03382415
+  RealtimeDelay: 0.033824205
+  StartTime: 2.0338242
+  DurationSum: 3.0338242
   useTime: 1
   IsInControl: 0
   OverrideTime: 0
   LocalizedText:
-  - LET US BEGIN!
+  - To start, press the keyboard button to show the keyboard and press any key. To
+    hide the keyboard, press anywhere.
   LocalizedVoiceRecordings:
   - {fileID: 0}
   LocalizedSoundEffects:
   - {fileID: 0}
   StoryboardImage: {fileID: 0}
   Tag: 
---- !u!114 &6787459419392905648
+--- !u!114 &1501741974804767051
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 6_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 6_Dialogue
+  Text: 
+  UID: dbbad317-4aee-433e-b9e7-419e2e8661a8
+  CharacterName: Doc
+  CallingNodeData: {fileID: -7386796664870972113}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -5754992171151227446}
+  DataIconnectedTo:
+  - {fileID: 6590956265922153253}
+  Duration: 1
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 6.050736
+  DurationSum: 7.050736
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - If you complete and answer the crossword puzzle perfectly, you will earn a reward
+    badge and unlock a power-up that you can use in the next level.
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &5095968478692066593
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 2_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 2_Dialogue
+  Text: 
+  UID: 315c8b39-a579-42b6-90b3-fe4cf1823a6b
+  CharacterName: Doc
+  CallingNodeData: {fileID: -7386796664870972113}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -1916678528062575246}
+  DataIconnectedTo:
+  - {fileID: 1331021505392503763}
+  Duration: 1
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 1
+  DurationSum: 2
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 'This is a digital crossword puzzle on the building blocks of biomolecules and
+    terminologies you encountered during lecture.
+
+'
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &6590956265922153253
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 7_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 7_Dialogue
+  Text: 
+  UID: 48a9ad12-3d68-4115-8365-8dea2f354695
+  CharacterName: Doc
+  CallingNodeData: {fileID: -7386796664870972113}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: 1501741974804767051}
+  DataIconnectedTo:
+  - {fileID: -6116836231811966625}
+  Duration: 1
+  Delay: 0.016912075
+  RealtimeDelay: 0.016911983
+  StartTime: 7.067648
+  DurationSum: 8.067648
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - You can collect a total of 3 badges which are equivalent to 15 points.
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &9136941654955048664
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -593,108 +677,26 @@ MonoBehaviour:
   Text: 
   UID: 9a043d92-6929-4907-a94d-90222b30f1cc
   CharacterName: Doc
-  CallingNodeData: {fileID: -3823669145414341296}
+  CallingNodeData: {fileID: -7386796664870972113}
   EnvironmentName: 
   Environment: {fileID: 0}
   Pass: 0
   Runtime_Pass: 0
   DataConnectedToMe:
-  - {fileID: 5395903081820193228}
+  - {fileID: 62238032183903455}
   DataIconnectedTo:
-  - {fileID: -2135984299700015968}
+  - {fileID: -5754992171151227446}
   Duration: 1
   Delay: 0.016912075
-  RealtimeDelay: 0.016911983
-  StartTime: 4.016912
-  DurationSum: 5.016912
+  RealtimeDelay: 0.016911745
+  StartTime: 4.050736
+  DurationSum: 5.050736
   useTime: 1
   IsInControl: 0
   OverrideTime: 0
   LocalizedText:
-  - " Level 1 \u2013 Apprentice. Level 2 \u2013 Master. Level 3 \u2013 Wizard"
-  LocalizedVoiceRecordings:
-  - {fileID: 0}
-  LocalizedSoundEffects:
-  - {fileID: 0}
-  StoryboardImage: {fileID: 0}
-  Tag: 
---- !u!114 &7600934798859598634
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
-  m_Name: 8_Dialogue
-  m_EditorClassIdentifier: 
-  Name: 8_Dialogue
-  Text: 
-  UID: d149f043-78b0-48d0-b057-7065c1a0f2e4
-  CharacterName: Doc
-  CallingNodeData: {fileID: -3823669145414341296}
-  EnvironmentName: 
-  Environment: {fileID: 0}
-  Pass: 0
-  Runtime_Pass: 0
-  DataConnectedToMe:
-  - {fileID: -3332057377710022146}
-  DataIconnectedTo:
-  - {fileID: 2748094899723635174}
-  Duration: 1
-  Delay: 0
-  RealtimeDelay: 0.00000047683716
-  StartTime: 8.016912
-  DurationSum: 9.016912
-  useTime: 1
-  IsInControl: 0
-  OverrideTime: 0
-  LocalizedText:
-  - Power-ups (beaker) are available in levels 2 and 3. When clicked, it solves one
-    empty tile within the word.
-  LocalizedVoiceRecordings:
-  - {fileID: 0}
-  LocalizedSoundEffects:
-  - {fileID: 0}
-  StoryboardImage: {fileID: 0}
-  Tag: 
---- !u!114 &8223980404752661795
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
-  m_Name: 1_Dialogue
-  m_EditorClassIdentifier: 
-  Name: 1_Dialogue
-  Text: 
-  UID: a752acb5-00ed-40f6-ac0f-6de2fcc89b5d
-  CharacterName: Doc
-  CallingNodeData: {fileID: -3823669145414341296}
-  EnvironmentName: 
-  Environment: {fileID: 0}
-  Pass: 0
-  Runtime_Pass: 0
-  DataConnectedToMe:
-  - {fileID: -3823669145414341296}
-  DataIconnectedTo:
-  - {fileID: -8471707175871261779}
-  Duration: 1
-  Delay: 0
-  RealtimeDelay: 0
-  StartTime: 0
-  DurationSum: 1
-  useTime: 1
-  IsInControl: 0
-  OverrideTime: 0
-  LocalizedText:
-  - Welcome to PuzzBuild!
+  - "In this game, you will be playing three levels. \nLevel 1 \u2013 Apprentice.
+    Level 2 \u2013 Master. Level 3 \u2013 Wizard"
   LocalizedVoiceRecordings:
   - {fileID: 0}
   LocalizedSoundEffects:
